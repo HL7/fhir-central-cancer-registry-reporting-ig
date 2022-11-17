@@ -83,7 +83,7 @@ The Cancer Pathology Data Sharing IG is currently under development. Once publis
 Inclusion of the above profiles will allow the extraction of Cancer Pathology Reports from the EHR and include them in the Central Cancer Registry Content Bundle in the future.
 
 
-##### Occupational Data for Health (ODH) IG Usage
+##### Occupational Data for Health (ODH) IG Usage 
 
 This IG leverages the [ODH FHIR IG]({{site.data.fhir.ver.odhIg}}/index.html) for exchanging occupational data for health which includes the following profile
 
