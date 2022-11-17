@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="us-ph-encounter"/>
+    <id value="cancer-encounter"/>
     <meta>
         <versionId value="21"/>
         <lastUpdated value="2021-07-01T02:41:12.847+00:00"/>
         <source value="#5j0H5mnTEDrulqHH"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/us-ph-encounter"/>
+    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"/>
     <version value="1.0.0"/>
-    <name value="USPublicHealthEncounter"/>
-    <title value="US Public Health Encounter"/>
+    <name value="CancerEncounter"/>
+    <title value="Cancer Encounter"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="HL7 Public Health Work Group"/>
-    <description value="This Encounter profile represents the encounter related to the event. It is based on the US Core Encounter."/>
+    <description value="This Encounter profile represents the encounter related to the cancer event. It is based on the US Core Encounter."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -32,8 +32,8 @@
     <differential>
         <element id="Encounter">
             <path value="Encounter"/>
-            <short value="US Public Health Encounter"/>
-            <definition value="The Public Health Encounter profile is based on the Encounter resource and establishes the core elements, extensions, vocabularies and value sets for representing the following encounters for public health reporting:&#xA;&#xA;- public health encounter related to the reported event."/>
+            <short value="Cancer Encounter"/>
+            <definition value="The Cancer Encounter profile is based on the Encounter resource and establishes the core elements, extensions, vocabularies and value sets for representing the following encounters for central cancer registry reporting:&#xA;&#xA;- public health encounter related to the reported event."/>
         </element>
         <element id="Encounter.subject">
             <path value="Encounter.subject"/>
@@ -68,6 +68,7 @@
             <path value="Encounter.participant.type"/>
             <short value="Responsible provider"/>
             <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>

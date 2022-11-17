@@ -9,7 +9,9 @@
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="HL7 Public Health Work Group"/>
-    <description value="This Patient profile represents a US Public Health Patient.&#xA;&#xA;It is based on the **US Core Patient** profile with further restrictions to allow masking of some data elements and the addition of the patient-genderIdentity extension.&#xA;&#xA;For ONC’s USCDI requirements, it adds Must Support constraints to the following:&#xA;&#xA;* contact detail (e.g. a telephone number or an email address)&#xA;* a communication language&#xA;* a race&#xA;* an ethnicity&#xA;* a birth sex"/>
+    <description value="This Patient profile represents a US Public Health Patient.&#xA;&#xA; This proile is present in the IG to synchronize with common Patient profile being developed by public health profiles library IG. 
+    This profile is being used by the Cancer Patient profile. Implementers of the IG are expected to implement only the Cancer Patient profile. 
+    It is based on the **US Core Patient** profile with further restrictions to allow masking of some data elements and the addition of the patient-genderIdentity extension.&#xA;&#xA;For ONC’s USCDI requirements, it adds Must Support constraints to the following:&#xA;&#xA;* contact detail (e.g. a telephone number or an email address)&#xA;* a communication language&#xA;* a race&#xA;* an ethnicity&#xA;* a birth sex"/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

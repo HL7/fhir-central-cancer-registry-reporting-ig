@@ -80,7 +80,7 @@ After 12 months from the initial diagnosis and transmission of a cancer report t
 The following is a diagram of the workflow based on the above user story used for Central Cancer Registry Reporting
 
 
-{% include img.html img="central-cancer-registry-reporting-workflow-v2.png" caption="Figure 2.1 - Central Cancer Registry Reporting Workflow" %}
+{% include img.html img="Content IG Workflows-revised.png" caption="Figure 2.1 - Central Cancer Registry Reporting Workflow" %}
 
 <br/>
 
@@ -109,15 +109,24 @@ The descriptions for each step in the above diagram include:
 * Step 2: The Health Data Exchange App (HDEA) queries the Knowledge Artifact Repository to retrieve a Knowledge Artifact. 
      * Step 2a: HDEA receives the Knowledge Artifact as a response to the query in Step 2.     
 * Step 3: The HDEA processes the Knowledge Artifact and creates subscriptions in the Data Source’s (e.g., EHR) FHIR Server so that it can be notified when specific events occur in clinical workflows.
+	* NOTE: The Knowledge Artifact for this use case will only require notification based on encounter-end event and hence a subscription notification is only needed based on the encounter close event.
 * Step 4: Providers as part of their clinical workflows update the data in the Data Source’s patient chart.
-* Step 5: The Data Source notifies the HDEA based on subscriptions that have been created in Step 3.
-* Step 6: The HDEA queries the Data Source for patient’s data.
+* Step 5: The Data Source notifies the HDEA based on encounter-end event that have been created in Step 3.
+* Step 6: The HDEA queries the Data Source for patient’s data and will create a report based on the KnowledgeArtifact trigger codes and timing data.
      * Step 6a: HDEA receives the response from the Data Source with the patient’s data.
 * Step 7: The HDEA submits the created report to the Trusted Third Party (TTP). (Central Cancer Registries require TTPs to act as intermediaries to receive reports from clinical organizations.) 
      * Step 7a: The TTP receives a submitted report from the HDEA and forwards the report to the Central Cancer Registry.
 * Step 8: The Central Cancer Registry submits a response back to the TTP based on the submitted report. The Response transaction can be synchronous or asynchronous (after a period of time).
      * Step 8a: The TTP receives the submitted response from the Central Cancer Registry and forwards the response to the HDEA which is part of the healthcare organization. The Response transaction can be synchronous or asynchronous (after a period of time). The Response transaction can be synchronous or asynchronous (after a period of time).
 * Step 9: The HDEA writes back the response from the Central Cancer Registry to the Data Source as appropriate. Note: The Response may have to be re-identified in some scenarios using Trust Services before it is written back to the EHR.
+
+
+#### Central Cancer Registry Reporting ValueSets
+
+The CDC central cancer registry program has identified the list of conditions against which the patient's data is evaluated for reporting purposes. If a patient has any of the conditions listed in any of the value sets identified below, the patient's data qualifies for reporting to the central cancer registry. These are not explicitly included in the IG as they will be maintained externally and published via the Knowledge Artifact and the links are being included for informational purposes only.
+
+{% include CancerReportingValueSetList.html %}
+ 
  
 - - - -
 

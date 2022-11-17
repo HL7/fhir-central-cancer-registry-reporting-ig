@@ -9,18 +9,18 @@
   <Author>Grahame</Author>
   <LastAuthor>Microsoft Office User</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2021-12-05T19:29:27Z</LastSaved>
+  <LastSaved>2022-09-30T18:42:39Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>15940</WindowHeight>
-  <WindowWidth>26840</WindowWidth>
-  <WindowTopX>5100</WindowTopX>
-  <WindowTopY>3760</WindowTopY>
-  <ActiveSheet>1</ActiveSheet>
+  <WindowHeight>16940</WindowHeight>
+  <WindowWidth>27640</WindowWidth>
+  <WindowTopX>4300</WindowTopX>
+  <WindowTopY>2760</WindowTopY>
+  <ActiveSheet>2</ActiveSheet>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -1148,7 +1148,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1177,7 +1176,7 @@
   </WorksheetOptions>
  </Worksheet>
  <Worksheet ss:Name="cancer-patient">
-  <Table ss:ExpandedColumnCount="25" ss:ExpandedRowCount="44" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="25" ss:ExpandedRowCount="52" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
    <Column ss:AutoFitWidth="0" ss:Width="93"/>
    <Column ss:AutoFitWidth="0" ss:Width="126"/>
@@ -1407,6 +1406,66 @@
     <Cell ss:Index="8"><Data ss:Type="String">code</Data></Cell>
     <Cell><Data ss:Type="String">Y</Data></Cell>
     <Cell ss:Index="11"><Data ss:Type="String">SS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.name</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">1..*</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.name.family</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">1..1</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">data-absent-reason</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.name.family.extension</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Extension{http://hl7.org/fhir/StructureDefinition/data-absent-reason}</Data></Cell>
+    <Cell><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.name.given</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">1..*</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">data-absent-reason</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.name.given.extension</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Extension{http://hl7.org/fhir/StructureDefinition/data-absent-reason}</Data></Cell>
+    <Cell><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="4" ss:StyleID="s64"><Data ss:Type="String">Patient.address</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">1..*</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.address.state</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">1..1</Data></Cell>
+    <Cell ss:Index="9"><Data ss:Type="String">Y</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">data-absent-reason</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Patient.address.state.extension</Data></Cell>
+    <Cell ss:Index="6"><Data ss:Type="String">0..1</Data></Cell>
+    <Cell ss:Index="8"><Data ss:Type="String">Extension{http://hl7.org/fhir/StructureDefinition/data-absent-reason}</Data></Cell>
+    <Cell><Data ss:Type="String">Y</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s86"/>
@@ -1983,11 +2042,13 @@
     <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
    </PageSetup>
    <Unsynced/>
-   <TopRowVisible>1</TopRowVisible>
+   <Zoom>126</Zoom>
+   <Selected/>
+   <TopRowVisible>5</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>26</ActiveRow>
+     <ActiveRow>30</ActiveRow>
      <ActiveCol>7</ActiveCol>
     </Pane>
    </Panes>

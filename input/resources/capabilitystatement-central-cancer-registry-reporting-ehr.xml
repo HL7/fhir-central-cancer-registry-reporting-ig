@@ -32,8 +32,8 @@
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the EHR needs to meet the security requirements as outlined in the <a href="spec.html#smart-on-fhir-backend-services-authorization-requirements">Formal Specification - Security Section.</a></p>
-
+      <p>In addition the EHR needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
+	  
       <h3>US Core Support</h3>
 
       <p>
@@ -61,7 +61,7 @@
           </thead>
           <tbody>
            <tr>
-              <th><a href="http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscription.html">Backported Subscription</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription.html">Backported Subscription</a></th>
               <td>
               </td>
               <td>
@@ -74,25 +74,25 @@
               <td>
               </td>
               <td>
-                <a title="Allows creation of a specific Subscription Resource instance" href="#Subscription-create">SHALL</a>
+                <a title="Allows creation of a specific Subscription Resource instance" href="#Subscription-create">MAY</a>
               </td>
               <td>
-                <a title="Allows update of a specific Subscription Resource instance" href="#Subscription-update">SHALL</a>
+                <a title="Allows update of a specific Subscription Resource instance" href="#Subscription-update">MAY</a>
               </td>
 			  <td>
-                <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">SHALL</a>
+                <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">MAY</a>
               </td>
               <td>
-                <a href="http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/OperationDefinition-backport-subscriptiontopic-list.html">$topic-list</a>
-                <a href="http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/OperationDefinition-backport-subscription-status.html">$status</a>
+                $topic-list,
+                $status
               </td>
             </tr>
             <tr>
-              <th><a href="http://build.fhir.org/ig/HL7/fhir-medmorph/StructureDefinition-encounter-close.html">Encounter Close Subscription Topic</a></th>
+              <th><a href="http://hl7.org/fhir/us/medmorph/StructureDefinition-encounter-end.html">Encounter End Subscription Topic</a></th>
               <td>
               </td>
               <td>
-                <a title="Allows retrieval of a specific Encounter Close Subscription instance." href="#Subscription-read">SHALL</a>
+                <a title="Allows retrieval of a specific Encounter End Subscription instance." href="#Subscription-read">SHALL</a>
               </td>
               <td>
               </td>
@@ -101,19 +101,19 @@
               <td>
               </td>
               <td>
-                <a title="Allows creation of a specific Subscription Resource instance for Encounter close event" href="#Subscription-create">SHALL</a>
+                <a title="Allows creation of a specific Subscription Resource instance for Encounter End event" href="#Subscription-create">MAY</a>
               </td>
               <td>
-                <a title="Allows update of a specific Subscription Resource instance for Encounter close event" href="#Subscription-update">SHALL</a>
+                <a title="Allows update of a specific Subscription Resource instance for Encounter End event" href="#Subscription-update">MAY</a>
               </td>
               <td>
-                <a title="Allows deletion of a specific Subscription Resource instance for Encounter close event" href="#Subscription-delete">SHALL</a>
+                <a title="Allows deletion of a specific Subscription Resource instance for Encounter End event" href="#Subscription-delete">MAY</a>
               </td>
               <td>
               </td>
             </tr>
             <tr>
-              <th><a href="http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscription-notification.html">Backport Subscription Notification Bundle</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription-notification.html">Backport Subscription Notification Bundle</a></th>
               <td>
               </td>
               <td>
@@ -135,7 +135,7 @@
               </td>
             </tr>
             <tr>
-              <th><a href="http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscriptionstatus.html">Backport Subscription Status</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscriptionstatus.html">Backport Subscription Status</a></th>
               <td>
               </td>
               <td>
@@ -157,7 +157,7 @@
               </td>
             </tr>
             <tr>
-              <th>US Core APIs</th>
+              <th><a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core APIs</a></th>
               <td>
                 <a title="Allows search of a specific US Core Resource instances." href="#USCore-search-type">SHALL</a>
               </td>
@@ -179,29 +179,6 @@
               <td>
               </td>
             </tr>
-            <tr>
-              <th><a href="{{site.data.fhir.path}}medicationadministration.html">MedicationAdministration</a></th>
-              <td>
-                <a title="Allows search of a specific US Core Resource instances." href="#MedAdm-search">SHALL</a>
-              </td>
-              <td>
-                <a title="Allows retrieval of a specific US Core Resource instances." href="#MedAdm-read">SHALL</a>
-              </td>
-              <td>
-              </td>
-              <td>               
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>
@@ -211,7 +188,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}subscription.html">Subscription (Includes Subscriptions for encounter-close Subscription Topic)</a>
       </h3>
-      <p>Profile: http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscription.html
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -267,7 +244,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}bundle.html">Bundle (Notifcation Bundle for Subscriptions)</a>
       </h3>
-      <p>Profile: (http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscription-notification.html)
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription-notification.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -296,7 +273,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}parameters.html">Parameters (Parameters Profile to retrieve Subscription Status)</a>
       </h3>
-      <p>Profile: ("http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/StructureDefinition-backport-subscriptionstatus.html")
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscriptionstatus.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -323,7 +300,7 @@
       <br/>
       <br/>
       <h3>
-        <a href="http://hl7.org/fhir/us/core">US Core APIs</a>
+        <a href="http://hl7.org/fhir/us/core/STU3.1.1/">US Core APIs</a>
       </h3>
       <p>Profile: None
       </p>
@@ -353,44 +330,6 @@
               </th>
               <td>
                 <p>Allows retrieval of specific US Core resource profile instances</p>
-              </td>
-            </tr> 
-          </tbody>
-        </table>
-      </div>
-      <br/>
-      <br/> 
-      <h3>
-        <a href="http://hl7.org/fhir/medicationadministration.html">MedicationAdministation</a>
-      </h3>
-      <p>Profile: ("hcs-medicationadministration.html")
-      </p>
-      <h4>Interactions</h4>
-      <div class="table-wrapper">
-        <table class="list">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <a name="MedAdm-search"> </a>
-                <span>search</span>
-              </th>
-              <td>
-                <p>Allows searching of specific MedicationAdministration resource profile instances.</p>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a name="MedAdm-read"> </a>
-                <span>read</span>
-              </th>
-              <td>
-                <p>Allows retrieval of specific MedicationAdministration resource profile instances</p>
               </td>
             </tr> 
           </tbody>
@@ -435,21 +374,21 @@
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="create"/>
         <documentation value="Allows creation of a Subscription resource instance."/>
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="update"/>
         <documentation value="Allows update of a Subscription resource instance."/>
       </interaction> 
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL"/>
+          <valueCode value="MAY"/>
         </extension>
         <code value="delete"/>
         <documentation value="Allows deletion of a Subscription resource instance."/>

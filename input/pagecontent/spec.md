@@ -56,53 +56,65 @@ This IG leverages the [US PH Library Profiles](https://build.fhir.org/ig/HL7/fhi
 
 ##### mCode FHIR IG Usage
 
-This IG leverages the [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html) for exchanging cancer specific information which includes the following profiles:
+This IG leverages the [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html) for exchanging cancer specific information which includes the following profiles: 
 
-	* Primary Cancer Condition
-	* Secondary Cancer Condition
-	* Cancer Stage Group Information 
-	* Cancer Related MedicationRequests 
-	* Cancer Related MedicationAdministration
-	* TNM Observations 
-	* RadiotherapyCourseSummary
+* [mCODE Primary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-primary-cancer-condition.html)
+* [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
+* [mCODE Cancer Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-stage-group.html)
+* [mCODE TNM Distant Metastases Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html)
+* [mCODE TNM Primary Tumor Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-primary-tumor-category.html)
+* [mCODE TNM Regional Nodes Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-regional-nodes-category.html)
+* [mCODE Cancer-Related Medication Request Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-request.html)
+* [mCODE Cancer-Related Administration Request Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-administration.html)
+* [mCODE Radiotherapy Course Summary Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-radiotherapy-course-summary.html)
+
 	
-Implementers **SHOULD** use the [mCode Disease characterization]({{site.data.fhir.ver.mcodeIg}}/group-disease.html) and [mCode Treatment guidance]({{site.data.fhir.ver.mcodeIg}}/group-treatment.html) when using the above profiles.
+Implementers **SHOULD** use the [mCode Disease characterization guidance]({{site.data.fhir.ver.mcodeIg}}/group-disease.html) and [mCode Treatment guidance]({{site.data.fhir.ver.mcodeIg}}/group-treatment.html) when using the above profiles.
+
+##### Cancer Pathology IG Usage in the future
+
+The Cancer Pathology Data Sharing IG is currently under development. Once published, profiles of the following resources from the Cancer Pathology Data Sharing IG will be referenced in this IG.
+
+* DiagnosticReport
+* Specimen
+* RelatedPerson: Next-of-Kin
+* PractitionerRole
+
+Inclusion of the above profiles will allow the extraction of Cancer Pathology Reports from the EHR and include them in the Central Cancer Registry Content Bundle in the future.
 
 
 ##### Occupational Data for Health (ODH) IG Usage
 
-This IG leverages the ODH FHIR IG for exchanging occupational data for health which includes the following profile:
+This IG leverages the [ODH FHIR IG]({{site.data.fhir.ver.odhIg}}/index.html) for exchanging occupational data for health which includes the following profile
 
-	* Usual Work
+	* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhig}}/StructureDefinition-odh-UsualWork.html)
 
 ##### Subscriptions Backport IG Usage
 
 This IG leverages the [Subscriptions Backport IG]({{site.data.fhir.ver.subscriptionsIg}}/index.html) defined by HL7 Infrastructure WG for automating reporting workflows using subscriptions.
 
-##### Bulk Data Access IG Usage
+##### SMART App Launch IG Usage
 
-This IG leverages the [BulkData Access IG]({{site.data.fhir.ver.buldataIg}}/index.html) defined by HL7 Infrastructure WG for enabling authentication and authorization between various actors involved in the workflows. The Bulk Data Access IG is being referenced to use the SMART on FHIR Backend Services Authorization requirements only. The Bulk Data operations related to exporting data for a cohort (Group) or a patient or system level export is not used for this IG.
+This IG leverages the [SMART App Launch IG]({{site.data.fhir.ver.smartapplaunch}}/index.html) defined by HL7 Infrastructure WG for enabling authentication and authorization between various actors involved in the workflows.
 
 
 #### Implementation Requirements
 
-##### SMART on FHIR Backend Services Authorization Requirements from the Bulk Data Access IG
+##### Overall Security Requirements 
 
-This section outlines how the SMART on FHIR Backend Services Authorization (from the Bulk Data Access IG) will be used by the Central Cancer Registry (CCR) Reporting Content implementation guide. 
+Implementations must meet the general security requirements documented in [FHIR Security guidance](http://hl7.org/fhir/security.html). In addition the EHR needs to meet the security requirements as outlined in the [Authentication and Authorization Requirements](spec.html#authentication-and-authorization-requirements) section below.
+Implementers of this IG **SHOULD** follow the [HIPPA guidance](https://www.naaccr.org/hippa) to ensure applicable security and privacy laws are implemented.
 
-* The system actors namely EHR, backend services app, Trusted Third Party and the Central Cancer Registry are required to use the SMART on FHIR Backend Services Authorization mechanisms as outlined below for the following interactions: 
 
-    * HDEA accessing data from the EHR.
-    * HDEA posting data to the Central Cancer Registry data store.
+##### Authentication and Authorization Requirements
+
+This section outlines how the SMART on FHIR Backend Services Authorization will be used by the Central Cancer Registry (CCR) Reporting Content implementation guide. 
+
+* The system actors namely EHR, Health Data Exchange App (backend services app), Trusted Third Party and the Central Cancer Registry are required to conform to the [MedMorph Authentication and Authorization Requirements]({{site.data.fhir.ver.medmorphIg}}/spec.html#authentication-and-authorization-requirements) for the following interactions: 
+
+   * HDEA accessing data from the EHR.
+   * HDEA posting data to the Central Cancer Registry data store via the TTP or directly to the Central Cancer Registry.
     
-* The system actor acting as a server (e.g., EHR, Trusted Third Party, and Central Cancer Registry) **SHALL** advertise conformance to SMART Backend Services by hosting a Well-Known Uniform Resource Identifiers (URIs) as defined in the [Bulk Data Access IG Authorization Section]({{site.data.fhir.ver.bulkIg}}/authorization/index.html#advertising-server-conformance-with-smart-backend-services) specification.
-
-* The system actor acting as a server **SHALL** include token_endpoint, scopes_supported, token_endpoint_auth_methods_supported and token_endpoint_auth_signing_alg_values_supported as defined in the [Bulk Data Access IG Authorization Section]({{site.data.fhir.ver.bulkIg}}/authorization/index.html) specification.
-
-* When a system actor act as a client (HDEA), they **SHALL** share their JSON Web Key Set (JWKS) with the server System actors (EHRs, Trusted Third Party and Central Cancer Registry) using Uniform Resource Locators (URLs) as defined in the [Bulk Data Access IG Authorization Section]({{site.data.fhir.ver.bulkIg}}/authorization/index.html#registering-a-smart-backend-service-communicating-public-keys) specification.
-
-* The system actor acting as a client **SHALL** obtain the access token as defined in the [Bulk Data Access IG Authorization Section]({{site.data.fhir.ver.bulkIg}}/authorization/index.html#obtaining-an-access-token) specification.
-
 * For the Central Cancer Registry Reporting use cases, EHRs **SHALL** support the system/*.read scopes. 
 
 * The Central Cancer Registry **SHALL** support the system/*.read and system/*.write scopes. 
@@ -126,22 +138,24 @@ This section outlines how the SMART on FHIR Backend Services Authorization (from
 
 * The EHR **SHALL** support the requirements as outlined in the [EHR Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html).
 
-###### Authorization requirements 
+###### Security requirements 
 
-* EHRs **SHALL** support the [SMART on FHIR Backend Services Authorization](spec.html#smart-on-fhir-backend-services-authorization-requirements) outlined above as a Server. 
+* EHRs **SHALL** support the [Authentication and Authorization Requirements](spec.html#authentication-and-authorization-requirements) outlined above as a Server. 
  
 
 ###### Subscription requirements
 
-* EHRs **SHALL** support the creation of Subscriptions for the [encounter-close Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
+* EHRs **SHALL** support notifications based on the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
 
 * EHRs **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to notify the HDEA.
 
-* EHRs **SHALL** support Notification Bundles with [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) as outlined in the Backport Subscriptions IG. 
+* * EHRs **MAY** support the creation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
 
-* For the Central Cancer Registry Reporting Ig, EHRs **SHALL** include the Encounter resource which was closed as part of the Notification Bundle.
+* EHRs **SHOULD** support Notification Bundles with [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) as outlined in the Backport Subscriptions IG. 
 
-* EHRs **SHALL** support operations and APIs for Subscription, Notification Bundle, and Subscription Status resources as outlined in the [EHR Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html).
+* For the Central Cancer Registry Reporting Ig, EHRs **MAY** include the Encounter resource which was closed as part of the Notification Bundle.
+
+* EHRs **MAY** support operations and APIs for Subscription, Notification Bundle, and Subscription Status resources as outlined in the [EHR Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html).
 
 
 ###### Data API requirements
@@ -152,14 +166,14 @@ This section outlines how the SMART on FHIR Backend Services Authorization (from
 ##### HDEA Requirements 
 
 
-###### Authorization requirements
+###### Security requirements
 
-* The HDEA **SHALL** support the [SMART on FHIR Backend Services Authorization](spec.html#smart-on-fhir-backend-services-authorization-requirements) outlined above as a client. 
+* The HDEA **SHALL** support the [Authentication and Authorization Requirements](spec.html#authentication-and-authorization-requirements) outlined above as a client. 
 
 
 ###### Subscription requirements
 
-* The HDEA **SHALL** create Subscriptions for the [encounter-close Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
+* The HDEA **SHALL** create Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
 
 * The HDEA **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the EHR.
 
@@ -177,7 +191,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization (from
 
 * For the Central Cancer Registry Reporting IG, the HDEA **SHALL** create the Subscription for the [encounter-close Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html) trigger event. 
 
-* Upon deactivation of a Knowledge Artifact, The HDEA **SHALL** delete the Subscriptions previously created by the BSA for the Knowledge Artifact (e.g., delete the Subscription created for encounter-close trigger event). 
+* Upon deactivation of a Knowledge Artifact, The HDEA **SHALL** delete the Subscriptions previously created by the BSA for the Knowledge Artifact (e.g., delete the Subscription created for encounter-end trigger event). 
 
 * The HDEA **SHALL** implement FhirPath expression processing to process the Central Cancer Registry Reporting Knowledge Artifact actions.
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="central-cancer-registry-reporting-messageheader"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
+        <source value="#DggdH1djbgWRgxnJ"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-messageheader"/>
+    <version value="0.1.0"/>
+    <name value="CentralCancerRegistryReportingMessageHeader"/>
+    <title value="Central Cancer Registry Reporting Message Header"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-09-01"/>
+    <publisher value="HL7 International - Public Health Work Group"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="This is the MessageHeader Resource profile for the IG."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MessageHeader"/>
+    <baseDefinition value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MessageHeader">
+            <path value="MessageHeader"/>
+            <short value="Central Cancer Registry Reporting MessageHeader"/>
+            <definition value="Sets expectations for supported capabilities for MessageHeader resource for Central Cancer Registry Reporting."/>
+            <mustSupport value="false"/>
+        </element>
+        <element id="MessageHeader.source.name">
+            <path value="MessageHeader.source.name"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>  
+        <element id="MessageHeader.source.software">
+            <path value="MessageHeader.source.software"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MessageHeader.source.version">
+            <path value="MessageHeader.source.version"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>      
+    </differential>
+</StructureDefinition>

@@ -133,7 +133,7 @@
             <short value="Starts the workflow"/>
             <definition value="Description of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="This action represents the start of the reporting workflow in response to the encounter-close event"/>
+            <fixedString value="This action represents the start of the reporting workflow in response to the encounter-end event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.textEquivalent">
@@ -141,7 +141,7 @@
             <short value="Text equivalent of the start workflow action."/>
             <definition value="Text equivalent of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="Start the reporting workflow in response to an encounter-close event"/>
+            <fixedString value="Start the reporting workflow in response to an encounter-end event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.code">
@@ -167,7 +167,7 @@
                 <key value="epd-1"/>
                 <severity value="error"/>
                 <human value="The code value of the namedEventType SHALL be the same as the name element"/>
-                <expression value="extension('http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-us-ph-namedEventType').value.coding.code.supersetOf(name)"/>
+                <expression value="extension('http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype').value.coding.code.supersetOf(name)"/>
                 <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;name&quot;)])"/>
                 <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
             </constraint>
@@ -235,7 +235,7 @@
             </base>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-us-ph-namedEventType"/>
+                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype"/>
             </type>
             <constraint>
                 <key value="ele-1"/>
@@ -263,8 +263,8 @@
         </element>
         <element id="PlanDefinition.action:encounterClose.trigger.name">
             <path value="PlanDefinition.action.trigger.name"/>
-            <definition value="The name of the event, encounter-close in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
-            <fixedString value="encounter-close"/>
+            <definition value="The name of the event, encounter-end in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
+            <fixedString value="encounter-end"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.relatedAction">
             <path value="PlanDefinition.action.relatedAction"/>
@@ -316,6 +316,7 @@
         <element id="PlanDefinition.action:checkReportable.code">
             <path value="PlanDefinition.action.code"/>
             <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -354,6 +355,7 @@
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable.code">
             <path value="PlanDefinition.action.action.code"/>
             <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -419,6 +421,7 @@
         <element id="PlanDefinition.action:checkReportable.action:shouldContinueReporting.code">
             <path value="PlanDefinition.action.action.code"/>
             <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -487,6 +490,7 @@
         <element id="PlanDefinition.action:reportCancerData.code">
             <path value="PlanDefinition.action.code"/>
             <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -525,6 +529,8 @@
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:createCancerReport.code">
             <path value="PlanDefinition.action.action.code"/>
+            <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -550,6 +556,8 @@
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:validateCancerReport.code">
             <path value="PlanDefinition.action.action.code"/>
+            <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
@@ -587,6 +595,8 @@
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:routeAndSendCancerReport.code">
             <path value="PlanDefinition.action.action.code"/>
+            <min value="1"/>
+            <max value="1"/>
             <patternCodeableConcept>
                 <coding>
                     <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>

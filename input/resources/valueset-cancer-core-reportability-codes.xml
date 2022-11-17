@@ -6,6 +6,7 @@
 	<name value="CancerCoreReportabilityCodes"/>
 	<title value="Cancer Core Reportability Codes"/>
 	<status value="active"/>
+	<experimental value="false"/>
 	<date value="2021-11-22"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>

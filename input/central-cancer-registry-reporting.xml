@@ -4,7 +4,7 @@
   <id value="central-cancer-registry-reporting"/>
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/ImplementationGuide/central-cancer-registry-reporting"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="CentralCancerRegistryReporting"/>
   <title value="Central Cancer Registry Reporting Content IG"/>
   <status value="draft"/>
@@ -37,16 +37,16 @@
     <version value="3.1.1"/>
   </dependsOn>
   
-   <dependsOn id="bulkIg">
+ <!-- <dependsOn id="bulkIg">
     <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
     <packageId value="hl7.fhir.uv.bulkdata"/>
-    <version value="1.0.0"/>
-  </dependsOn>
+    <version value="1.0.1"/>
+  </dependsOn> -->
   
   <dependsOn id="medmorphIg">
     <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
     <packageId value="hl7.fhir.us.medmorph"/>
-    <version value="0.2.0"/>
+    <version value="current"/>
   </dependsOn>
   
   <dependsOn id="subscriptionsIg">
@@ -64,16 +64,33 @@
   <dependsOn id="odhIg">
     <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
     <packageId value="hl7.fhir.us.odh"/>
-    <version value="1.0.0"/>
+    <version value="1.1.0"/>
+  </dependsOn>
+  
+<!--   <dependsOn id="vsac">
+    <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
+    <packageId value="us.nlm.vsac"/>
+    <version value="0.3.0"/>
+  </dependsOn> --> 
+  
+  <dependsOn id="smartapplaunch">
+    <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
+    <packageId value="hl7.fhir.uv.smart-app-launch"/>
+    <version value="2.0.0"/>
   </dependsOn>
  
   <definition>
+  
+  <grouping id="mcode">
+  <name value="mCode Profiles"/>
+  <description value="The list of mCode Profiles used by this IG are identified in the detailed specification page."/>
+  </grouping>
   
   <resource>
       <reference>
         <reference value="Patient/patient-eve-everywoman"/>
       </reference>
-      <name value="Patient - Example"/>
+      <name value="Cancer Patient - Example"/>
       <description value="An example showing a Patient"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -105,31 +122,31 @@
       <reference>
         <reference value="Bundle/reporting-bundle-example"/>
       </reference>
-      <name value="Reporting Bundle - Example"/>
-      <description value="An example showing a Reporting Bundle"/>
+      <name value="Central Cancer Registry Reporting Bundle - Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Bundle"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
       <reference>
         <reference value="Bundle/content-bundle-example"/>
       </reference>
-      <name value="Content Bundle - Example"/>
-      <description value="An example showing a Cancer Content Bundle"/>
+      <name value="Central Cancer Registry Reporting Content Bundle - Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Content Bundle"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
       <reference>
         <reference value="Bundle/central-cancer-registry-reporting-specification-bundle-example"/>
       </reference>
-      <name value="Specifiation Bundle - Example"/>
-      <description value="An example showing a Central Cancer Registry Reporting Specification Bundle"/>
+      <name value="Central Cancer Registry Reporting Specifiation Bundle (Knowledge Artifact)- Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Specification Bundle (Knowledge Artifact)"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
       <reference>
         <reference value="PlanDefinition/plandefinition-central-cancer-registry-reporting-example"/>
       </reference>
-      <name value="PlanDefinition - Example"/>
+      <name value="Central Cancer Registry PlanDefinition - Example"/>
       <description value="An example showing a Central Cancer Registry Reporting PlanDefinition instance"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -137,8 +154,8 @@
       <reference>
         <reference value="Endpoint/example-ph-endpoint"/>
       </reference>
-      <name value="PHA Endpoint - Example"/>
-      <description value="An example showing an PHA Endpoint"/>
+      <name value="Central Cancer Registry Endpoint - Example"/>
+      <description value="An example showing an Central Cancer Registry Endpoint"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
@@ -184,12 +201,12 @@
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2020+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <value value="STU 1"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

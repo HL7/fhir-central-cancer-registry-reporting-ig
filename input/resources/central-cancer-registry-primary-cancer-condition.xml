@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="central-cancer-registry-primary-cancer-condition"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
+        <source value="#DggdH1djbgWRgxnJ"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"/>
+    <version value="0.1.0"/>
+    <name value="CentralCancerRegistryReportingPrimaryCancerCondition"/>
+    <title value="Central Cancer Registry Reporting Primary Cancer Condition"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2019-09-01"/>
+    <publisher value="HL7 International - Public Health Work Group"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="This is the Primary Cancer Condition Resource profile for the IG."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Condition"/>
+    <baseDefinition value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Condition">
+            <path value="Condition"/>
+            <short value="Central Cancer Registry Reporting Primary Cancer Condition"/>
+            <definition value="Sets expectations for supported capabilities for Primary Cancer Condition in Central Cancer Registry Reporting use cases."/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.extension:condition-assertedDate">
+            <path value="Condition.extension"/>
+            <sliceName value="condition-assertedDate"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.extension:mcode-histology-morphology-behavior">
+            <path value="Condition.extension"/>
+            <sliceName value="mcode-histology-morphology-behavior"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.extension:mcode-cancer-disease-type-evidence-type">
+            <path value="Condition.extension"/>
+            <sliceName value="mcode-cancer-disease-type-evidence-type"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.bodySite">
+            <path value="Condition.bodySite"/>
+            <sliceName value="bodySite"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.bodySite.extension:data-absent-reason">
+            <path value="Condition.bodySite.extension"/>
+            <sliceName value="data-absent-reason"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.bodySite.extension:mcode-location-qualifier">
+            <path value="Condition.bodySite.extension"/>
+            <sliceName value="mcode-location-qualifier"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-location-qualifier"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

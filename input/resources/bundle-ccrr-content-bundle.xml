@@ -10,7 +10,7 @@
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-content-bundle"/>
     <version value="0.1.0"/>
     <name value="CentralCancerRegistryReportingContentBundle"/>
-    <title value="Central Cancer Registry Report Content Bundle"/>
+    <title value="Central Cancer Registry Reporting Content Bundle"/>
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
