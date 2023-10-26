@@ -8,13 +8,13 @@
 	<status value="active"/>
 	<experimental value="false"/>
 	<date value="2021-11-22"/>
-	<publisher value="HL7 US Realm Steering Committee"/>
-	<contact>
-		<telecom>
-			<system value="other"/>
-			<value value="http://hl7.org/fhir"/>
-		</telecom>
-	</contact>
+	<publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
 	<description value="The valueset contains SNOMED-CT and ICD-10-CM codes for Cancer Core Reportability determination. These are just sample codes and the actual value set will be 
 		published by the Central Cancer Registry."/>
 	<copyright value="This value set includes content from:&#xA;

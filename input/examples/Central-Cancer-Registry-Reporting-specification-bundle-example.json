@@ -29,28 +29,9 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-receiverAddress",
+            "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint",
             "valueReference": {
               "reference": "Endpoint/example-ph-endpoint"
-            }
-          },
-          {
-            "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-authorSignature",
-            "valueSignature": {
-              "type": [
-                {
-                  "system": "urn:iso-astm:E1762-95:2013",
-                  "code": "1.2.840.10065.1.12.1.5",
-                  "display": "Verification Signature"
-                }
-              ],
-              "when": "2020-11-04T08:39:24+10:00",
-              "who": {
-                "reference": "Organization/example-pha-org"
-              },
-              "targetFormat": "application/fhir+xml",
-              "sigFormat": "application/signature+xml",
-              "data": "L44u"
             }
           }
         ],
@@ -85,8 +66,8 @@
         "action": [
           {
             "id": "start-workflow",
-            "description": "This action represents the start of the reporting workflow in response to the encounter-close event",
-            "textEquivalent": "Start the reporting workflow in response to an encounter-close event",
+            "description": "This action represents the start of the reporting workflow in response to the encounter-end event",
+            "textEquivalent": "Start the reporting workflow in response to an encounter-end event",
             "code": [
               {
                 "coding": [
@@ -102,20 +83,20 @@
                 "id": "encounter-close",
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/ext-us-ph-namedEventType",
+                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
                     "valueCodeableConcept": {
                       "coding": [
                         {
                           "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
-                          "code": "encounter-close",
-                          "display": "Indicates the close of an encounter"
+                          "code": "encounter-end",
+                          "display": "Indicates the end of an encounter"
                         }
                       ]
                     }
                   }
                 ],
                 "type": "named-event",
-                "name": "encounter-close"
+                "name": "encounter-end"
               }
             ],
             "relatedAction": [
@@ -182,7 +163,7 @@
                     "codeFilter" : [
                       {
                         "path" : "code",
-                        "valueSet" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"
+                        "valueSet" : "http://hl7.org/fhir/us/central-cancer-registry-reporting/ValueSet/cancer-core-reportability-codes"
                       }
                     ]
                   }
@@ -280,7 +261,7 @@
                           "type": "Encounter",
                           "profile": [
                             
-                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/us-ph-encounter"
+                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"
                             
                           ]
                     },

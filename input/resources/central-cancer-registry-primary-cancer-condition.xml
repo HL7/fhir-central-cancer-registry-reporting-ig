@@ -14,11 +14,11 @@
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
-    <publisher value="HL7 International - Public Health Work Group"/>
+    <publisher value="HL7 International / Public Health"/>
     <contact>
         <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/pher"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
     <description value="This is the Primary Cancer Condition Resource profile for the IG."/>
@@ -76,9 +76,20 @@
         </element>
         <element id="Condition.bodySite">
             <path value="Condition.bodySite"/>
-            <sliceName value="bodySite"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.bodySite.extension">
+            <path value="Condition.bodySite.extension"/>
+            <slicing>
+                <discriminator>
+                    <type value="value"/>
+                    <path value="url"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <definition value="Defines extensions for the bodySite element."/>
             <mustSupport value="true"/>
         </element>
         <element id="Condition.bodySite.extension:data-absent-reason">
@@ -95,7 +106,7 @@
         <element id="Condition.bodySite.extension:mcode-location-qualifier">
             <path value="Condition.bodySite.extension"/>
             <sliceName value="mcode-location-qualifier"/>
-            <min value="1"/>
+            <min value="0"/>
             <max value="1"/>
             <type>
                 <code value="Extension"/>

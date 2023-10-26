@@ -145,11 +145,11 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ###### Subscription requirements
 
-* EHRs **SHALL** support notifications based on the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
+* EHRs **SHALL** support notifications based on the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
 
 * EHRs **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to notify the HDEA.
 
-* * EHRs **MAY** support the creation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
+* * EHRs **MAY** support the creation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
 
 * EHRs **SHOULD** support Notification Bundles with [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) as outlined in the Backport Subscriptions IG. 
 
@@ -173,7 +173,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ###### Subscription requirements
 
-* The HDEA **SHALL** create Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html).
+* The HDEA **SHALL** create Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
 
 * The HDEA **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the EHR.
 
@@ -189,7 +189,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * The HDEA **SHALL** process the MedMorph Central Cancer Registry Reporting Knowledge Artifact and create Subscription resources in the EHR for each trigger event.
 
-* For the Central Cancer Registry Reporting IG, the HDEA **SHALL** create the Subscription for the [encounter-close Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-encounter-close.html) trigger event. 
+* For the Central Cancer Registry Reporting IG, the HDEA **SHALL** create the Subscription for the [encounter-close Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html) trigger event. 
 
 * Upon deactivation of a Knowledge Artifact, The HDEA **SHALL** delete the Subscriptions previously created by the BSA for the Knowledge Artifact (e.g., delete the Subscription created for encounter-end trigger event). 
 
@@ -215,7 +215,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ###### MedMorph RA Requirements 
 
-* The HDEA **SHALL** implement the MedMorph HDEA requirements as outlined in the [MedMorph HDEA requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-backend-service-app.html).
+* The HDEA **SHALL** implement the MedMorph HDEA requirements as outlined in the [MedMorph HDEA requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-healthdata-exchange-app-client.html).
 
 ##### Central Cancer Registry Requirements 
 
@@ -228,7 +228,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * When there are validation failures, the Central Cancer Registry Data Store **SHALL** return an Operation Outcome response with the details of the validations as part of the POST response.
 
-* The Central Cancer Registry **SHALL** implement the PHA requirements as outlined in the [MedMorph Data Receiver requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-public-health-authority.html).
+* The Central Cancer Registry **SHALL** implement the PHA requirements as outlined in the [MedMorph Data Receiver requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-data-receiver.html).
 
 ##### Trusted Third Party Requirements
 

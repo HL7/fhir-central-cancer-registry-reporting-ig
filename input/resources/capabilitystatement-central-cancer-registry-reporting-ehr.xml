@@ -61,7 +61,7 @@
           </thead>
           <tbody>
            <tr>
-              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription.html">Backported Subscription</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription.html">Backported Subscription</a></th>
               <td>
               </td>
               <td>
@@ -83,12 +83,11 @@
                 <a title="Allows deletion of a specific Subscription Resource instance" href="#Subscription-delete">MAY</a>
               </td>
               <td>
-                $topic-list,
                 $status
               </td>
             </tr>
             <tr>
-              <th><a href="http://hl7.org/fhir/us/medmorph/StructureDefinition-encounter-end.html">Encounter End Subscription Topic</a></th>
+              <th><a href="http://hl7.org/fhir/us/medmorph/StructureDefinition-medmorph-encounter-end-subscription.html">Encounter End Subscription Topic</a></th>
               <td>
               </td>
               <td>
@@ -113,7 +112,7 @@
               </td>
             </tr>
             <tr>
-              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription-notification.html">Backport Subscription Notification Bundle</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-notification-r4.html">Backport Subscription Notification Bundle</a></th>
               <td>
               </td>
               <td>
@@ -135,7 +134,7 @@
               </td>
             </tr>
             <tr>
-              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscriptionstatus.html">Backport Subscription Status</a></th>
+              <th><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-status-r4.html">Backport Subscription Status</a></th>
               <td>
               </td>
               <td>
@@ -188,7 +187,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}subscription.html">Subscription (Includes Subscriptions for encounter-close Subscription Topic)</a>
       </h3>
-      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription.html">Profile</a>
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -244,7 +243,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}bundle.html">Bundle (Notifcation Bundle for Subscriptions)</a>
       </h3>
-      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscription-notification.html">Profile</a>
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-notification-r4.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -273,7 +272,7 @@
       <h3>
         <a href="{{site.data.fhir.path}}parameters.html">Parameters (Parameters Profile to retrieve Subscription Status)</a>
       </h3>
-      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/2021Jan/StructureDefinition-backport-subscriptionstatus.html">Profile</a>
+      <p><a href="http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-subscription-status-r4.html">Profile</a>
       </p>
       <h4>Interactions</h4>
       <div class="table-wrapper">
@@ -345,13 +344,13 @@
   <title value="Central Cancer Registry Reporting EHR Capability Statement"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
-  <publisher value="HL7 International - Public Health Work Group"/>
-  <contact>
-    <telecom>
-      <system value="other"/>
-      <value value="https://www.cdc.gov/csels/phio/making-ehr-data-more-available.html"/>
-    </telecom>
-  </contact>
+  <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
   <description value="This profile defines the expected capabilities of the ''EHR'' actor when conforming to the Central Cancer Registry Reporting Content IG.  
   This role is responsible for allowing creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs."/>
   <kind value="requirements"/>

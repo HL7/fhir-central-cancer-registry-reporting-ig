@@ -12,7 +12,13 @@
     <name value="USPublicHealthTribalAffiliationExtension"/>
     <title value="US Public Health Tribal Affiliation Extension"/>
     <status value="active"/>
-    <publisher value="HL7 Public Health Work Group"/>
+    <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
     <description value="This Extension profile represents an affiliated tribe name and whether or not the patient is an enrolled member"/>
     <jurisdiction>
         <coding>

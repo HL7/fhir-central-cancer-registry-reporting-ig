@@ -14,11 +14,11 @@
     <status value="draft"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
-    <publisher value="HL7 International - Public Health Work Group"/>
+    <publisher value="HL7 International / Public Health"/>
     <contact>
         <telecom>
             <system value="url"/>
-            <value value="http://hl7.org/Special/committees/pher"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
     <description value="Bundle Resource profile for exchanging a cancer report with the Central Cancer Registry. This bundle contains the MessageHeader resource used for routing and the Content Bundle specifying the content."/>

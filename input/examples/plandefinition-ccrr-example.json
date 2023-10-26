@@ -246,7 +246,7 @@
                           "type": "Encounter",
                           "profile": [
                             
-                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/us-ph-encounter"
+                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"
                             
                           ]
                     },

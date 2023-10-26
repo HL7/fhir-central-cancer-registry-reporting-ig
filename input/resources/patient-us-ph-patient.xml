@@ -8,7 +8,13 @@
     <title value="US Public Health Patient"/>
     <status value="active"/>
     <experimental value="false"/>
-    <publisher value="HL7 Public Health Work Group"/>
+    <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
     <description value="This Patient profile represents a US Public Health Patient.&#xA;&#xA; This proile is present in the IG to synchronize with common Patient profile being developed by public health profiles library IG. 
     This profile is being used by the Cancer Patient profile. Implementers of the IG are expected to implement only the Cancer Patient profile. 
     It is based on the **US Core Patient** profile with further restrictions to allow masking of some data elements and the addition of the patient-genderIdentity extension.&#xA;&#xA;For ONC’s USCDI requirements, it adds Must Support constraints to the following:&#xA;&#xA;* contact detail (e.g. a telephone number or an email address)&#xA;* a communication language&#xA;* a race&#xA;* an ethnicity&#xA;* a birth sex"/>
@@ -47,7 +53,7 @@
             <sliceName value="birthsex"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Patient.extension:birthPlace">
+          <element id="Patient.extension:birthPlace">
             <path value="Patient.extension"/>
             <sliceName value="birthPlace"/>
             <min value="0"/>
@@ -66,7 +72,7 @@
             <max value="*"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"/>
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
@@ -83,7 +89,8 @@
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
-        </element>
+        </element> 
+
         <element id="Patient.identifier">
             <path value="Patient.identifier"/>
             <min value="1"/>

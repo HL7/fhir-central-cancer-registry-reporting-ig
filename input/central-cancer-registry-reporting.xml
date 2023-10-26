@@ -2,6 +2,10 @@
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="central-cancer-registry-reporting"/>
+  <extension
+             url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pher"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/ImplementationGuide/central-cancer-registry-reporting"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="1.0.0"/>
@@ -9,12 +13,12 @@
   <title value="Central Cancer Registry Reporting Content IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="HL7 International - Public Health Work Group"/>
+  <publisher value="HL7 International / Public Health"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/pher"/>
+      <value value="http://www.hl7.org/Special/committees/pher"/>
     </telecom>
   </contact>
   <description value="The Central Cancer Registry Reporting Content IG provides healthcare organizations the necessary data exchange mechanisms to report cancer data to public health agencies."/>
@@ -37,12 +41,6 @@
     <version value="3.1.1"/>
   </dependsOn>
   
- <!-- <dependsOn id="bulkIg">
-    <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
-    <packageId value="hl7.fhir.uv.bulkdata"/>
-    <version value="1.0.1"/>
-  </dependsOn> -->
-  
   <dependsOn id="medmorphIg">
     <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
     <packageId value="hl7.fhir.us.medmorph"/>
@@ -51,8 +49,8 @@
   
   <dependsOn id="subscriptionsIg">
     <uri value="http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport"/>
-    <packageId value="hl7.fhir.uv.subscriptions-backport"/>
-    <version value="0.1.0"/>
+    <packageId value="hl7.fhir.uv.subscriptions-backport.r4"/>
+    <version value="1.1.0"/>
   </dependsOn>
   
   <dependsOn id="mcodeIg">
@@ -65,13 +63,7 @@
     <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
     <packageId value="hl7.fhir.us.odh"/>
     <version value="1.1.0"/>
-  </dependsOn>
-  
-<!--   <dependsOn id="vsac">
-    <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
-    <packageId value="us.nlm.vsac"/>
-    <version value="0.3.0"/>
-  </dependsOn> --> 
+  </dependsOn> 
   
   <dependsOn id="smartapplaunch">
     <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
@@ -190,7 +182,7 @@
       <page>
         <nameUrl value="downloads.html"/>
         <title value="Useful Downloads"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="changes.html"/>
@@ -232,9 +224,9 @@
       <code value="shownav"/>
       <value value="true"/>
     </parameter>
-    <parameter>
+ <!--  <parameter>
       <code value="showsource"/>
       <value value="true"/>
-    </parameter>
+    </parameter> -->
   </definition>
 </ImplementationGuide>
