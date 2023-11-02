@@ -18,7 +18,7 @@ From the mCODE IG:
 
 From ODH IG:
 
-[Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhig}}/StructureDefinition-odh-UsualWork.html)
+[Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhIg}}/StructureDefinition-odh-UsualWork.html)
 
 From US Core IG:
 

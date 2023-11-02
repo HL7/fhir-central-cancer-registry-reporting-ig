@@ -96,6 +96,54 @@
    </resource>
    <resource>
       <reference>
+        <reference value="AllergyIntolerance/example"/>
+      </reference>
+      <name value="Allergy Intolerance - Example"/>
+      <description value="An example showing an Allergy Intolerance"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Patient/example"/>
+      </reference>
+      <name value="Patient - Example"/>
+      <description value="An example showing a US Core Patient"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Condition/example"/>
+      </reference>
+      <name value="Condition - Example"/>
+      <description value="An example showing a US Core Condition"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Encounter/example-1"/>
+      </reference>
+      <name value="Encounter - Example"/>
+      <description value="An example showing an US Core Encounter"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="MedicationAdministration/medicationadministration-example"/>
+      </reference>
+      <name value="MedicationAdministration - Example"/>
+      <description value="An example showing a MedicationAdministration"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Practitioner/1"/>
+      </reference>
+      <name value="Practitioner - Example"/>
+      <description value="An example showing a Practitioner"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
         <reference value="Organization/example-pha-org"/>
       </reference>
       <name value="PHA Organization - Example"/>
@@ -120,10 +168,26 @@
    </resource>
    <resource>
       <reference>
-        <reference value="Bundle/content-bundle-example"/>
+        <reference value="Bundle/ccrr-content-bundle-example"/>
       </reference>
       <name value="Central Cancer Registry Reporting Content Bundle - Example"/>
       <description value="An example showing a Central Cancer Registry Reporting Content Bundle"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="MessageHeader/messageheader-example-reportheader"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Message Header - Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Message Header resource"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Composition/ccrr-composition-example"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Composition - Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Composition resource"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>

@@ -32,18 +32,19 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Bundle"/>
-    <baseDefinition value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-reporting-bundle"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Bundle.entry">
             <path value="Bundle.entry"/>
             <slicing>
                 <discriminator>
-                    <type value="profile"/>
-                    <path value="$this.resource"/>
+                    <type value="type"/>
+                    <path value="resource"/>
                 </discriminator>
                 <rules value="open"/>
             </slicing>
+            <min value="2"/>
             <mustSupport value="true"/>
         </element>
         <element id="Bundle.entry:sliceMessageHeader">
@@ -56,8 +57,8 @@
         <element id="Bundle.entry:sliceMessageHeader.resource">
             <path value="Bundle.entry.resource"/>
             <type>
-                <code value="Resource"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-messageheader"/>
+                <code value="MessageHeader"/>
+                <profile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-messageheader"/>
             </type>
         </element>
         <element id="Bundle.entry:contentBundle">
@@ -70,7 +71,7 @@
         <element id="Bundle.entry:contentBundle.resource">
             <path value="Bundle.entry.resource"/>
             <type>
-                <code value="Resource"/>
+                <code value="Bundle"/>
                 <profile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-content-bundle"/>
             </type>
         </element>
