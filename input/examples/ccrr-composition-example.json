@@ -30,8 +30,8 @@
     "display": "Amy Shaw"
   },
   "encounter": {
-    "reference": "Encounter/example-1",
-    "display": "Ambulatory Office Visit"
+    "reference": "Encounter/encounter-cancer-example",
+    "display": "Patient encounter procedure"
   },
   "date": "2023-01-02T22:13:23Z",
   "author": [
@@ -43,26 +43,68 @@
   "title": "Central Cancer Registry Report",
   "section": [
     {
-      "title": "Problems Section",
+      "title": "Primary Cancer Condition Section",
       "code": {
         "coding": [
           {
-            "system": "http://loinc.org",
-            "code": "11450-4",
-            "display": "Problem list - Reported"
+            "system": "http://snomed.info/sct",
+            "code": "363346000",
+            "display": "Malignant neoplastic disease (disorder)"
           }
         ]
       },
       "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Single liveborn, born in hospital</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Primary Cancer Condition Section</p></div>"
       },
       "entry": [
         {
-          "reference": "Condition/example"
+          "reference": "Condition/primary-cancer-condition-breast"
         }
       ]
     },
+    {
+      "title": "Cancer Stage Group section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "21908-9",
+            "display": "Stage group.clinical Cancer"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Cancer Stage Group</p></div>"
+      },
+      "entry": [
+        {
+          "reference": "Observation/cancer-stage-group-example"
+        }
+      ]
+    },	
+	{
+      "title": "Cancer Radio Therapy Course Summary section",
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "1217123003",
+            "display": "Radiotherapy course of treatment"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Cancer Radio Therapy Course Summary</p></div>"
+      },
+      "entry": [
+        {
+          "reference": "Procedure/radiotherapy-example"
+        }
+      ]
+    },	
     {
       "title": "Allergies Section",
       "code": {
@@ -97,11 +139,11 @@
       },
       "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Taking Lantus </div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n Medications section: cancer-related medication </div>"
       },
       "entry": [
         {
-          "reference": "MedicationAdministration/medicationadministration-example"
+          "reference": "MedicationAdministration/cancer-related-medication-administration-example"
         }
       ]
     }

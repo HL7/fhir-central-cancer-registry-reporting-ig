@@ -58,8 +58,8 @@
      </element>
     <element id="Composition.type">
       <path value="Composition.type" />
-      <short value="Central Cancelr Registry Report" />
-      <definition value="The type of this Composition is a Central Cancelr Registry Report" />
+      <short value="Central Cancer Registry Report" />
+      <definition value="The type of this Composition is a Central Cancer Registry Report" />
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org" />
@@ -138,7 +138,7 @@
       <sliceName value="slicePrimaryCancerCondition" />
       <short value="Primary Cancer Condition Section" />
       <definition value="This section records the Primary Cancer Condition for the patient)." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -171,7 +171,7 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition" />
       </type>
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
     </element>
     <element id="Composition.section:sliceSecondaryCancerCondition">

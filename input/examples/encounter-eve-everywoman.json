@@ -1,6 +1,6 @@
 {
   "resourceType": "Encounter",
-  "id": "encounter-eve-everywoman-external-encounter",
+  "id": "encounter-cancer-example",
   "meta": {
     "versionId": "4",
     "lastUpdated": "2021-07-19T03:02:05.801+00:00",
@@ -37,7 +37,33 @@
     }
   ],
   "subject": {
-    "reference": "Patient/patient-eve-everywoman",
-    "display": "Eve Everywoman"
-  }
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "ATND",
+              "display": "attender"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/1",
+        "display": "Joseph Nichols"
+      }
+    }
+  ],
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/primary-cancer-condition-breast"
+      }
+    }
+  ]
 }

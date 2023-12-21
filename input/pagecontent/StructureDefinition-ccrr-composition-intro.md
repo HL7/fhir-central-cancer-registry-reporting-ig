@@ -8,7 +8,6 @@ The content is made up data elements from the following profiles from the other 
 
 From the mCODE IG:
 
-* [mCODE Primary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-primary-cancer-condition.html)
 * [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
 * [mCODE Cancer Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-stage-group.html)
 * [mCODE TNM Distant Metastases Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html)
