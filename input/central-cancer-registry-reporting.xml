@@ -259,7 +259,7 @@
       <reference>
         <reference value="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
       </reference>
-      <name value="mCODE Radiotherapy Volume - Example"/>
+      <name value="mCODE Radiotherapy Lymph Nodes Treatment Volume - Example"/>
       <description value="An example showing an mCODE Radiotherapy Volume"/>
       <exampleBoolean value="true"/>
    </resource>    
