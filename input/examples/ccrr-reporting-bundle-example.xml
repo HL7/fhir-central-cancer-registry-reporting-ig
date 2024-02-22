@@ -10,7 +10,7 @@
 	<type value="message"/>
 	<timestamp value="2020-11-20T11:15:33-10:00"/>
 	<entry>
-		<fullUrl value="MessageHeader/messageheader-example-reportheader"/>
+		<fullUrl value="http://hl7.org/fhir/us/central-cancer-registry-reporting/MessageHeader/messageheader-example-reportheader"/>
 		<resource>
 			<MessageHeader>
 				<id value="messageheader-example-reportheader"/>
@@ -77,7 +77,7 @@
 		</resource>
 	</entry>
 	<entry>
-		<fullUrl value="Bundle/content-bundle-example"/>
+		<fullUrl value="http://hl7.org/fhir/us/central-cancer-registry-reporting/Bundle/content-bundle-example"/>
 		<resource>
 			<Bundle
 				xmlns="http://hl7.org/fhir">
@@ -91,7 +91,7 @@
 				<type value="collection"/>
 				<timestamp value="2020-11-20T11:15:33-10:00"/>
 				<entry>
-					<fullUrl value="Composition/ccrr-composition-content-example"/>
+					<fullUrl value="http://hl7.org/fhir/us/central-cancer-registry-reporting/Composition/ccrr-composition-content-example"/>
 					<resource>
 						<Composition>
 							<id value="ccrr-composition-content-example"/>

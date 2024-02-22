@@ -12,7 +12,7 @@
   "timestamp": "2020-11-20T11:15:33-10:00",
   "entry": [
     {
-      "fullUrl": "Composition/ccrr-composition-content-example",
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Composition/ccrr-composition-content-example",
       "resource": {
         "resourceType": "Composition",
         "id": "ccrr-composition-content-example",
