@@ -149,11 +149,9 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * EHRs **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to notify the HDEA.
 
-* * EHRs **MAY** support the creation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
+* * EHRs **MAY** support the creation, deletion, updation of Subscriptions for the [encounter-end Subscription Topic]({{site.data.fhir.ver.medmorphIg}}/StructureDefinition-medmorph-encounter-end-subscription.html).
 
-* EHRs **SHOULD** support Notification Bundles with [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) as outlined in the Backport Subscriptions IG. 
-
-* For the Central Cancer Registry Reporting Ig, EHRs **MAY** include the Encounter resource which was closed as part of the Notification Bundle.
+* EHRs **SHOULD** support Notification Bundles with either [``full resource payload``]({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#full-resource) or [''id-only payload'']({{site.data.fhir.ver.subscriptionsIg}}/payloads.html#id-only) as outlined in the Backport Subscriptions IG.  
 
 * EHRs **MAY** support operations and APIs for Subscription, Notification Bundle, and Subscription Status resources as outlined in the [EHR Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html).
 

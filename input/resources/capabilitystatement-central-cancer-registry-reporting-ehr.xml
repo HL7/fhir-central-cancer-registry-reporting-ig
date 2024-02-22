@@ -41,6 +41,14 @@
       <a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the Central Cancer Registry Reporting IG. 
       </p>
       <br/>
+      
+      <h3>mCode Support</h3>
+
+      <p>
+      The EHR <b>SHALL</b> implement the 
+      <a href="spec.html#mcode-fhir-ig-usage">mCode profiles</a> outlined to support the Central Cancer Registry Reporting IG. 
+      </p>
+      <br/>
 
       <h3>Resource summary</h3>
       <div class="table-wrapper">

@@ -11,7 +11,7 @@
   <version value="1.0.0"/>
   <name value="CentralCancerRegistryReporting"/>
   <title value="Central Cancer Registry Reporting Content IG"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <publisher value="HL7 International / Public Health"/>
   <contact>
@@ -78,22 +78,7 @@
   <description value="The list of mCode Profiles used by this IG are identified in the detailed specification page."/>
   </grouping>
   
-  <!--<resource>
-      <reference>
-        <reference value="Patient/patient-eve-everywoman"/>
-      </reference>
-      <name value="Cancer Patient - Example"/>
-      <description value="An example showing a Patient"/>
-      <exampleBoolean value="true"/>
-   </resource>-->
-   <!--<resource>
-      <reference>
-        <reference value="Encounter/encounter-eve-everywoman-external-encounter"/>
-      </reference>
-      <name value="Encounter - Example"/>
-      <description value="An example showing an Encounter"/>
-      <exampleBoolean value="true"/>
-   </resource>-->
+
    <resource>
       <reference>
         <reference value="AllergyIntolerance/example"/>
@@ -110,14 +95,6 @@
       <description value="An example showing a Cancer Patient"/>
       <exampleBoolean value="true"/>
    </resource>
- <!--    <resource>
-      <reference>
-        <reference value="Condition/example"/>
-      </reference>
-      <name value="US Core Condition - Example"/>
-      <description value="An example showing a US Core Condition"/>
-      <exampleBoolean value="true"/>
-   </resource> -->
    <resource>
       <reference>
         <reference value="Condition/primary-cancer-condition-breast"/>
@@ -330,6 +307,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="credits.html"/>
+        <title value="Credits"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
         <generation value="html"/>
@@ -369,9 +351,5 @@
       <code value="shownav"/>
       <value value="true"/>
     </parameter>
- <!--  <parameter>
-      <code value="showsource"/>
-      <value value="true"/>
-    </parameter> -->
   </definition>
 </ImplementationGuide>
