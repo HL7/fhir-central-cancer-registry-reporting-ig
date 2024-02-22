@@ -38,7 +38,7 @@
   <dependsOn id="uscoreR4">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="3.1.1"/>
+    <version value="5.0.1"/>
   </dependsOn>
   
   <dependsOn id="medmorphIg">
@@ -56,7 +56,7 @@
   <dependsOn id="mcodeIg">
     <uri value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode"/>
     <packageId value="hl7.fhir.us.mcode"/>
-    <version value="1.16.0"/>
+    <version value="3.0.0"/>
   </dependsOn>
   
   <dependsOn id="odhIg">
@@ -110,14 +110,14 @@
       <description value="An example showing a Cancer Patient"/>
       <exampleBoolean value="true"/>
    </resource>
-   <resource>
+ <!--    <resource>
       <reference>
         <reference value="Condition/example"/>
       </reference>
       <name value="US Core Condition - Example"/>
       <description value="An example showing a US Core Condition"/>
       <exampleBoolean value="true"/>
-   </resource>
+   </resource> -->
    <resource>
       <reference>
         <reference value="Condition/primary-cancer-condition-breast"/>

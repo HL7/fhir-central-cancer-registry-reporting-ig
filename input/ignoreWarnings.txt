@@ -3,10 +3,49 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
-# These errors related to references to the Bulk Data Access IG give broken link errors, however they are false positives and the links are valid.
-# Upon discussion with Grahame, it is understood that these errors cannot be resolved in the IG publisher for now.
+# Cancer Specific Value Sets
+The value set include has too many codes to validate (4,919)
+The value set include has too many codes to validate (1,492)
+The value set expansion is incomplete
 
-The link 'http://hl7.org/fhir/uv/bulkdata/STU1/authorization/index.html#advertising-server-conformance-with-smart-backend-services' for "Bulk Data Access IG Authorization Section" cannot be resolved
-The link 'http://hl7.org/fhir/uv/bulkdata/STU1/authorization/index.html' for "Bulk Data Access IG Authorization Section" cannot be resolved
-The link 'http://hl7.org/fhir/uv/bulkdata/STU1/authorization/index.html#registering-a-smart-backend-service-communicating-public-keys' for "Bulk Data Access IG Authorization Section" cannot be resolved
-The link 'http://hl7.org/fhir/uv/bulkdata/STU1/authorization/index.html#obtaining-an-access-token' for "Bulk Data Access IG Authorization Section" cannot be resolved
+# MedMorph value sets
+Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions|1.0.0
+Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents|1.0.0
+Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types|1.0.0
+Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types|1.0.0
+
+# mCode Value sets
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-proton-beam-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-permanent-seeds-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-radiopharmaceutical-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-neutron-beam-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-electron-beam-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-carbon-ion-beam-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-pulsed-dose-rate-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs|3.0.0
+Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs|3.0.0
+
+# FHIR value sets
+A definition for CodeSystem 'http://cancerstaging.org' could not be found, so the code cannot be validated
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/plan-definition-type|0.1.0
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+
+# Bundle references
+Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
+Can't find 'Patient/example' in the bundle (Bundle.entry[1].resource.entry[0].resource.subject)
+Can't find 'Encounter/encounter-cancer-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.encounter)
+Can't find 'Practitioner/1' in the bundle (Bundle.entry[1].resource.entry[0].resource.author[0])
+Can't find 'Condition/primary-cancer-condition-breast' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[0].entry[0])
+Can't find 'Observation/cancer-stage-group-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[1].entry[0])
+Can't find 'Procedure/radiotherapy-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[2].entry[0])
+Can't find 'AllergyIntolerance/example' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[3].entry[0])
+Can't find 'MedicationAdministration/cancer-related-medication-administration-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.section[4].entry[0])

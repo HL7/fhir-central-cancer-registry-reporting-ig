@@ -12,14 +12,6 @@
           "status": "extensions",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CCRR PlanDefinition Example</b></p></div>"
         },
-        "extension" : [
-		    {
-		      "url" : "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-receiver-endpoint",
-		      "valueReference" : {
-		        "reference" : "Endpoint/example-ph-endpoint"
-		      }
-		    }
-		  ],
         "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/plandefinition-central-cancer-registry-reporting-example",
         "version": "1.0",
         "name": "CentralCancerRegistryReportingExample",

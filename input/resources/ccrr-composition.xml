@@ -257,7 +257,7 @@
       <mustSupport value="true" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group" />
       </type>
       <min value="0" />
       <max value="1" />

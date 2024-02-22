@@ -32,9 +32,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "system": "http://cancerstaging.org",
-        "code": "cT3",
-        "display": "T3"
+        "system": "http://snomed.info/sct",
+        "code": "1228938002",
+        "display": "American Joint Committee on Cancer cT3 (qualifier value)"
       }
     ]
   },

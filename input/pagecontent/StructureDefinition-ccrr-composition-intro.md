@@ -9,7 +9,7 @@ The content is made up data elements from the following profiles from the other 
 From the mCODE IG:
 
 * [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
-* [mCODE Cancer Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-stage-group.html)
+* [mCODE Cancer Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-stage-group.html)
 * [mCODE TNM Distant Metastases Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html)
 * [mCODE TNM Primary Tumor Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-primary-tumor-category.html)
 * [mCODE TNM Regional Nodes Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-regional-nodes-category.html)
@@ -23,7 +23,7 @@ From ODH IG:
 
 From US Core IG:
 
-[US Core profiles]({{site.data.fhir.ver.uscoreR4}}/profiles.html)
+[US Core profiles]({{site.data.fhir.ver.uscoreR4}}/profiles-and-extensions.html)
 
 #### Guidance on populating the data for each section:
 

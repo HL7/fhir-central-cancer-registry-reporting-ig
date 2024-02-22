@@ -12,7 +12,7 @@
   "timestamp": "2020-11-20T11:15:33-10:00",
   "entry": [
     {
-      "fullUrl": "PlanDefinition/plandefinition-central-cancer-registry-reporting-example",
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/PlanDefinition/plandefinition-central-cancer-registry-reporting-example",
       "resource": {
         "resourceType": "PlanDefinition",
         "id": "plandefinition-central-cancer-registry-reporting-example",

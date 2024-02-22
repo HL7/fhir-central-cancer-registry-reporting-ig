@@ -3,7 +3,7 @@
   "id": "example",
   "meta": {
     "profile": [
-      "http:​/​/hl7​.org​/fhir​/us​/central-cancer-registry-reporting​/StructureDefinition​/cancer-patient"
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-patient"
     ]
   },
   "text": {
@@ -96,24 +96,20 @@
     {
       "extension" : [
         {
-          "url" : "tribalAffiliation",
-          "valueCodeableConcept" : {
-            "coding" : [
-              {
+          "url" : "TribeName",
+          "valueCoding" :
+          		{
                 "system" : "http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS",
                 "code" : "187",
                 "display" : "Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada"
-              }
-            ],
-            "text" : "Shoshone"
-          }
+                }
         },
         {
-          "url" : "isEnrolled",
+          "url" : "EnrolledTribeMember",
           "valueBoolean" : false
         }
       ],
-      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation"
+      "url" : "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/us-ph-tribal-affiliation-extension"
     },
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",

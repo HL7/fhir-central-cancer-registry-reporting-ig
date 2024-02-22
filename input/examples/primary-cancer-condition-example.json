@@ -21,9 +21,8 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "version": "http://snomed.info/sct/900000000000207008",
-            "code": "399919001",
-            "display": "Carcinoma in situ - category (morphologic abnormality)"
+            "code": "127569003",
+            "display": "In situ neoplasm (morphologic abnormality)"
           }
         ]
       }
@@ -61,7 +60,6 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/900000000000207008",
         "code": "363346000",
         "display": "Malignant neoplastic disease (disorder)"
       }
@@ -71,7 +69,7 @@
     {
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-location-qualifier",
+          "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -86,7 +84,6 @@
       "coding": [
         {
           "system": "http://snomed.info/sct",
-          "version": "http://snomed.info/sct/900000000000207008",
           "code": "80248007",
           "display": "Left breast structure (body structure)"
         }
@@ -106,7 +103,6 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "version": "http://snomed.info/sct/900000000000207008",
             "code": "1222806003",
             "display": "American Joint Committee on Cancer stage IIIC (qualifier value)"
           }

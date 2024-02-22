@@ -41,26 +41,22 @@
             <definition value="Sets expectations for supported capabilities for Primary Cancer Condition in Central Cancer Registry Reporting use cases."/>
             <mustSupport value="true"/>
         </element>
-        <element id="Condition.extension:condition-assertedDate">
+        <element id="Condition.extension">
+      		<path value="Condition.extension"/>
+      		<mustSupport value="true"/>
+    	</element>
+        <element id="Condition.extension:assertedDate">
             <path value="Condition.extension"/>
-            <sliceName value="condition-assertedDate"/>
+            <sliceName value="assertedDate"/>
             <min value="1"/>
             <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate"/>
-            </type>
             <mustSupport value="true"/>
         </element>
-        <element id="Condition.extension:mcode-histology-morphology-behavior">
+        <element id="Condition.extension:histologyMorphologyBehavior">
             <path value="Condition.extension"/>
-            <sliceName value="mcode-histology-morphology-behavior"/>
+            <sliceName value="histologyMorphologyBehavior"/>
             <min value="1"/>
             <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior"/>
-            </type>
             <mustSupport value="true"/>
         </element>
         <element id="Condition.extension:mcode-cancer-disease-type-evidence-type">
@@ -70,7 +66,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -103,16 +99,12 @@
             </type>
             <mustSupport value="true"/>
         </element>
-        <element id="Condition.bodySite.extension:mcode-location-qualifier">
+   <!--      <element id="Condition.bodySite.extension:locationQualifier">
             <path value="Condition.bodySite.extension"/>
-            <sliceName value="mcode-location-qualifier"/>
+            <sliceName value="locationQualifier"/>
             <min value="0"/>
             <max value="1"/>
-            <type>
-                <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-location-qualifier"/>
-            </type>
             <mustSupport value="true"/>
-        </element>
+        </element> -->
     </differential>
 </StructureDefinition>

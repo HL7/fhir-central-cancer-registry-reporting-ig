@@ -32,9 +32,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "system": "http://cancerstaging.org",
-        "code": "cM0",
-        "display": "M0"
+        "system": "http://snomed.info/sct",
+        "code": "1229901006",
+        "display": "American Joint Committee on Cancer cM0 (qualifier value)"
       }
     ]
   },
