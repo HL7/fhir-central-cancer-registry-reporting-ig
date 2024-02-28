@@ -89,7 +89,7 @@
         <element id="PlanDefinition.action.input">
             <path value="PlanDefinition.action.input"/>
         </element>
-        <element id="PlanDefinition.action.input.extension">
+ <!--         <element id="PlanDefinition.action.input.extension">
             <path value="PlanDefinition.action.input.extension"/>
             <slicing>
                 <discriminator>
@@ -117,7 +117,7 @@
             <max value="1"/>
             <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"/>
             <mustSupport value="true"/>
-        </element>
+        </element> -->
         
         <element id="PlanDefinition.action:encounterClose">
             <path value="PlanDefinition.action"/>
