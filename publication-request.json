@@ -5,7 +5,7 @@
   "mode" : "milestone",
   "milestone" : "true",
   "status" : "trial-use",
-  "sequence" : "STU1 Release 1",
+  "sequence" : "STU1",
   "desc" : "This release is the first release of the Central Cancer Registry Reporting Content IG to deliver Cancer data to central cancer registries.",
   "changes" : "changes.html"
 }
