@@ -1,17 +1,17 @@
 == Suppressed Messages ==
 
-# Cancer Specific Value Sets that tooling is unable to expand because it is too large, it is a limitation of the publisher.
+# Cancer Specific Value Sets that tooling is unable to expand because they are too large, it is a limitation of the publisher.
 The value set include has too many codes to validate (4,919), so each individual code has not been checked
 The value set include has too many codes to validate (1,492), so each individual code has not been checked
 The value set expansion is too large, and only a subset has been displayed
 
-# Cannot change these because these value sets are part of the MedMorph IG and are reused by this IG.
+# Cannot change these because these value sets exist in the MedMorph IG and are reused by this IG.
 Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types|1.0.0
 
-# Cannot change these because these value sets are part of the mCode IG and are reused by this IG 
+# Cannot change these because these value sets exist in the mCODE IG and are reused by this IG. 
 Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs|3.0.0
 Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs|3.0.0
 Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs|3.0.0
@@ -32,11 +32,11 @@ Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyth
 Reference to draft ValueSet http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs|3.0.0
 A definition for CodeSystem 'http://cancerstaging.org' could not be found, so the code cannot be validated
 
-# Cannot change these because these value sets are part of the base FHIR THO and are reused by this IG
+# Cannot change these because these value sets exist in the base FHIR THO and are reused by this IG.
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/plan-definition-type|0.1.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
 
-# These resources do exist in the IG but are not included in the Bundle directly, they are referenced in the bundle due to which these information messages are raised by the publisher.
+# These resources exist in the IG but are not included in the Bundle directly, they are referenced in the bundle due to which these information messages are raised by the publisher.
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
 Can't find 'Patient/example' in the bundle (Bundle.entry[1].resource.entry[0].resource.subject)
 Can't find 'Encounter/encounter-cancer-example' in the bundle (Bundle.entry[1].resource.entry[0].resource.encounter)
