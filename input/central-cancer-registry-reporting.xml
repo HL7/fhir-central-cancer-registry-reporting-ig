@@ -319,6 +319,10 @@
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>
+    	<code value="auto-oid-root"/>
+      	<value value="2.16.840.1.113883.4.642.40.40"/>
+    </parameter>
+    <parameter>
       <code value="copyrightyear"/>
       <value value="2021+"/>
     </parameter>
