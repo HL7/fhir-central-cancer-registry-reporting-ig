@@ -243,3 +243,4 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * The TTP **SHALL** implement the Trusted Third Party requirements as outlined in the [MedMorph RA TTP requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-trusted-third-party.html).
 
+
