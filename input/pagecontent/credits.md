@@ -18,7 +18,6 @@
 
 * Maria Michaels
 
-
 ##### Project management and coordination:
 
 * Mike Flanigan (Carradora Health Inc)
