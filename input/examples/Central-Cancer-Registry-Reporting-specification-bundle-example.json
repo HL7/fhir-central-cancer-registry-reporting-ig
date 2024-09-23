@@ -298,36 +298,127 @@
               "code" : "create-report"
             }]
           }],
-          "input" : [{
-            "id" : "patient",
-            "type" : "Patient",
-            "profile" : ["http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-patient"]
-          },
+          "input" : [{ 
+				"id": "patient",
+         		 "extension": [ {
+		            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+		            "valueString": "Patient/{{context.patientId}}"
+		          } ],
+          		"type": "Patient"
+          }, {
+          		"id": "encounter",
+		          "extension": [ {
+		            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+		            "valueString": "Encounter/{{context.encounterId}}"
+		          } ],
+          		"type": "Encounter"
+        	},
+        	{
+          		"id": "conditiondata",
+		          "extension": [ {
+		            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+		            "valueString": "Condition?patient=Patient/{{context.patientId}}&category=problem-list-item"
+		          } ],
+		          "type": "Condition",
+		          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" ]
+		   }, {
+	          "id": "encounterDiagnosesData",
+	          "extension": [ {
+	            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+	            "valueString": "Condition?patient=Patient/{{context.patientId}}&category=encounter-diagnosis"
+	          } ],
+	          "type": "Condition",
+	          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" ]
+	        },
+	        {
+	          "id": "mrdata",
+	          "extension": [ {
+	            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+	            "valueString": "MedicationRequest?patient=Patient/{{context.patientId}}&intent=order"
+	          } ],
+	          "type": "MedicationRequest",
+	          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" ]
+        	}, {
+		          "id": "medAdmdata",
+		          "extension": [ {
+		            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+		            "valueString": "MedicationAdministration?patient=Patient/{{context.patientId}}"
+		          } ],
+		          "type": "MedicationAdministration"
+        	}, {
+	          "id": "medStatementdata",
+	          "extension": [ {
+	            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+	            "valueString": "MedicationStatement?patient=Patient/{{context.patientId}}"
+	          } ],
+	          "type": "MedicationStatement"
+        	},
           {
-            "id" : "condition",
-            "type" : "Condition",
-            "profile" : ["http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"]
-          },
-          {
-            "id" : "encounter",
-            "type" : "Encounter",
-            "profile" : ["http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"]
-          },
-          {
-            "id" : "mr",
-            "type" : "MedicationRequest",
-            "profile" : ["http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"]
-          },
-          {
-            "id" : "vitals",
-            "type" : "Observation",
-            "profile" : ["http://hl7.org/fhir/StructureDefinition/vitalsigns"]
-          },
-          {
-            "id" : "labs",
-            "type" : "Observation",
-            "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"]
-          }],
+          "id": "procdata",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "Procedure?patient=Patient/{{context.patientId}}"
+          } ],
+          "type": "Procedure",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure" ]
+        }, {
+          "id": "labResultdata",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "Observation?patient=Patient/{{context.patientId}}"
+          } ],
+          "type": "Observation",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" ]
+        }, {
+          "id": "labOrderdata",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-relateddata-extension",
+            "valueString": "labOrders"
+          } ],
+          "type": "ServiceRequest",
+          "profile": [ "http://hl7.org/fhir/StructureDefinition/ServiceRequest" ]
+        }, {
+          "id": "diagnosticResultdata",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "DiagnosticReport?patient=Patient/{{context.patientId}}"
+          } ],
+          "type": "DiagnosticReport",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab" ]
+        },
+        {
+          "id": "docRefData",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "DocumentReference?patient=Patient/{{context.patientId}}"
+          } ],
+          "type": "DocumentReference",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference" ]
+        },
+        {
+          "id": "odhData-loinc",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "Observation?patient=Patient/{{context.patientId}}&code=http://loinc.org|11295-3,11341-5,21843-8,74165-2"
+          } ],
+          "type": "Observation",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history" ]
+        }, {
+          "id": "odhData-snomed",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "Observation?patient=Patient/{{context.patientId}}&code=http://snomed.info/sct|224362002,364703007"
+          } ],
+          "type": "Observation",
+          "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history" ]
+        },  {
+          "id": "vitals-data",
+          "extension": [ {
+            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
+            "valueString": "Observation?patient=Patient/{{context.patientId}}&category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs&date=ge{{context.encounterStartDate}}"
+          } ],
+          "type": "Observation"
+        }],
           "output" : [{
             "id" : "cancer-report",
             "type" : "Bundle",
