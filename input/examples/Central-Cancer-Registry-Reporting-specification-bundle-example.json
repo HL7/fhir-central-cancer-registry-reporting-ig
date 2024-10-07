@@ -298,7 +298,8 @@
               "code" : "create-report"
             }]
           }],
-          "input" : [{ 
+          "input" : [
+			{ 
 				"id": "patient",
          		 "extension": [ {
 		            "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-fhirquerypattern-extension",
@@ -441,11 +442,15 @@
           }],
           "input" : [{
             "id" : "created-cancer-report",
+	    "extension": [ {
+            	"url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-relateddata-extension",
+            	"valueString": "cancer-report"
+             } ],
             "type" : "Bundle",
             "profile" : ["http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle"]
           }],
           "output" : [{
-            "id" : "validated-cancer-report",
+            "id" : "valid-cancer-report",
             "type" : "Bundle",
             "profile" : ["http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle"]
           }],
@@ -465,7 +470,11 @@
             }]
           }],
           "input" : [{
-            "id" : "val-cancer-report",
+            "id" : "validated-cancer-report",
+	    "extension": [ {
+                "url": "http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-relateddata-extension",
+                "valueString": "valid-cancer-report"
+             } ],
             "type" : "Bundle",
             "profile" : ["http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle"]
           }]
