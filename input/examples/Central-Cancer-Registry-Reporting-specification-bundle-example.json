@@ -47,7 +47,7 @@
       ]
     }
   ],
-  "description" : "The valueset contains SNOMED-CT and ICD-10-CM codes for Cancer Core Reportability determination. These are just sample codes and the actual value set will be    published by the Central Cancer Registry.",
+  "description" : "The valueset contains SNOMED-CT and ICD-10-CM codes for Central Cancer Registry Reportability determination. These are just sample codes and the actual value set will be    published by the Central Cancer Registry.",
   "jurisdiction" : [
     {
       "coding" : [
