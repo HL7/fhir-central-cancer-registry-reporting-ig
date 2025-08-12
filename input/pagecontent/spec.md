@@ -1,4 +1,4 @@
-This section defines the specific requirements for systems wishing to conform to actors specified in this MedMorph Central Cancer Registry Reporting Content IG.  The specification focuses on using the Health Data Exchange App (HDEA), MedMorph's backend services app, to report cancer data to central cancer registries.
+This section defines the specific requirements for systems wishing to conform to actors specified in this Central Cancer Registry Reporting Content IG.  The specification focuses on using the eCR Now App (or a vendor developed solutaion) to report cancer data to central cancer registries.
 
 ### Context
 
@@ -32,14 +32,9 @@ Actors and Systems asserting conformance to this implementation guide have to im
 
 
 #### Profiles and Other IGs Usage
-This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of MedMorph Central Cancer Registry Reporting Content IG workflows. The implementation guide is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
+This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of Central Cancer Registry Reporting Content IG workflows. The implementation guide is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
 
 The full set of profiles defined in this implementation guide can be found by following the links on the [FHIR Artifacts](artifacts.html) page.
-
-
-##### MedMorph Reference Architecture (RA) IG Usage
-
-This IG leverages the [MedMorph RA IG]({{site.data.fhir.ver.medmorphIg}}/index.html) defined by HL7 Public Health WG as the reference architecture for automating and implementing the central cancer registry reporting use case.
 
 ##### US Core Usage
 
@@ -48,7 +43,7 @@ This IG leverages the [US Core]({{site.data.fhir.ver.uscoreR4}}) set of profiles
 
 ##### US Public Health (PH) library profiles Usage
 
-This IG leverages the [US PH Library Profiles](https://build.fhir.org/ig/HL7/fhir-us-ph-common-library-ig/index.html) as a reference to define the following profile(s) in this IG:
+This IG leverages the [US PH Library Profiles]({{site.data.fhir.ver.usphplIG}}) as a reference to define the following profile(s) in this IG:
 
 	* USPublicHealthEncounter
 	* USPublicHealthPatient
@@ -71,23 +66,20 @@ This IG leverages the [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html)
 	
 Implementers **SHOULD** use the [mCode Disease characterization guidance]({{site.data.fhir.ver.mcodeIg}}/group-disease.html) and [mCode Treatment guidance]({{site.data.fhir.ver.mcodeIg}}/group-treatment.html) when using the above profiles.
 
-##### Cancer Pathology IG Usage in the future
+##### Cancer Pathology Data Sharing IG Usage 
 
-The Cancer Pathology Data Sharing IG is currently under development. Once published, profiles of the following resources from the Cancer Pathology Data Sharing IG will be referenced in this IG.
+This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIG}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and include them in the Central Cancer Registry Content Bundle.
 
-* DiagnosticReport
-* Specimen
-* RelatedPerson: Next-of-Kin
-* PractitionerRole
-
-Inclusion of the above profiles will allow the extraction of Cancer Pathology Reports from the EHR and include them in the Central Cancer Registry Content Bundle in the future.
+* [US Pathology Diagnostic Report Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-diagnostic-report.html)
+* [US Pathology Specimen Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-specimen.html)
+* [US Pathology Related Practitioner Roles Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-related-practitioner-role.html)
 
 
 ##### Occupational Data for Health (ODH) IG Usage 
 
 This IG leverages the [ODH FHIR IG]({{site.data.fhir.ver.odhIg}}/index.html) for exchanging occupational data for health which includes the following profile
 
-	* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhig}}/StructureDefinition-odh-UsualWork.html)
+* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhig}}/StructureDefinition/odh-UsualWork.html)
 
 ##### Subscriptions Backport IG Usage
 

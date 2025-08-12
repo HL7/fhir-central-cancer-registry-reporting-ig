@@ -9,7 +9,7 @@
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-composition" />
   <version value="1.0.0" />
   <name value="CcrrComposition" />
-  <title value="Central Cancer Registry Report Composition" />
+  <title value="Central Cancer Registry Reporting Composition" />
   <status value="active" />
   <experimental value="false" />
   <publisher value="HL7 International / Public Health"/>
@@ -39,7 +39,7 @@
       <path value="Composition" />
       <short value="Central Cancer Registry Composition Profile" />
       <definition
-        value="The Central Cancelr Registry Report Composition profile establishes the core elements, extensions, vocabularies and value sets for representing heath care survey report. " />
+        value="The Central Cancer Registry Report Composition profile establishes the core elements, extensions, vocabularies and value sets for representing heath care survey report. " />
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
@@ -75,7 +75,8 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0" />
+		<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -87,7 +88,8 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0" />
+		<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-encounter" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -100,13 +102,14 @@
     <element id="Composition.author">
             <path value="Composition.author"/>
             <short value="The author(s) of the document"/>
-            <definition value="It is possible to have multiple authors - especially in the case where the default author is the organization. Author information can contain the HDEA/BSA as a Device Author. "/>
+            <definition value="It is possible to have multiple authors - especially in the case where the default author is the organization. "/>
             <max value="*"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|6.1.0"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"/>
+                <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
+				<targetProfile value="http://hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-related-practitioner-role"/>
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
@@ -345,7 +348,7 @@
       <mustSupport value="true" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0" />
       </type>
     </element>  
     <element id="Composition.section:sliceAllergiesSection">
@@ -387,7 +390,7 @@
       <mustSupport value="true" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0" />
       </type>
     </element> 
     <element id="Composition.section:sliceMedicationsAdministeredSection">
@@ -452,7 +455,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -530,7 +533,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -631,7 +634,7 @@
       <short value="Lab Result Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -642,7 +645,7 @@
       <short value="Diagnostic Result Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -699,7 +702,7 @@
       <short value="Document Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -710,7 +713,8 @@
       <short value="Diagnostic Report Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|6.1.0" />
+		<targetProfile value="http://hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-diagnostic-report" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -778,7 +782,7 @@
       <short value="Medication Reference Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -789,7 +793,7 @@
       <short value="Procedure Order Entries"/>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -800,7 +804,7 @@
       <short value="CarePlan Entries"/>     
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|6.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -843,7 +847,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -887,7 +891,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs|6.1.0" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -930,7 +934,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|6.1.0" />
       </type>
       <min value="0" />
       <max value="1" />

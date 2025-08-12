@@ -6,9 +6,15 @@
              url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pher"/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+	  <valueCode value="trial-use"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+	  <valueInteger value="2"/>
+  </extension>
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/ImplementationGuide/central-cancer-registry-reporting"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="1.0.0"/>
+  <version value="2.0.0-ballot"/>
   <name value="CentralCancerRegistryReporting"/>
   <title value="Central Cancer Registry Reporting Content IG"/>
   <status value="active"/>
@@ -38,12 +44,12 @@
   <dependsOn id="uscoreR4">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="5.0.1"/>
+    <version value="6.1.0"/>
   </dependsOn>
   
-  <dependsOn id="medmorphIg">
-    <uri value="http://hl7.org/fhir/us/medmorph/ImplementationGuide/hl7.fhir.us.medmorph"/>
-    <packageId value="hl7.fhir.us.medmorph"/>
+  <dependsOn id="usphplIG">
+    <uri value="http://hl7.org/fhir/us/ph-library/ImplementationGuide/hl7.fhir.us.ph-library"/>
+    <packageId value="hl7.fhir.us.ph-library"/>
     <version value="1.0.0"/>
   </dependsOn>
   
@@ -56,19 +62,25 @@
   <dependsOn id="mcodeIg">
     <uri value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode"/>
     <packageId value="hl7.fhir.us.mcode"/>
-    <version value="3.0.0"/>
+    <version value="4.0.0"/>
+  </dependsOn>
+
+  <dependsOn id="cancerpathIg">
+    <uri value="http://hl7.org/fhir/us/cancer-reporting/ImplementationGuide/hl7.fhir.us.cancer-reporting"/>
+    <packageId value="hl7.fhir.us.cancer-reporting"/>
+    <version value="1.0.1"/>
   </dependsOn>
   
   <dependsOn id="odhIg">
     <uri value="http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh"/>
     <packageId value="hl7.fhir.us.odh"/>
-    <version value="1.1.0"/>
+    <version value="1.3.0"/>
   </dependsOn> 
   
   <dependsOn id="smartapplaunch">
     <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
     <packageId value="hl7.fhir.uv.smart-app-launch"/>
-    <version value="2.0.0"/>
+    <version value="2.2.0"/>
   </dependsOn>
  
   <definition>
@@ -91,7 +103,7 @@
       <reference>
         <reference value="Patient/example"/>
       </reference>
-      <name value="Cancer Patient - Example"/>
+      <name value="Central Cancer Registry Reporting Patient - Example"/>
       <description value="An example showing a Cancer Patient"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -147,7 +159,7 @@
       <reference>
         <reference value="Encounter/encounter-cancer-example"/>
       </reference>
-      <name value="Cancer Encounter - Example"/>
+      <name value="Central Cancer Registry Reporting Encounter - Example"/>
       <description value="An example showing a Cancer Encounter"/>
       <exampleBoolean value="true"/> 
    </resource>	  
@@ -185,10 +197,10 @@
    </resource>
    <resource>
       <reference>
-        <reference value="Organization/example-healthcare-org"/>
+        <reference value="Organization/example-cancer-org"/>
       </reference>
-      <name value="Healthcare Organization - Example"/>
-      <description value="An example showing a Health Care Organization"/>
+      <name value="Central Cancer Registry Reporting Organization - Example"/>
+      <description value="An example showing a Cancer Organization"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
@@ -313,8 +325,8 @@
       </page>
       <page>
         <nameUrl value="changes.html"/>
-        <title value="IG Change History"/>
-        <generation value="html"/>
+        <title value="Change Log"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
@@ -329,7 +341,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1"/>
+      <value value="STU 2 -Ballot"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

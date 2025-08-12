@@ -140,15 +140,6 @@
     }
   ],
   "status": "completed",
-  "category": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "108290001",
-        "display": "Radiation oncology AND/OR radiotherapy (procedure)"
-      }
-    ]
-  },
   "code": {
     "coding": [
       {

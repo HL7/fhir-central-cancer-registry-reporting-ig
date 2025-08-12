@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+	    <id value="central-cancer-registry-reporting-patient"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-08-11T02:41:12.847+00:00"/>
+        <source value="#5l3H3bmTQAwzjlFF"/>
+    </meta>
+   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"/>
+    <version value="1.0.0"/>
+    <name value="CentralCancerRegistryReportingPatient"/>
+    <title value="Central Cancer Registry Reporting Patient"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="This profile represents the patient related to the cancer event. It is based on the US Public Health Patient profile with further restrictions on identifiers."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+        <text value="United States of America"/>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Patient"/>
+    <baseDefinition value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-patient|1.0.0"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Patient">
+            <path value="Patient"/>
+            <short value="Central Cancer Registry Reporting Patient"/>
+            <definition value="This profile is based on the Patient resource and establishes the core elements, extensions, vocabularies and value sets for representing a patient for central cancer registry reporting."/>
+       </element>
+		<element id="Patient.identifier">
+		  <path value="Patient.identifier"/>
+		  <slicing>
+			<discriminator>
+			  <type value="value"/>
+			  <path value="type.coding.system"/>
+			</discriminator>
+			<discriminator>
+			  <type value="value"/>
+			  <path value="type.coding.code"/>
+			</discriminator>
+			<rules value="open"/>
+		  </slicing>
+		  <min value="1"/>
+		  <max value="*"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicareIdentifier">
+		  <path value="Patient.identifier"/>
+		  <sliceName value="MedicareIdentifier"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicareIdentifier.type">
+		  <path value="Patient.identifier.type"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="CodeableConcept"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicareIdentifier.type.coding">
+		  <path value="Patient.identifier.type.coding"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicareIdentifier.type.coding.system">
+		  <path value="Patient.identifier.type.coding.system"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="uri"/>
+		  </type>
+		  <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicareIdentifier.type.coding.code">
+		  <path value="Patient.identifier.type.coding.code"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="code"/>
+		  </type>
+		  <fixedCode value="MC"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicaidIdentifier">
+		  <path value="Patient.identifier"/>
+		  <sliceName value="MedicaidIdentifier"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicaidIdentifier.type">
+		  <path value="Patient.identifier.type"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="CodeableConcept"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicaidIdentifier.type.coding">
+		  <path value="Patient.identifier.type.coding"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicaidIdentifier.type.coding.system">
+		  <path value="Patient.identifier.type.coding.system"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="uri"/>
+		  </type>
+		  <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MedicaidIdentifier.type.coding.code">
+		  <path value="Patient.identifier.type.coding.code"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="code"/>
+		  </type>
+		  <fixedCode value="MA"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MR">
+		  <path value="Patient.identifier"/>
+		  <sliceName value="MR"/>
+		  <min value="0"/>
+		  <max value="*"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MR.type">
+		  <path value="Patient.identifier.type"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="CodeableConcept"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MR.type.coding">
+		  <path value="Patient.identifier.type.coding"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MR.type.coding.system">
+		  <path value="Patient.identifier.type.coding.system"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="uri"/>
+		  </type>
+		  <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:MR.type.coding.code">
+		  <path value="Patient.identifier.type.coding.code"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="code"/>
+		  </type>
+		  <fixedCode value="MR"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:SSNIdentifier">
+		  <path value="Patient.identifier"/>
+		  <sliceName value="SSNIdentifier"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:SSNIdentifier.type">
+		  <path value="Patient.identifier.type"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="CodeableConcept"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:SSNIdentifier.type.coding">
+		  <path value="Patient.identifier.type.coding"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:SSNIdentifier.type.coding.system">
+		  <path value="Patient.identifier.type.coding.system"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="uri"/>
+		  </type>
+		  <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.identifier:SSNIdentifier.type.coding.code">
+		  <path value="Patient.identifier.type.coding.code"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <type>
+			<code value="code"/>
+		  </type>
+		  <fixedCode value="SS"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.name">
+		  <path value="Patient.name"/>
+		  <min value="1"/>
+		  <max value="*"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.name.family">
+		  <path value="Patient.name.family"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.name.family.extension:data-absent-reason">
+		  <path value="Patient.name.family.extension"/>
+		  <sliceName value="data-absent-reason"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <type>
+			<code value="Extension"/>
+			<profile
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.name.given">
+		  <path value="Patient.name.given"/>
+		  <min value="1"/>
+		  <max value="*"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.name.given.extension:data-absent-reason">
+		  <path value="Patient.name.given.extension"/>
+		  <sliceName value="data-absent-reason"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <type>
+			<code value="Extension"/>
+			<profile
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.address">
+		  <path value="Patient.address"/>
+		  <min value="1"/>
+		  <max value="*"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.address.state">
+		  <path value="Patient.address.state"/>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.address.state.extension:data-absent-reason">
+		  <path value="Patient.address.state.extension"/>
+		  <sliceName value="data-absent-reason"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <type>
+			<code value="Extension"/>
+			<profile
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.maritalStatus">
+		  <path value="Patient.maritalStatus"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.generalPractitioner">
+		  <path value="Patient.generalPractitioner"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <type>
+			<code value="Reference"/>
+			<targetProfile
+						   value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Patient.managingOrganization">
+		  <path value="Patient.managingOrganization"/>
+		  <min value="0"/>
+		  <max value="1"/>
+		  <type>
+			<code value="Reference"/>
+			<targetProfile
+						   value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
+		  </type>
+		  <mustSupport value="true"/>
+		</element>
+	  </differential>
+</StructureDefinition>

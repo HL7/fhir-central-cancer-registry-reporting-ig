@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition
     xmlns="http://hl7.org/fhir">
-    <id value="cancer-encounter"/>
+    <id value="central-cancer-registry-reporting-encounter"/>
     <meta>
         <versionId value="21"/>
         <lastUpdated value="2021-07-01T02:41:12.847+00:00"/>
         <source value="#5j0H5mnTEDrulqHH"/>
     </meta>
-    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"/>
+    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-encounter"/>
     <version value="1.0.0"/>
-    <name value="CancerEncounter"/>
-    <title value="Cancer Encounter"/>
+    <name value="CentralCancerRegistryReportingEncounter"/>
+    <title value="Central Cancer Registry Reporting Encounter"/>
     <status value="active"/>
     <experimental value="false"/>
     <publisher value="HL7 International / Public Health"/>
@@ -20,7 +20,7 @@
             <value value="http://www.hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
-    <description value="This Encounter profile represents the encounter related to the cancer event. It is based on the US Core Encounter."/>
+    <description value="This profile represents the encounter related to the cancer event. It is based on US Core Encounter."/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -33,20 +33,20 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Encounter"/>
-    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Encounter">
             <path value="Encounter"/>
-            <short value="Cancer Encounter"/>
-            <definition value="The Cancer Encounter profile is based on the Encounter resource and establishes the core elements, extensions, vocabularies and value sets for representing the following encounters for central cancer registry reporting:&#xA;&#xA;- public health encounter related to the reported event."/>
+            <short value="Central Cancer Registry Reporting Encounter"/>
+            <definition value="This profile is based on US Core and establishes the core elements, extensions, vocabularies and value sets for central cancer registry reporting encounters."/>
         </element>
         <element id="Encounter.subject">
             <path value="Encounter.subject"/>
             <min value="1"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-patient"/>
+                <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -93,7 +93,7 @@
             <definition value="The provider in charge of care and the facility in which care was provided during the encounter"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -107,7 +107,7 @@
             <path value="Encounter.diagnosis.condition"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0"/>
             </type>
             <mustSupport value="true"/>
         </element>
@@ -127,7 +127,7 @@
             <path value="Encounter.location.location"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|6.1.0"/>
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
@@ -136,7 +136,7 @@
             <path value="Encounter.serviceProvider"/>
             <type>
                 <code value="Reference"/>
-                <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+                <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
             </type>
             <mustSupport value="true"/>
         </element>

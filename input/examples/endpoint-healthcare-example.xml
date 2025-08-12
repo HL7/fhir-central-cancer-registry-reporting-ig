@@ -4,7 +4,7 @@
   <meta>
         <versionId value="1"/>
         <lastUpdated value="2020-11-29T02:03:28.045+00:00"/>
-        <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-endpoint"/>
+        <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-endpoint"/>
   </meta> 
   <text> 
     <status value="generated"/> 
@@ -13,7 +13,7 @@
     </div> 
   </text> 
   <identifier> 
-    <system value="http://example.healthcare.org/enpoint-identifier"/> 
+    <system value="http://example.healthcare.org/endpoint-identifier"/> 
     <value value="healthcare-endpoint-id"/> 
   </identifier> 
   <status value="active"/> 
@@ -23,7 +23,7 @@
   </connectionType> 
   <name value="HealthCareSenderAndReceiver"/> 
   <managingOrganization> 
-    <reference value="Organization/example-healthcare-org"/> 
+    <reference value="Organization/example-cancer-org"/> 
   </managingOrganization> 
   <contact> 
     <system value="email"/> 

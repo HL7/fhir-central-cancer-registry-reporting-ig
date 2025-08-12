@@ -6,6 +6,10 @@ This profile is used to represent the Central Cancer Registry Report Composition
 
 The content is made up data elements from the following profiles from the other IGs as direct references or as base profiles.
 
+From the Cancer Pathology Data Sharing IG:
+* [US Pathology Diagnostic Report]({{site.data.fhir.ver.cancerpathIg}}/StructureDefinition-us-pathology-diagnostic-report.html)
+* [US Pathology Related PractitionerRoles]({{site.data.fhir.ver.cancerpathIg}}/StructureDefinition-us-pathology-related-practitioner-role.html)
+
 From the mCODE IG:
 
 * [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
@@ -19,33 +23,49 @@ From the mCODE IG:
 
 From ODH IG:
 
-[Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhIg}}/StructureDefinition-odh-UsualWork.html)
+* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhIg}}/StructureDefinition-odh-UsualWork.html)
 
 From US Core IG:
 
-[US Core profiles]({{site.data.fhir.ver.uscoreR4}}/profiles-and-extensions.html)
+* [US Core AllergyIntolerance Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-allergyintolerance.html)
+* [US Core CarePlan Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-careplan.html)
+* [US Core Condition Encounter Diagnosis Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+* [US Core Condition Problems and Health Concerns Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-problems-health-concerns.html)
+* [US Core DiagnosticReport Profile for Laboratory Results Reporting]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-diagnosticreport-lab.html)
+* [US Core DiagnosticReport Profile for Report and Note Exchange]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-diagnosticreport-note.html)
+* [US Core DocumentReference Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-documentreference.html)
+* [US Core Encounter Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-encounter.html)
+* [US Core Laboratory Result Observation Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-observation-lab.html)
+* [US Core Medication Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-medication.html)
+* [US Core Patient Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-patient.html)
+* [US Core Practitioner Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-practitioner.html)
+* [US Core PractitionerRole Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-practitionerrole.html)
+* [US Core Procedure Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-procedure.html)
+* [US Core ServiceRequest Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-servicerequest.html)
+* [US Core Smoking Status Observation Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-smokingstatus.html)
+* [US Core Vital Signs Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-vital-signs.html)
 
 #### Guidance on populating the data for each section:
 
 The following guidance is provided to the implementers to identify the data of interest which needs to be extracted and populated in the various sections.
 
-* Patient: The Patient who is the subject of the closed encounter
-* Encounter: The encounter that triggered the HDEA (i.e., closed encounter)
-* Primary Cancer Condition: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list.All Conditions with do not have a clinicalStatuses of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
-* Secondary Cancer Condition: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set.All Conditions with do not have a clinicalStatuses of inactive can be considered to determine the primary cancer condition along with a verificationStatus of Confirmed.
-* Cancer Stage Group: All Observations with the Cancer Stage Group information and a status of final, amended, or corrected
-* TNM Primary Tumor Category: All Observation with TNM tumor information having a status of final, amended, or corrected
-* TNM Regional Nodes Category: All Observation with TNM Regional Nodes information having a status of final, amended, or corrected
-* TNM Distant Metastases Category: All Observation with TNM Metastases information having a status of final, amended, or corrected
-* Radiotherapy Course Summary: All Procedures with the Radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
-* Cancer-Related Medication Request: Medications requested during the closed encounter with a status of active, completed, cancelled, entered-in-error, stopped, unknown and an intent of order.
-* Cancer-Related Medication Administration: Medications administered during the closed encounter with a status of completed, in-progress, entered-in-error, stopped or unknown.
-* Usual Work: Usual Work information for the patient with a status of final.
-* Laboratory Resul : Results linked to the encounter or ordered during the encounter or results received during the Encounter with a status of final
-* Vital Signs: All vital signs for the encounter with status of final, corrected, unknown or amended
-* Procedure: Procedures performed during the closed encounter limited to status of completed or unknown.
-* DiagnosticReport Profile for Laboratory Results Reporting: Results linked to the encounter or ordered during the encounter or results received during the Encounter and Status of final
-* DiagnosticReport Profile for Report and Note exchange: Results linked to the encounter or ordered during the encounter or results received during the Encounter and Status of final
-* DocumentReference: All notes created during the encounter with a status of current
-* Smoking Status: Smoking Status associated with the patient with status of final.
-
+* Patient: The Patient who is the subject of the closed encounter.
+* Encounter: The Encounter that triggered the report (i.e., closed encounter).
+* Primary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
+* Secondary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the secondary cancer condition along with a verificationStatus of confirmed.
+* Cancer Stage Group Section: Observation with the Cancer Stage Group information and a status of final, amended, or corrected.
+* TNM Primary Tumor Category: Observation with TNM tumor information having a status of final, amended, or corrected.
+* TNM Regional Nodes Category: Observation with TNM Regional Nodes information having a status of final, amended, or corrected.
+* TNM Distant Metastases Category: Observation with TNM Metastases information having a status of final, amended, or corrected.
+* Radiotherapy Course Summary Section: Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
+* Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and verificationStatus of confirmed.
+* Allergies Section: Allergies associated with the patient with status of active and verification status of confirmed.
+* Medications Administered Section: Cancer-related medications administered during the closed encounter with a status of completed, in-progress, entered-in-error, stopped or unknown.
+* Medications Section: Medications referenced by MedicationRequest and MedicationAdministration.
+* ODH Section: Usual Work information for the patient with a status of final.
+* Results Section: Results linked to the encounter or ordered during the encounter or results received during the encounter with a status of final.
+* Notes Section: DiagnosticReports and Documents created during the encounter with a status of current or final.
+* Procedures Section: Procedures performed during the closed encounter limited to status of completed or unknown.
+* Plan of Treatment Section: Cancer-related medications requested during the closed encounter with a status of active, completed, cancelled, entered-in-error, stopped, unknown and an intent of order. Service requests and care plan...
+* Vital Signs: All vital signs for the encounter with status of final, corrected, unknown or amended.
+* Social History Section: Smoking status associated with the patient with status of final.

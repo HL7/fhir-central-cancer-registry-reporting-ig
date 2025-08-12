@@ -11,12 +11,23 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 21907-1}\">Distant metastases.clinical [Class] Cancer</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Amy Shaw</a></p><p><b>effective</b>: 2019-04-01</p><p><b>value</b>: <span title=\"Codes: {http://cancerstaging.org cM0}\">M0</span></p><p><b>method</b>: <span title=\"Codes: {http://snomed.info/sct 897275008}\">American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)</span></p></div>"
   },
   "status": "final",
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "imaging",
+          "display" : "Imaging"
+        }
+      ]
+    }
+  ],
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org",
-        "code": "21907-1",
-        "display": "Distant metastases.clinical [Class] Cancer"
+        "system" : "http://snomed.info/sct",
+        "code" : "399387003",
+        "display" : "cM category"
       }
     ]
   },
@@ -43,7 +54,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "897275008",
-        "display": "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+        "display": "American Joint Committee on Cancer, Cancer Staging Manual, 8th edition tumor staging system"
       }
     ]
   }

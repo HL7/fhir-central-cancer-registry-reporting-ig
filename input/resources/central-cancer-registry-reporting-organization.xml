@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="central-cancer-registry-reporting-organization"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2025-07-30T02:41:12.847+00:00"/>
+        <source value="#4k9G4nbRWSeykpGG"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
+    <version value="1.0.0"/>
+    <name value="CentralCancerRegistryReportingOrganization"/>
+    <title value="Central Cancer Registry Reporting Organization"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="HL7 International / Public Health"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/pher"/>
+        </telecom>
+    </contact>
+    <description value="This profile represents the organization related to the cancer event. It is based on the US Core Organization."/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+        <text value="United States of America"/>
+    </jurisdiction>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Organization"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Organization">
+            <path value="Organization"/>
+            <short value="Central Cancer Registry Reporting Organization"/>
+            <definition value="This profile is based on the Organization resource and establishes the core elements, extensions, vocabularies and value sets for representing an organization for central cancer registry reporting."/>
+        </element>
+		<element id="Organization.identifier:NPI">
+		  <path value="Organization.identifier"/>
+		  <sliceName value="NPI"/>
+		  <short value="National Provider Identifier (NPI)"/>
+		  <patternIdentifier>
+			<system value="http://hl7.org/fhir/sid/us-npi"/>
+		  </patternIdentifier>
+		  <min value="1"/>
+		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+    </differential>
+</StructureDefinition>

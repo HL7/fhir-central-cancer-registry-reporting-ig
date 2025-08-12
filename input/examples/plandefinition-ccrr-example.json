@@ -37,19 +37,19 @@
           {
             "type": "depends-on",
             "label": "Central Cancer Registry Trigger Codes",
-            "resource": "http://hl7.org/fhir/us/central-cancer-registry-reporting/ValueSet/cancer-core-reportability-codes"
+            "resource": "http://hl7.org/fhir/us/central-cancer-registry-reporting/ValueSet/cancer-core-reportability-codes|2.0.0"
           }
         ],
         "action": [
           {
             "id": "start-workflow",
-            "description": "This action represents the start of the reporting workflow in response to the encounter-end event",
-            "textEquivalent": "Start the reporting workflow in response to an encounter-end event",
+            "description": "This action represents the start of the reporting workflow in response to the encounter-close event",
+            "textEquivalent": "Start the reporting workflow in response to an encounter-close event",
             "code": [
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                     "code": "initiate-reporting-workflow"
                   }
                 ]
@@ -60,20 +60,20 @@
                 "id": "encounter-close",
                 "extension": [
                   {
-                    "url": "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype",
+                    "url": "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension",
                     "valueCodeableConcept": {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents",
-                          "code": "encounter-end",
-                          "display": "Indicates the end of an encounter"
+                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-triggerdefinition-namedevent",
+                          "code": "encounter-close",
+                          "display": "Indicates the close of an encounter"
                         }
                       ]
                     }
                   }
                 ],
                 "type": "named-event",
-                "name": "encounter-end"
+                "name": "encounter-close"
               }
             ],
             "relatedAction": [
@@ -97,7 +97,7 @@
               {
                 "coding" : [
                   {
-                    "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                     "code" : "execute-reporting-workflow"
                   }
                 ]
@@ -112,7 +112,7 @@
                   {
                     "coding" : [
                       {
-                        "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                        "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                         "code" : "check-trigger-codes"
                       }
                     ]
@@ -132,7 +132,7 @@
                     "id" : "conditions",
                     "extension" : [
                       {
-                        "url" : "http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "url" : "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
                         "valueString" : "Condition?patient=Patient/{{context.patientId}}"
                       }
                     ],
@@ -140,7 +140,7 @@
                     "codeFilter" : [
                       {
                         "path" : "code",
-                        "valueSet" : "http://hl7.org/fhir/us/central-cancer-registry-reporting/ValueSet/cancer-core-reportability-codes"
+                        "valueSet" : "http://hl7.org/fhir/us/central-cancer-registry-reporting/ValueSet/cancer-core-reportability-codes|2.0.0"
                       }
                     ]
                   }
@@ -158,7 +158,7 @@
                   {
                     "coding" : [
                       {
-                        "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                        "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                         "code" : "evaluate-condition"
                       }
                     ]
@@ -195,7 +195,7 @@
               {
                 "coding" : [
                   {
-                    "system" : "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                    "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                     "code" : "execute-reporting-workflow"
                   }
                 ]
@@ -210,7 +210,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                           "code": "create-report"
                         }
                       ]
@@ -265,7 +265,7 @@
                           "type": "Observation",
                           "profile": [
                             
-                              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+                              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|6.1.0"
                             
                           ]
                     }
@@ -296,7 +296,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                           "code": "validate-report"
                         }
                       ]
@@ -339,7 +339,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions",
+                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
                           "code": "submit-report"
                         }
                       ]

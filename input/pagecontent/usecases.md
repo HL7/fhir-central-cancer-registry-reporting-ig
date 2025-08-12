@@ -15,7 +15,7 @@ Standards specifications provided in this document are designed to facilitate th
 
 ### Legal Mandate for Cancer Reporting 
 
-Cancer reporting from all healthcare providers (e.g., hospital, laboratory and ambulatory) for public health surveillance is mandated at the state and territory level. Legislation requiring cancer reporting by healthcare providers exists in all states with some variation in specific requirements. United States federal law Public Health Service Act (42 USC 280e-280e-4; Public Law 102-515), as amended.), authorizing the National Program of Cancer Registries, specifies that each federally-funded registry must have a legislative "means for the statewide cancer registry to access all records of physicians and surgeons, hospitals, outpatient clinics, nursing homes, and all other facilities…”. The [National Cancer Act of 1971 (Public Law 92-218)](https://www.congress.gov/92/statute/STATUTE-85/STATUTE-85-Pg778-3.pdf) gives the Director of NCI the authority to “collect, analyze, and disseminate all data useful in the prevention, diagnosis and treatment of cancer.”
+Cancer reporting from all healthcare providers (e.g., hospital, laboratory and ambulatory) for public health surveillance is mandated at the state and territory level. Legislation requiring cancer reporting by healthcare providers exists in all states with some variation in specific requirements. United States federal law Public Health Service Act (42 USC 280e-280e-4; Public Law 102-515), as amended, authorizing the National Program of Cancer Registries, specifies that each federally-funded registry must have a legislative "means for the statewide cancer registry to access all records of physicians and surgeons, hospitals, outpatient clinics, nursing homes, and all other facilities…”. The [National Cancer Act of 1971 (Public Law 92-218)](https://www.congress.gov/92/statute/STATUTE-85/STATUTE-85-Pg778-3.pdf) gives the Director of NCI the authority to “collect, analyze, and disseminate all data useful in the prevention, diagnosis and treatment of cancer.”
 
 #### HIPAA:
 The Health Insurance Portability and Accountability Act (HIPAA, or the Act), P.L. 104-191, enacted on August 21, 1996, includes provisions related to insurance coverage and a section that is relevant to electronic reporting of healthcare information. The regulation implementing the HIPAA privacy provisions allows public health exemptions for disclosure without patient consent of individually identifiable health information.
@@ -26,7 +26,7 @@ A [discussion of HIPAA as it relates to reporting to Cancer Registries](https://
 The section identifies the business needs and specific user stories outlining the central cancer registry reporting data exchange needs.
 
 #### Use Case Goals
-The purpose of the use case is to transmit cancer case information to state central cancer registries. The intent is to provide access to data not currently available, or available through non-standard and/or manual methods; it will not replace hospital registry reporting methods that are working well. The cancer use case will help assess how to address the gaps in workflow and triggers, and the ability to leverage MedMorph RA IG along with other existing HL7 FHIR® Implementation Guides to address the public health information needs.
+The purpose of the use case is to transmit cancer case information to state central cancer registries. The intent is to provide access to data not currently available, or available through non-standard and/or manual methods; it will not replace hospital registry reporting methods that are working well. The cancer use case will help assess how to address the gaps in workflow and triggers, and the ability to leverage existing HL7 FHIR® Implementation Guides to address the public health information needs.
 
 #### Problem Statement
 Cancer is a mandatory reportable disease; every state has public health law/regulation requiring information to be reported to a central cancer registry about all cancers diagnosed or treated within that state. Central cancer registries are population-based cancer registries that collect data on all cancer diagnosed in residents in a defined geographic area.  The main sources of information include information from treatment facilities (e.g., hospitals, clinics/physician offices), diagnostic services (e.g., pathology laboratories) and vital statistics (e.g., death certificates). Central cancer registries have an emphasis on epidemiology and public health to determine patterns among various populations, monitor cancer trends over time, guide planning and evaluation of cancer control efforts, help prioritize health resource allocations and to advance clinical, epidemiologic and health services research <sup>1</sup>. Even with reporting requirements, cancer surveillance is complex given the heterogeneous nature of the disease, numerous diagnostic and prognostic factors, and multiple medical encounters that produce data from a variety of non-harmonized data sources.
@@ -45,7 +45,7 @@ These challenges make it difficult for registries to synthesize information in a
 
 #### Goals of the Use Case
 
-The goal of the Central Cancer Registry Reporting Content IG is to automate the capture of cancer cases and cancer treatment information not reported by other sources and provide incidence data faster for research and public health. It will leverage the Making Electronic Data More Available for Research and Public Health (MedMorph) Reference Architecture (RA) IG and other existing FHIR® infrastructure to transmit cancer case information primarily from ambulatory care practices to central cancer registries. This Use case will not replace hospital registry reporting methods which are working well.  Additionally, this use case aims to identify data standards that allow for the collection and transmission of these data electronically from EHRs automatically rather than relying on labor-intensive manual processes and duplications of effort.
+The goal of the Central Cancer Registry Reporting Content IG is to automate the capture of cancer cases and cancer treatment information not reported by other sources and provide incidence data faster for research and public health. It will leverage existing FHIR® infrastructure to transmit cancer case information primarily from ambulatory care practices to central cancer registries. This use case will not replace hospital registry reporting methods which are working well.  Additionally, this use case aims to identify data standards that allow for the collection and transmission of these data electronically from EHRs automatically rather than relying on labor-intensive manual processes and duplications of effort.
 
 ##### Scope of the Use Case
 
@@ -66,13 +66,13 @@ The goal of the Central Cancer Registry Reporting Content IG is to automate the 
 
  
 #### **User Story: Cancer Diagnosis and Treatment Reporting based on Specific Criteria** 
-A patient visits her primary care provider (PCP) because of a lump in her breast. The provider orders a mammogram and then a biopsy that is sent to the pathology laboratory for testing. The laboratory analyzes the biopsy specimen which indicates the patient has breast cancer. The pathology report is sent to the provider who ordered the biopsy. On January 20, 2022, the provider confirms the diagnosis of breast cancer. This information is integrated into the patient's EHR. The patient is informed of her test results. The PCP clinic's electronic reporting system determines that the patient has been diagnosed with a cancer that meets the criteria for reporting to the central cancer registry, as defined by the national standard Cancer Reportability List. These lists and other reportability criteria are contained in the Health Data Exchange App (HDEA), MedMorph's backend services app. The HDEA handles all the trigger events for exchanging a patient's EHR information across systems and is notified when the encounter is closed. The HDEA creates a standard report with the required data elements and sends it to the central cancer registry in the state where the patient resides, as required by state law. On February 2, 2022, the PCP orders a further workup and clinically stages the patient’s cancer. This information is also included in the patient’s EHR. The HDEA recognizes that this initial staging information does not meet the criteria for reporting because the information has been added within six months of the initial report transmitted to the central cancer registry (i.e., the initial report was sent January 20, 2022, and the staging information was done February 2, 2022). Thus, the staging information is in the EHR, but does not yet trigger the HDEA to report or exchange this information. 
+A patient visits her primary care provider (PCP) because of a lump in her breast. The provider orders a mammogram and then a biopsy that is sent to the pathology laboratory for testing. The laboratory analyzes the biopsy specimen which indicates the patient has breast cancer. The pathology report is sent to the provider who ordered the biopsy. On January 20, 2022, the provider confirms the diagnosis of breast cancer. This information is integrated into the patient's EHR. The patient is informed of her test results. The PCP clinic's electronic reporting system determines that the patient has been diagnosed with a cancer that meets the criteria for reporting to the central cancer registry, as defined by the national standard Cancer Reportability List. These lists and other reportability criteria are contained in the eCR Now App. The eCR Now App handles all the trigger events for exchanging a patient's EHR information across systems and is notified when the encounter is closed. The eCR Now App creates a standard report with the required data elements and sends it to the central cancer registry in the state where the patient resides, as required by state law. On February 2, 2022, the PCP orders a further workup and clinically stages the patient’s cancer. This information is also included in the patient’s EHR. The eCR Now App recognizes that this initial staging information does not meet the criteria for reporting because the information has been added within six months of the initial report transmitted to the central cancer registry (i.e., the initial report was sent January 20, 2022, and the staging information was done February 2, 2022). Thus, the staging information is in the EHR, but does not yet trigger the eCR Now App to report or exchange this information. 
 
-The patient has surgery on February 9, 2022, and the PCP refers her to a medical oncologist in the same clinic for further treatment. The medical oncologist sends the patient to the radiation therapy department to initiate radiation therapy as part of the first course of treatment for her breast cancer. Radiation therapy is given through September 29, 2022 and is documented in the EHR as the reason for the encounter/visit. The HDEA is notified of this update by the patient's EHR and determines that the patient was seen for treatment of a cancer that meets the criteria for reporting to the central cancer registry and is more than six months after the initial diagnosis was transmitted to the central cancer registry. Thus, the HDEA creates a standard report with the required data elements and securely sends it to the central cancer registry in the state where the patient resides, as required by state law.
+The patient has surgery on February 9, 2022, and the PCP refers her to a medical oncologist in the same clinic for further treatment. The medical oncologist sends the patient to the radiation therapy department to initiate radiation therapy as part of the first course of treatment for her breast cancer. Radiation therapy is given through September 29, 2022 and is documented in the EHR as the reason for the encounter/visit. The eCR Now App is notified of this update by the patient's EHR and determines that the patient was seen for treatment of a cancer that meets the criteria for reporting to the central cancer registry and is more than six months after the initial diagnosis was transmitted to the central cancer registry. Thus, the eCR Now App creates a standard report with the required data elements and securely sends it to the central cancer registry in the state where the patient resides, as required by state law.
 
-After radiation was completed on September 29, 2022, the medical oncologist initiates the chemotherapy regimen on October 10, 2022, as part of the first course of treatment for her breast cancer. The chemotherapy drugs are infused, and the chemotherapy treatment is documented in the EHR as the reason for the encounter/visit. The HDEA determines that the patient was seen for treatment of a cancer that meets the criteria for reporting to the central cancer registry; however, it does not meet the criteria for transmitting to the central registry because it has been added to the EHR between 6 months and 12 months of the initial diagnosis and transmission of a cancer report. 
+After radiation was completed on September 29, 2022, the medical oncologist initiates the chemotherapy regimen on October 10, 2022, as part of the first course of treatment for her breast cancer. The chemotherapy drugs are infused, and the chemotherapy treatment is documented in the EHR as the reason for the encounter/visit. The eCR Now App determines that the patient was seen for treatment of a cancer that meets the criteria for reporting to the central cancer registry; however, it does not meet the criteria for transmitting to the central registry because it has been added to the EHR between 6 months and 12 months of the initial diagnosis and transmission of a cancer report. 
  
-After 12 months from the initial diagnosis and transmission of a cancer report to the central cancer registry, the HDEA generates and sends a standard report with essential data elements to the central cancer registry in the state where the patient resides. At every subsequent 12 months after the initial diagnosis and transmission of a cancer report to the central cancer registry, the HDEA generates and sends a standard report with essential data elements to the central cancer registry in the state where the patient resides, until the patient is recorded as deceased or there have been no updates to the patient’s EHR record. These timed exchanges of a patient’s EHR information are triggered by criteria set up in the HDEA and run seamlessly in the background without human intervention, which eases mandatory reporting requirements. 
+After 12 months from the initial diagnosis and transmission of a cancer report to the central cancer registry, the eCR Now App generates and sends a standard report with essential data elements to the central cancer registry in the state where the patient resides. At every subsequent 12 months after the initial diagnosis and transmission of a cancer report to the central cancer registry, the eCR Now App generates and sends a standard report with essential data elements to the central cancer registry in the state where the patient resides, until the patient is recorded as deceased or there have been no updates to the patient’s EHR record. These timed exchanges of a patient’s EHR information are triggered by criteria set up in the eCR Now App and run seamlessly in the background without human intervention, which eases mandatory reporting requirements. 
 
 
 #### Central Cancer Registry Reporting Workflow 
@@ -80,7 +80,7 @@ After 12 months from the initial diagnosis and transmission of a cancer report t
 The following is a diagram of the workflow based on the above user story used for Central Cancer Registry Reporting
 
 
-{% include img.html img="Content IG Workflows-revised.png" caption="Figure 2.1 - Central Cancer Registry Reporting Workflow" %}
+{% include img.html img="ccrr-ig-workflow.png" caption="Figure 2.1 - Central Cancer Registry Reporting Workflow" %}
 
 <br/>
 
@@ -90,35 +90,27 @@ The following is a diagram of the workflow based on the above user story used fo
 
 #### Central Cancer Registry Reporting Actors and Definitions
 
-The following actors and definitions from the [MedMorph RA IG]({{site.data.fhir.ver.medmorphIg}}/usecases.html#medmorph-actors-and-definitions) are used by the Central Cancer Registry Reporting use cases. 
-
 * Data Source (e.g., EHR, HIE)
-* Health Data Exchange App (HDEA) (MedMorph's backend services app)
-* Central Cancer Registry (Data Receiver)
-* Knowledge Artifact Repository (KAR)
+* Data Submitter
+* Data Receiver (e.g., Central Cancer Registry)
 * Trusted Third Party (TTP)
 
-##### Interactions between MedMorph RA Actors and Systems for Central Cancer Registry Reporting 
-This section outlines the high-level interactions between the various MedMorph Actors and Systems listed above. These interactions are shown in Figure 2.2 below along with the descriptions for each step.
+##### Interactions between Actors and Systems for Central Cancer Registry Reporting 
+This section outlines the high-level interactions between the various actors and systems listed above. These interactions are shown in Figure 2.2 below along with the descriptions for each step.
 
-{% include img.html img="cancer-actors-and-systems.png" caption="Figure 2.2 - Central Cancer Registry Reporting Actors and Systems" %}
+{% include img.html img="ccrr-ig-actors-systems.png" caption="Figure 2.2 - Central Cancer Registry Reporting Actors and Systems" %}
 
 The descriptions for each step in the above diagram include:
-* Step 1: The Central Cancer Registry (CCR) (e.g., Data Receiver) creates a Knowledge Artifact and makes it available via the Knowledge Artifact Repository.
-    * Steps 2a and 2b: Optionally, Knowledge Artifact Repositories which implement notifications can notify the subscribers (EHR, HDEA) of changes in the Knowledge Artifacts.
-* Step 3: The Health Data Exchange App (HDEA) queries the Knowledge Artifact Repository to retrieve a Knowledge Artifact. 
-* Step 4: The HDEA receives the Knowledge Artifact as a response to the query in Step 3.     
-* Step 5: The HDEA processes the Knowledge Artifact and creates subscriptions in the Data Source’s (e.g., EHR) FHIR Server so that it can be notified when specific events occur in clinical workflows.
-* Step 6: Providers as part of their clinical workflows update the data in the Data Source’s patient chart.
-* Step 7: The Data Source notifies the HDEA based on subscriptions that have been created in Step 5.
-* Step 8: The HDEA queries the Data Source for patient’s data.
-* Step 9: The HDEA receives the respose from the Data Source with the patient's data.
-* Step 10: The HDEA submits the created report to the CCR.
-    * Steps 10a and 10b: Optionally, the HDEA submits the created report to the Trusted Third Party (TTP) which then send it to the CCR.
-* Step 11: The CCR submits a response back to the HDEA based on the submitted report. The Response transaction can be synchronous or asynchronous (after a period of time).
-    * Steps 11a and 11b: Optionally, the TTP receives the submitted response from the CCR and forwards the response to the HDEA.
-* Step 12: The HDEA writes back the response from the CCR to the Data Source as appropriate. 
-
+* Step 1: The Data Submitter creates a notification (e.g., subscription, CDS hook, v2 message) in the Data Source’s FHIR server so that it can be notified when specific events occur in the clinical workflow. 
+* Step 2: The Provider, as part of its clinical workflow, update the patient’s data in the Data Source.
+* Step 3: The Data Source notifies the Data Submitter based on notifications created in Step 1.
+* Step 4: The Data Submitter queries the Data Source for the patient’s data.
+* Step 5: The Data Submitter receives the response from the Data Source with the patient’s data.
+* Step 6: The Data Submitter submits the created report to the Data Receiver (e.g., Central Cancer Registry (CCR)).
+    * Steps 6a and 6b: Optionally, the Data Submitter submits the created report to the Trusted Third Party (TTP) which then sends it to the Data Receiver.
+* Step 7: The Data Receiver submits a response back to the Data Submitter based on the submitted report. The Response transaction can be synchronous or asynchronous (after a period of time).
+    * Steps 7a and 7b: Optionally, the TTP receives the submitted response from the Data Receiver and forwards the response to the Data Submitter.
+* Step 8: The Data Submitter writes back the response from the Data Receiver to the Data Source as appropriate.
 
 #### Central Cancer Registry Reporting ValueSets
 

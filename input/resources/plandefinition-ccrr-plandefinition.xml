@@ -53,7 +53,7 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="PlanDefinition"/>
-   <baseDefinition value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-plandefinition"/>
+   <baseDefinition value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-plandefinition"/>
     <derivation value="constraint"/>
     <differential>
         <element id="PlanDefinition">
@@ -83,7 +83,7 @@
             <binding>
                 <strength value="extensible"/>
                 <description value="The set of actions that can be used to create plan definition"/>
-                <valueSet value="http://hl7.org/fhir/us/medmorph/ValueSet/us-ph-plandefinition-action"/>
+                <valueSet value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
             </binding>
         </element>
         <element id="PlanDefinition.action.input">
@@ -115,7 +115,7 @@
             <path value="PlanDefinition.action.input.extension.url"/>
             <min value="1"/>
             <max value="1"/>
-            <fixedUri value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-fhirquerypattern-extension"/>
+            <fixedUri value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension"/>
             <mustSupport value="true"/>
         </element> -->
         
@@ -139,7 +139,7 @@
             <short value="Starts the workflow"/>
             <definition value="Description of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="This action represents the start of the reporting workflow in response to the encounter-end event"/>
+            <fixedString value="This action represents the start of the reporting workflow in response to the encounter-close event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.textEquivalent">
@@ -147,7 +147,7 @@
             <short value="Text equivalent of the start workflow action."/>
             <definition value="Text equivalent of the start workflow action."/>
             <min value="1"/>
-            <fixedString value="Start the reporting workflow in response to an encounter-end event"/>
+            <fixedString value="Start the reporting workflow in response to an encounter-close event"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.code">
@@ -158,7 +158,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="initiate-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -173,7 +173,7 @@
                 <key value="epd-1"/>
                 <severity value="error"/>
                 <human value="The code value of the namedEventType SHALL be the same as the name element"/>
-                <expression value="extension('http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype').value.coding.code.supersetOf(name)"/>
+                <expression value="extension('http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension').value.coding.code.supersetOf(name)"/>
                 <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;name&quot;)])"/>
                 <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
             </constraint> -->
@@ -241,7 +241,7 @@
             </base>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-named-eventtype"/>
+                <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension"/>
             </type>
     <!--        <constraint>
                 <key value="ele-1"/>
@@ -269,8 +269,8 @@
         </element>
         <element id="PlanDefinition.action:encounterClose.trigger.name">
             <path value="PlanDefinition.action.trigger.name"/>
-            <definition value="The name of the event, encounter-end in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
-            <fixedString value="encounter-end"/>
+            <definition value="The name of the event, encounter-close in this case. For any action invoked as a result of this trigger, the triggering encounter is accessible via the context variable `%encounter`"/>
+            <fixedString value="encounter-close"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.relatedAction">
             <path value="PlanDefinition.action.relatedAction"/>
@@ -325,7 +325,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="execute-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -364,7 +364,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="check-trigger-codes"/>
                 </coding>
             </patternCodeableConcept>
@@ -430,7 +430,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="evaluate-condition"/>
                 </coding>
             </patternCodeableConcept>
@@ -499,7 +499,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="execute-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -539,7 +539,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="create-report"/>
                 </coding>
             </patternCodeableConcept>
@@ -566,7 +566,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="validate-report"/>
                 </coding>
             </patternCodeableConcept>
@@ -605,7 +605,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-plandefinition-actions"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
                     <code value="submit-report"/>
                 </coding>
             </patternCodeableConcept>

@@ -28,22 +28,26 @@
 					</div>
 				</text>
 				<extension
-                   url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension">
+                   url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-data-encrypted-extension">
 					<valueBoolean value="false"/>
 				</extension>
-				<extension
-                   url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type">
+				<!--<extension
+                   url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-report-initiation-type-extension">
 					<valueCodeableConcept>
 						<coding>
 							<system
-                      value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/>
+                      value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-report-initiation-types"/>
 							<code value="subscription-notification"/>
 						</coding>
 					</valueCodeableConcept>
+				</extension>-->
+				<extension
+					url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-message-processing-category-extension">
+					<valueCode value="consequence"/>
 				</extension>
 				<eventCoding>
 					<system
-                  value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
+                  value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-message-types"/>
 					<code value="cancer-report-message"/>
 				</eventCoding>
 				<destination>
@@ -66,8 +70,8 @@
 				<reason>
 					<coding>
 						<system
-                    value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
-						<code value="encounter-end"/>
+                    value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-triggerdefinition-namedevent"/>
+						<code value="encounter-close"/>
 					</coding>
 				</reason>
 				<focus>

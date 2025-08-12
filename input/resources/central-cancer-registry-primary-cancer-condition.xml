@@ -45,7 +45,7 @@
       		<path value="Condition.extension"/>
       		<mustSupport value="true"/>
     	</element>
-        <element id="Condition.extension:assertedDate">
+        <element id="Condition.extension:assertedDate|5.2.0">
             <path value="Condition.extension"/>
             <sliceName value="assertedDate"/>
             <min value="1"/>
@@ -95,7 +95,7 @@
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.2.0"/>
             </type>
             <mustSupport value="true"/>
         </element>

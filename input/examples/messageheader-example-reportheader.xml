@@ -15,22 +15,25 @@
           </div>
         </text>
         <extension
-                   url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-data-encrypted-extension">
+                   url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-data-encrypted-extension">
           <valueBoolean value="false"/>
         </extension>
-        <extension
-                   url="http://hl7.org/fhir/us/medmorph/StructureDefinition/us-ph-report-initiation-type">
+        <!--<extension
+                   url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-report-initiation-type-extension">
           <valueCodeableConcept>
             <coding>
               <system
-                      value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-report-initiation-types"/>
+                      value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-report-initiation-types"/>
               <code value="subscription-notification"/>
             </coding>
           </valueCodeableConcept>
-        </extension>
+        </extension>-->
+		<extension
+			url="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-message-processing-category-extension">
+			<valueCode value="consequence"/>
+		</extension>		
         <eventCoding>
-          <system
-                  value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-messageheader-message-types"/>
+          <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-message-types"/>
           <code value="cancer-report-message"/>
         </eventCoding>
         <destination>
@@ -38,10 +41,10 @@
           <endpoint value="http://example.pha.org/fhir"/>
         </destination>
         <sender>
-          <reference value="Organization/example-healthcare-org"/>
+          <reference value="Organization/example-cancer-org"/>
         </sender>
         <source>
-          <name value="Healthcare Organization"/>
+          <name value="Cancer Organization"/>
           <software value="Backend Service App"/>
           <version value="3.1.45.AABB"/>
           <contact>
@@ -53,7 +56,7 @@
         <reason>
           <coding>
             <system
-                    value="http://hl7.org/fhir/us/medmorph/CodeSystem/us-ph-triggerdefinition-namedevents"/>
+                    value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-triggerdefinition-namedevent"/>
             <code value="encounter-end"/>
           </coding>
         </reason>
