@@ -45,8 +45,8 @@
     </element>
     <element id="Composition.identifier">
             <path value="Composition.identifier"/>
-            <short value="Central Cancelr Registry Report Composition identifier"/>
-            <definition value="Central Cancelr Registry Report Composition identifier. This is equivalent to ClinicalDocument.setId in CDA. The identifier of the containing Bundle is equivalent to ClinicalDocument.id in CDA. "/>
+            <short value="Central Cancer Registry Report Composition identifier"/>
+            <definition value="Central Cancer Registry Report Composition identifier. This is equivalent to ClinicalDocument.setId in CDA. The identifier of the containing Bundle is equivalent to ClinicalDocument.id in CDA. "/>
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
@@ -109,7 +109,6 @@
                 <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|6.1.0"/>
                 <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"/>
                 <targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
-				<targetProfile value="http://hl7.org/fhir/us/cancer-reporting/StructureDefinition/us-pathology-related-practitioner-role"/>
             </type>
             <mustSupport value="true"/>
             <isModifier value="false"/>
@@ -133,6 +132,73 @@
       </slicing>
       <mustSupport value="true" />
     </element>
+ 	<element id="Composition.section:sliceEncounterSection">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
+      <path value="Composition.section" />
+      <sliceName value="sliceEncounterSection" />
+      <short value="Encounter Section" />
+      <definition value="This section lists and describes all the patient's encounter information related to the encounter." />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>	
+    <element id="Composition.section:sliceEncounterSection.code">
+      <path value="Composition.section.code" />
+      <short value="Encounter Section code" />
+      <definition value="Encounter Section code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="67781-5" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceEncounterSection.text">
+      <path value="Composition.section.text" />
+      <short value="Encounter Section narrative" />
+      <definition value="Encounter Section narrative" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>	
+	<element id="Composition.section:sliceEncounterSection.entry">
+      <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:sliceEncounterSection.sliceEncounterEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEncounter"/>
+      <short value="Encounter Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceEncounterSection.sliceEncounterDiagnosis">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceEncounterDiagnosis"/>
+      <short value="Encounter Diagnosis Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>	
     <element id="Composition.section:slicePrimaryCancerCondition">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
@@ -221,23 +287,23 @@
       <min value="0" />
       <max value="*" />
     </element>
-        <element id="Composition.section:sliceCancerStageGroup">
+        <element id="Composition.section:sliceTNMStageGroup">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="sliceCancerStageGroup" />
-      <short value="Cancer Stage Group" />
-      <definition value="This section records the Cancer Stage Group for the patient)." />
+      <sliceName value="sliceTNMStageGroup" />
+      <short value="TNM Stage Group" />
+      <definition value="This section records the TNM Stage Group for the patient." />
       <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceCancerStageGroup.code">
+    <element id="Composition.section:sliceTNMStageGroup.code">
       <path value="Composition.section.code" />
-      <short value="Cancer Stage Group code" />
-      <definition value="Cancer Stage Group code" />
+      <short value="TNM Stage Group code" />
+      <definition value="TNM Stage Group code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -248,14 +314,14 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceCancerStageGroup.text">
+    <element id="Composition.section:sliceTNMStageGroup.text">
       <path value="Composition.section.text" />
-      <short value="Cancer Stage Group narrative" />
-      <definition value="Cancer Stage Group narrative" />
+      <short value="TNM Stage Group narrative" />
+      <definition value="TNM Stage Group narrative" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceCancerStageGroup.entry">
+    <element id="Composition.section:sliceTNMStageGroup.entry">
       <path value="Composition.section.entry" />
       <mustSupport value="true" />
       <type>
@@ -538,20 +604,20 @@
       <mustSupport value="true" />
       <isModifier value="false" />
    </element>
-   <element id="Composition.section:sliceOdhSection">
+   <element id="Composition.section:sliceODHSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="sliceOdhSection" />
+      <sliceName value="sliceODHSection" />
       <short value="ODH Data" />
-      <definition value="This section records the ODH data for the patient)." />
+      <definition value="This section records the Occupational Data for Health (ODH) data for the patient)." />
       <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceOdhSection.code">
+    <element id="Composition.section:sliceODHSection.code">
       <path value="Composition.section.code" />
       <short value="ODH Data code" />
       <definition value="ODH Data code" />
@@ -565,14 +631,14 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceOdhSection.text">
+    <element id="Composition.section:sliceODHSection.text">
       <path value="Composition.section.text" />
       <short value="ODH Data narrative" />
       <definition value="ODH Data narrative" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceOdhSection.entry">
+    <element id="Composition.section:sliceODHSection.entry">
       <path value="Composition.section.entry" />
       <mustSupport value="true" />
       <type>

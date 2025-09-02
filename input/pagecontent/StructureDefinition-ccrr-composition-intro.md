@@ -8,12 +8,11 @@ The content is made up data elements from the following profiles from the other 
 
 From the Cancer Pathology Data Sharing IG:
 * [US Pathology Diagnostic Report]({{site.data.fhir.ver.cancerpathIg}}/StructureDefinition-us-pathology-diagnostic-report.html)
-* [US Pathology Related PractitionerRoles]({{site.data.fhir.ver.cancerpathIg}}/StructureDefinition-us-pathology-related-practitioner-role.html)
 
 From the mCODE IG:
 
 * [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
-* [mCODE Cancer Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-stage-group.html)
+* [mCODE TNM Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-stage-group.html)
 * [mCODE TNM Distant Metastases Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html)
 * [mCODE TNM Primary Tumor Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-primary-tumor-category.html)
 * [mCODE TNM Regional Nodes Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-regional-nodes-category.html)
@@ -51,12 +50,13 @@ The following guidance is provided to the implementers to identify the data of i
 
 * Patient: The Patient who is the subject of the closed encounter.
 * Encounter: The Encounter that triggered the report (i.e., closed encounter).
+* Encounter Section: Encounter(s) that contain conditions, staging, procedures and results.
 * Primary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
 * Secondary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the secondary cancer condition along with a verificationStatus of confirmed.
-* Cancer Stage Group Section: Observation with the Cancer Stage Group information and a status of final, amended, or corrected.
+* TNM Stage Group Section: Observation with the TNM stage group information having a status of final, amended, or corrected.
 * TNM Primary Tumor Category: Observation with TNM tumor information having a status of final, amended, or corrected.
-* TNM Regional Nodes Category: Observation with TNM Regional Nodes information having a status of final, amended, or corrected.
-* TNM Distant Metastases Category: Observation with TNM Metastases information having a status of final, amended, or corrected.
+* TNM Regional Nodes Category: Observation with TNM regional nodes information having a status of final, amended, or corrected.
+* TNM Distant Metastases Category: Observation with TNM metastases information having a status of final, amended, or corrected.
 * Radiotherapy Course Summary Section: Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
 * Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and verificationStatus of confirmed.
 * Allergies Section: Allergies associated with the patient with status of active and verification status of confirmed.

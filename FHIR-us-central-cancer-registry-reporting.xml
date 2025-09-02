@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-central-cancer-registry-reporting" defaultVersion="1.0.0" defaultWorkgroup="pher" gitUrl="https://github.com/HL7/fhir-central-cancer-registry-reporting" url="http://hl7.org/fhir/us/central-cancer-registry-reporting">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/central-cancer-registry-reporting/2026Jan" ciUrl="http://build.fhir.org/ig/HL7/fhir-central-cancer-registry-reporting" defaultVersion="1.0.0" defaultWorkgroup="pher" gitUrl="https://github.com/HL7/fhir-central-cancer-registry-reporting" url="http://hl7.org/fhir/us/central-cancer-registry-reporting">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-central-cancer-registry-reporting"/>
+<version code="2.0.0-ballot" url="http://hl7.org/fhir/us/central-cancer-registry-reporting/2026Jan"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/central-cancer-registry-reporting/STU1"/>
-<version code="0.1.0" url="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan"/>
+<version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
