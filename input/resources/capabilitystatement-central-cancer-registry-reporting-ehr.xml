@@ -4,12 +4,12 @@
   <text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h2>EHR</h2>
+      <h2>Data Source</h2>
       <p>(Requirements Definition Capability Statement)</p>
       <p>Canonical URL: http://hl7.org/fhir/us/central-cancer-registry-reporting/CapabilityStatement/central-cancer-registry-reporting-ehr</p>
       <p>Published by: <b>HL7 International - Public Health Work Group</b>
       </p>
-      <p>This profile defines the expected capabilities of the <i>EHR </i> actor to support the central cancer registry reporting use cases.  
+      <p>This profile defines the expected capabilities of the Data Source actor to support the central cancer registry reporting use cases.  
       This actor is responsible for publishing Subscription Topics based on Named Events, generate notifications base on subscriptions and support US Core FHIR APIs.</p>
       <h2>General</h2>
       <div class="table-wrapper">
@@ -27,17 +27,17 @@
         </table>
       </div>
       <h2>REST  behavior</h2>
-      <p>The primary focus of the EHR is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs.</p>
+      <p>The primary focus of the Data Source is to allow the creation, modification and deletion of Subscriptions, notify subscribers based on subscriptions and support US Core APIs.</p>
       <p>
         <b>Security:</b>
       </p>
       <p>Implementations must meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
-      <p>In addition the EHR needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
+      <p>In addition the Data Source needs to meet the security requirements as outlined in the <a href="spec.html#authentication-and-authorization-requirements">Formal Specification - Security Section.</a></p>
 	  
       <h3>US Core Support</h3>
 
       <p>
-      The EHR <b>SHALL</b> implement the 
+      The Data Source <b>SHALL</b> implement the 
       <a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the Central Cancer Registry Reporting IG. 
       </p>
       <br/>
@@ -45,7 +45,7 @@
       <h3>mCode Support</h3>
 
       <p>
-      The EHR <b>SHALL</b> implement the 
+      The Data Source <b>SHALL</b> implement the 
       <a href="spec.html#mcode-fhir-ig-usage">mCode profiles</a> outlined to support the Central Cancer Registry Reporting IG. 
       </p>
       <br/>
@@ -349,7 +349,7 @@
   
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/CapabilityStatement/central-cancer-registry-reporting-ehr"/>
   <name value="CentralCancerRegistryReportingEHRCapabilityStatement"/>
-  <title value="Central Cancer Registry Reporting EHR Capability Statement"/>
+  <title value="Central Cancer Registry Reporting Data Source Capability Statement"/>
   <status value="draft"/>
   <date value="2020-12-06"/>
   <publisher value="HL7 International / Public Health"/>
@@ -359,14 +359,14 @@
             <value value="http://www.hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
-  <description value="This profile defines the expected capabilities of the ''EHR'' actor when conforming to the Central Cancer Registry Reporting Content IG.  
+  <description value="This profile defines the expected capabilities of the ''Data Source'' actor when conforming to the Central Cancer Registry Reporting Content IG.  
   This role is responsible for allowing creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs."/>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="json"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The focus of the EHR is to allow creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs. "/>
+    <documentation value="The focus of the Data Source is to allow creation, modification and deletion of Subscriptions and allows searching and retrieval of resources using US Core APIs. "/>
     <security>
       <description value="Implementations must meet the general security requirements documented in the security section of the implementation guide."/>
     </security>

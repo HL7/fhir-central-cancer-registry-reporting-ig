@@ -67,14 +67,14 @@
             </type>
             <mustSupport value="true"/>
         </element>
-        <element id="Condition.extension:mcode-cancer-disease-type-evidence-type">
+        <element id="Condition.extension:cancer-status-evidence-type">
             <path value="Condition.extension"/>
-            <sliceName value="mcode-cancer-disease-type-evidence-type"/>
+            <sliceName value="cancer-status-evidence-type"/>
             <min value="0"/>
             <max value="1"/>
             <type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type"/>
+                <profile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-status-evidence-type"/>
             </type>
             <mustSupport value="true"/>
         </element>

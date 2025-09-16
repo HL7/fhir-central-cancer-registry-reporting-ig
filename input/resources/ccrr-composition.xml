@@ -85,7 +85,8 @@
       <path value="Composition.encounter" />
       <short value="Encounter related to the public health event" />
       <definition value="This Encounter profile represents the encounter related to the central cancer registry report." />
-      <min value="1" />
+      <min value="0"/>
+	  <max value="*"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0" />
@@ -287,23 +288,23 @@
       <min value="0" />
       <max value="*" />
     </element>
-        <element id="Composition.section:sliceTNMStageGroup">
+        <element id="Composition.section:sliceTNMStaging">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
       <path value="Composition.section" />
-      <sliceName value="sliceTNMStageGroup" />
-      <short value="TNM Stage Group" />
-      <definition value="This section records the TNM Stage Group for the patient." />
+      <sliceName value="sliceTNMStaging" />
+      <short value="TNM Stagi" />
+      <definition value="This section records the TNM Staging information for the patient." />
       <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceTNMStageGroup.code">
+    <element id="Composition.section:sliceTNMStaging.code">
       <path value="Composition.section.code" />
-      <short value="TNM Stage Group code" />
-      <definition value="TNM Stage Group code" />
+      <short value="TNM Staging code" />
+      <definition value="TNM Staging code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
@@ -314,23 +315,76 @@
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceTNMStageGroup.text">
+    <element id="Composition.section:sliceTNMStaging.text">
       <path value="Composition.section.text" />
-      <short value="TNM Stage Group narrative" />
-      <definition value="TNM Stage Group narrative" />
+      <short value="TNM Staging narrative" />
+      <definition value="TNM Staging narrative" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:sliceTNMStageGroup.entry">
+    <element id="Composition.section:sliceTNMStaging.entry">
       <path value="Composition.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
+    </element> 
+    <element id="Composition.section:sliceTNMStagingSection.sliceTNMStageGroupEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceTNMStageGroup"/>
+      <short value="TNM Stage Group Entry"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group" />
       </type>
       <min value="0" />
       <max value="1" />
-    </element>  
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceTNMStagingSection.sliceTNMDistantMetastasesCategoryEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceTNMDistantMetastasesCategory"/>
+      <short value="TNM Distant Metastases Category Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category" />
+      </type>
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceTNMStagingSection.sliceTNMPrimaryTumorCategoryEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceTNMPrimaryTumorCategory"/>
+      <short value="TNM Primary Tumor Category Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category" />
+      </type>
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Composition.section:sliceTNMStagingSection.sliceTNMRegionalNodesCategoryEntry">
+      <path value="Composition.section.entry" />
+      <sliceName value="sliceTNMRegionalNodesCategory"/>
+      <short value="TNM Regional Nodes Category Entry"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category" />
+      </type>
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
     <element id="Composition.section:sliceRadioTherapyCourseSummary">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

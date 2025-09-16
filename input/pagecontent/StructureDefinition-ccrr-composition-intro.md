@@ -46,17 +46,12 @@ From US Core IG:
 
 #### Guidance on populating the data for each section:
 
-The following guidance is provided to the implementers to identify the data of interest which needs to be extracted and populated in the various sections.
+The following guidance is provided to the implementers to identify the data of interest which needs to be extracted and populated in the various sections of the Composition.
 
-* Patient: The Patient who is the subject of the closed encounter.
-* Encounter: The Encounter that triggered the report (i.e., closed encounter).
-* Encounter Section: Encounter(s) that contain conditions, staging, procedures and results.
+* Encounter Section: Any relevant Encounter(s).
 * Primary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
 * Secondary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the secondary cancer condition along with a verificationStatus of confirmed.
-* TNM Stage Group Section: Observation with the TNM stage group information having a status of final, amended, or corrected.
-* TNM Primary Tumor Category: Observation with TNM tumor information having a status of final, amended, or corrected.
-* TNM Regional Nodes Category: Observation with TNM regional nodes information having a status of final, amended, or corrected.
-* TNM Distant Metastases Category: Observation with TNM metastases information having a status of final, amended, or corrected.
+* TNM Staging Section: Observation(s) with the TNM stage group, primary tumor, regional nodes, and distant metastases information having a status of final, amended, or corrected.
 * Radiotherapy Course Summary Section: Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
 * Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and verificationStatus of confirmed.
 * Allergies Section: Allergies associated with the patient with status of active and verification status of confirmed.
@@ -66,6 +61,6 @@ The following guidance is provided to the implementers to identify the data of i
 * Results Section: Results linked to the encounter or ordered during the encounter or results received during the encounter with a status of final.
 * Notes Section: DiagnosticReports and Documents created during the encounter with a status of current or final.
 * Procedures Section: Procedures performed during the closed encounter limited to status of completed or unknown.
-* Plan of Treatment Section: Cancer-related medications requested during the closed encounter with a status of active, completed, cancelled, entered-in-error, stopped, unknown and an intent of order. Service requests and care plan...
+* Plan of Treatment Section: Cancer-related medications and services requested during the closed encounter with a status of active, completed, cancelled, entered-in-error, stopped, unknown and an intent of order. Care plans associated with the patient with status = active.
 * Vital Signs: All vital signs for the encounter with status of final, corrected, unknown or amended.
 * Social History Section: Smoking status associated with the patient with status of final.

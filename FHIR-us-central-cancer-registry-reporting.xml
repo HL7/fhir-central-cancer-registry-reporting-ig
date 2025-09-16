@@ -11,6 +11,7 @@
 <artifact id="ValueSet/cancer-core-reportability-codes" key="ValueSet-cancer-core-reportability-codes" name="Cancer Core Reportability Codes"/>
 <artifact deprecated="true" id="StructureDefinition/cancer-encounter" key="StructureDefinition-cancer-encounter" name="Cancer Encounter"/>
 <artifact id="MedicationAdministration/cancer-related-medication-administration-example" key="MedicationAdministration-cancer-related-medication-administration-example" name="Cancer Related Medication Administration - Example"/>
+<artifact id="StructureDefinition/cancer-status-evidence-type" key="StructureDefinition-cancer-status-evidence-type" name="Cancer Status Evidence Type Extension"/>
 <artifact deprecated="true" id="StructureDefinition/cancer-patient" key="StructureDefinition-cancer-patient" name="CancerPatient"/>
 <artifact id="Endpoint/example-ph-endpoint" key="Endpoint-example-ph-endpoint" name="Central Cancer Registry Endpoint - Example"/>
 <artifact id="PlanDefinition/plandefinition-central-cancer-registry-reporting-example" key="PlanDefinition-plandefinition-central-cancer-registry-reporting-example" name="Central Cancer Registry PlanDefinition - Example"/>
@@ -20,7 +21,7 @@
 <artifact id="Composition/ccrr-composition-example" key="Composition-ccrr-composition-example" name="Central Cancer Registry Reporting Composition - Example"/>
 <artifact id="StructureDefinition/ccrr-content-bundle" key="StructureDefinition-ccrr-content-bundle" name="Central Cancer Registry Reporting Content Bundle"/>
 <artifact id="Bundle/ccrr-content-bundle-example" key="Bundle-ccrr-content-bundle-example" name="Central Cancer Registry Reporting Content Bundle - Example"/>
-<artifact id="CapabilityStatement/central-cancer-registry-reporting-ehr" key="CapabilityStatement-central-cancer-registry-reporting-ehr" name="Central Cancer Registry Reporting EHR Capability Statement"/>
+<artifact id="CapabilityStatement/central-cancer-registry-reporting-ehr" key="CapabilityStatement-central-cancer-registry-reporting-ehr" name="Central Cancer Registry Reporting Data Source Capability Statement"/>
 <artifact id="StructureDefinition/central-cancer-registry-reporting-encounter" key="StructureDefinition-central-cancer-registry-reporting-encounter" name="Central Cancer Registry Reporting Encounter"/>
 <artifact id="Encounter/encounter-cancer-example" key="Encounter-encounter-cancer-example" name="Central Cancer Registry Reporting Encounter - Example"/>
 <artifact id="StructureDefinition/central-cancer-registry-reporting-messageheader" key="StructureDefinition-central-cancer-registry-reporting-messageheader" name="Central Cancer Registry Reporting Message Header"/>

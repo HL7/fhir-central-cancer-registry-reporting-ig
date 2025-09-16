@@ -113,7 +113,7 @@ Figure 2.1 below illustrates a sample central cancer registry reporting timeline
 
 * Provider: A person who delivers health care to a patient. In addition to delivering care, the provider also updates patient data and signs off on the content added, deleted, or modified in the patient record once it is updated. The provider can be the individual doctor, nurse, or a combination of different people that are part of the care team.
 * Data Source (e.g., Electronic Health Record (EHR), Health Information Exchange (HIE)): A system that is used in a health care organization to capture, store patient data and make the data available securely with authorized users. The most widely used Data Source is the EHR system, however other systems such as an HIE can serve as a Data Source. FHIR APIs can be used to extract data from the data source, process, package the data as needed, and then submit the data to the Data Receiver (e.g., Central Cancer Registry (CCR)).
-* Data Submitter: A system responsible for extracting the data and submitting that data to the Data Receiver.
+* Data Submitter (e.g., eCR Now App): A system responsible for extracting the data and submitting that data to the Data Receiver.
 * Data Receiver (e.g., Central Cancer Registry): A system that receives and stores the data. 
 
 ##### Interactions between Actors and Systems for Central Cancer Registry Reporting 
