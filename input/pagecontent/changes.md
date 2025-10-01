@@ -33,7 +33,7 @@ The following is a list of all the changes based on versions.
             <td>All (where applicable)</td>
             <td>Removed references to MedMorph Reference Architecture IG</td>
         </tr>
-         <tr>
+        <tr>
             <td>All (where applicable)</td>
             <td>Added references to US PH Library profiles</td>
         </tr>
@@ -44,6 +44,10 @@ The following is a list of all the changes based on versions.
 		<tr>
 			<td>Change Log</td>
 			<td>Added Change Log</td>
+		</tr>
+		<tr>
+			<td> Removed the Allergies Section and associated US Core profile from the Central Cancer Registry Composition Profile</td>
+			<td> This section was included in error. This information is not collected by registries or NAACCR and should not be included in a CCR report.</td>
 		</tr>
 		<tr>
 			<td>US PH Tribal Affiliation Extension</td>

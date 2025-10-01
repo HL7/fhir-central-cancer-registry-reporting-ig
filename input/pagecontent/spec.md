@@ -1,4 +1,4 @@
-This section defines the specific requirements for systems wishing to conform to actors specified in this Central Cancer Registry Reporting Content IG.  The specification focuses on using the eCR Now App (or a vendor developed solutaion) to report cancer data to central cancer registries.
+This section defines the specific requirements for systems wishing to conform to actors specified in this Central Cancer Registry Reporting Content IG.  The specification focuses on using the eCR Now App (or a vendor developed solution) to report cancer data to central cancer registries.
 
 ### Context
 
@@ -26,6 +26,7 @@ Actors and Systems asserting conformance to this implementation guide have to im
 
 * Systems **SHALL** be capable of populating data elements as specified by the profiles and data elements are returned using the specified APIs in the capability statement.
 * Systems **SHALL** be capable of processing resource instances containing the MUST SUPPORT data elements without generating an error or causing the application to fail. In other words, Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
+* Systems SHOULD be capable of displaying the Must Support data elements for human use or storing them for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Systems **SHALL NOT** include the data elements in the resource instance returned from executing the API requests.
 * When accessing Central Cancer Registry Reporting data, Systems **SHALL** interpret missing data elements within resource instances returned from API requests as data not present.
 * When data is not available for any of the mandatory elements specified in the IG, a data absent reason extension should be added to satisfy the requirement along with an appropriate value from the [data-absent-reason value set](http://hl7.org/fhir/ValueSet/data-absent-reason).
@@ -38,9 +39,8 @@ The full set of profiles defined in this implementation guide can be found by fo
 
 ##### US Core Usage
 
-This IG leverages the following [US Core]({{site.data.fhir.ver.uscoreR4}}) profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this IG either leverages them directly or uses them as a base for any additional constraints needed to support the research use cases.  
+This IG leverages the following [US Core]({{site.data.fhir.ver.uscoreR4}}) profiles defined by HL7 for sharing non-veterinary EMR individual health data in the U.S.  Where US Core profiles exist, this IG either leverages them directly or uses them as a base for any additional constraints needed to support the cancer use cases.  
 
-* [US Core AllergyIntolerance Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-allergyintolerance.html)
 * [US Core CarePlan Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-careplan.html)
 * [US Core Condition Encounter Diagnosis Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-encounter-diagnosis.html)
 * [US Core Condition Problems and Health Concerns Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-problems-health-concerns.html)
@@ -78,7 +78,7 @@ Implementers **SHOULD** use the [mCode Disease characterization guidance]({{site
 
 ##### Cancer Pathology Data Sharing IG Usage 
 
-This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIG}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and include them in the Central Cancer Registry Content Bundle.
+This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIG}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and inclusion of them in the Central Cancer Registry Content Bundle.
 
 * [US Pathology Diagnostic Report Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-diagnostic-report.html)
 

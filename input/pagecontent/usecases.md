@@ -129,7 +129,7 @@ The descriptions for each step in the above diagram include:
 * Step 3: The Data Source notifies the Data Submitter based on notifications created in Step 1.
 * Step 4: The Data Submitter queries the Data Source for the patient’s data.
 * Step 4a: The Data Submitter receives the response from the Data Source with the patient’s data.
-* Step 5: The Data Submitter evaluates the data and creates the report if criteria is met.
+* Step 5: The Data Submitter evaluates the data and creates the report if criteria are met.
 * Step 6: When a report is generated, the Data Submitter submits the created report to the Data Receiver.
 
 Figure 2.3 below depicts the interactions between actors and systems when the Data Submitter is integrated with the Data Source. 

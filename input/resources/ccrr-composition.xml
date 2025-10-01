@@ -471,7 +471,7 @@
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0" />
       </type>
     </element>  
-    <element id="Composition.section:sliceAllergiesSection">
+    <!--<element id="Composition.section:sliceAllergiesSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
@@ -512,7 +512,7 @@
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|6.1.0" />
       </type>
-    </element> 
+    </element> -->
     <element id="Composition.section:sliceMedicationsAdministeredSection">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />

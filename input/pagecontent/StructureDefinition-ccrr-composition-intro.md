@@ -17,7 +17,7 @@ From the mCODE IG:
 * [mCODE TNM Primary Tumor Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-primary-tumor-category.html)
 * [mCODE TNM Regional Nodes Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-regional-nodes-category.html)
 * [mCODE Cancer-Related Medication Request Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-request.html)
-* [mCODE Cancer-Related Administration Request Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-administration.html)
+* [mCODE Cancer-Related Medication Administration Request Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-administration.html)
 * [mCODE Radiotherapy Course Summary Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-radiotherapy-course-summary.html)
 
 From ODH IG:
@@ -26,7 +26,6 @@ From ODH IG:
 
 From US Core IG:
 
-* [US Core AllergyIntolerance Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-allergyintolerance.html)
 * [US Core CarePlan Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-careplan.html)
 * [US Core Condition Encounter Diagnosis Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-encounter-diagnosis.html)
 * [US Core Condition Problems and Health Concerns Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-condition-problems-health-concerns.html)
@@ -54,7 +53,6 @@ The following guidance is provided to the implementers to identify the data of i
 * TNM Staging Section: Observation(s) with the TNM stage group, primary tumor, regional nodes, and distant metastases information having a status of final, amended, or corrected.
 * Radiotherapy Course Summary Section: Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
 * Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and verificationStatus of confirmed.
-* Allergies Section: Allergies associated with the patient with status of active and verification status of confirmed.
 * Medications Administered Section: Cancer-related medications administered during the closed encounter with a status of completed, in-progress, entered-in-error, stopped or unknown.
 * Medications Section: Medications referenced by MedicationRequest and MedicationAdministration.
 * ODH Section: Usual Work information for the patient with a status of final.
