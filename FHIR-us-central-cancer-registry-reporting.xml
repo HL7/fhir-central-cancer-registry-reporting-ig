@@ -7,7 +7,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="AllergyIntolerance/example" key="AllergyIntolerance-example" name="Allergy Intolerance - Example"/>
+<artifact deprecated="true" id="AllergyIntolerance/example" key="AllergyIntolerance-example" name="Allergy Intolerance - Example"/>
 <artifact id="ValueSet/cancer-core-reportability-codes" key="ValueSet-cancer-core-reportability-codes" name="Cancer Core Reportability Codes"/>
 <artifact deprecated="true" id="StructureDefinition/cancer-encounter" key="StructureDefinition-cancer-encounter" name="Cancer Encounter"/>
 <artifact id="MedicationAdministration/cancer-related-medication-administration-example" key="MedicationAdministration-cancer-related-medication-administration-example" name="Cancer Related Medication Administration - Example"/>

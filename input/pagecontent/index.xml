@@ -23,7 +23,7 @@
   </p>
   <ul>
     <li>
-      <a href="usecases.html">Use Cases</a> - The use cases provide clinical context for this IG as well as information implementers should know before reading the remainder of the IG.  
+      <a href="usecases.html">Use Cases</a> - The use cases provide clinical context for this IG as well as information implementers should know before reading the remainder of the IG. The <b>Use Case Triggers and Reporting</b> section provides critically important details for implementers developing their own solution. 
     </li>
     <li>
       <a href="spec.html">Detailed Specification</a> - The formal specification identifying the requirements for the implementers.

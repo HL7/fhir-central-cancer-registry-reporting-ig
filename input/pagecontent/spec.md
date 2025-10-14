@@ -78,7 +78,7 @@ Implementers **SHOULD** use the [mCode Disease characterization guidance]({{site
 
 ##### Cancer Pathology Data Sharing IG Usage 
 
-This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIG}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and inclusion of them in the Central Cancer Registry Content Bundle.
+This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIg}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and inclusion of them in the Central Cancer Registry Content Bundle.
 
 * [US Pathology Diagnostic Report Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-diagnostic-report.html)
 
@@ -86,7 +86,7 @@ This IG leverages the following profiles from the [Cancer Pathology Data Sharing
 
 This IG leverages the [ODH FHIR IG]({{site.data.fhir.ver.odhIg}}/index.html) for exchanging occupational data for health which includes the following profile:
 
-* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhig}}/StructureDefinition/odh-UsualWork.html)
+* [Occupation Data for Health Usual Work Profile]({{site.data.fhir.ver.odhIg}}/StructureDefinition-odh-UsualWork.html)
 
 ##### Subscriptions Backport IG Usage
 
@@ -168,10 +168,10 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 * The Data Source **SHALL** support the [SMART on FHIR Backend Services Authorization](spec.html#smart-on-fhir-backend-services-requirements) outlined above as a Server.
  
 
-##### Subscription requirements
+##### Subscription Requirements
 The requirements in this sub-section are only applicable if when the Data Submitter is not packaged as part of the Data Source.
 
-* The Data Source **SHALL** support the creation of Subscriptions for the following named events described at [US Public Health Profiles Library IG Trigger Events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html).
+* The Data Source **SHALL** support the creation of Subscriptions for the following named events described at [US Public Health Profiles Library IG Trigger Events]({{site.data.fhir.ver.usphplIG}}/ValueSet-us-ph-valueset-triggerdefinition-namedevent.html).
 	
 	* Start of an Encounter
 	* Close of an Encounter
@@ -185,7 +185,7 @@ The requirements in this sub-section are only applicable if when the Data Submit
 
 * The Data Source **SHALL** support operations and APIs for Subscription, Notification Bundle, Subscription status resources as outlined in the [Central Cancer Registry Reporting Data Source Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html).
 
-##### Data API requirements
+##### Data API Requirements
 
 * The Data Source **SHALL** support the [US Core Server APIs]({{site.data.fhir.ver.uscoreR4}}/CapabilityStatement-us-core-server.html) and APIs as outlined in the [Central Cancer Registry Reporting Data Source Capability Statement](CapabilityStatement-central-cancer-registry-reporting-ehr.html) for the Data Submitter to access patient data.
 
@@ -201,7 +201,7 @@ The requirements in this sub-section are only applicable if when the Data Submit
 ##### Subscription Requirements
 The requirements in this sub-section are only applicable if the Data Submitter is not packaged, as part of the Data Source.
 
-* The Data Submitter **SHALL** be capable of creating Subscriptions for the [encounter-close and encounter-start trigger events]({{site.data.fhir.ver.uspublichealthprofileslibraryIg}}/us-ph-valueset-triggerdefinition-namedevent.html).
+* The Data Submitter **SHALL** be capable of creating Subscriptions for the [encounter-close and encounter-start trigger events]({{site.data.fhir.ver.usphplIG}}/ValueSet-us-ph-valueset-triggerdefinition-namedevent.html).
 
 * The Data Submitter **SHALL** support [``rest-hook``]({{site.data.fhir.path}}subscription.html#2.46.7.1) Subscription channel to receive notifications from the Data Source.
 

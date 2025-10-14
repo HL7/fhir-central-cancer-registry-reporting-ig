@@ -20,7 +20,7 @@
             <value value="http://www.hl7.org/Special/committees/pher"/>
         </telecom>
     </contact>
-    <description value="This PlanDefinition profile defines the logic and rules around determining: whether or not a condition is reportable to a cancer registry, which jurisdiction(s) is/are responsible, which jurisdiction(s) need to be notified, and if the cancer condition is reportable, gives timing information, next steps and condition information to the clinician. The rules for determining reportability described by the Central Cancer Registry Reporting specification involve the use of triggering codes to determine potentially reportable events, and optionally locally evaluated rules for determining suspected reportable events. "/>
+    <description value="This PlanDefinition profile defines the logic and rules around determining whether or not a cancer report should be generated and sent to a cancer registry. If the cancer condition is reportable, the PlanDefinition gives timing information, next steps and instructions for sending the cancer report to the cancer registry. The rules for determining reportability described by the Central Cancer Registry Reporting specification involve the use of triggering codes to determine potentially reportable events, and optionally locally evaluated rules for determining suspected reportable events. "/>
     <jurisdiction>
         <coding>
             <system value="urn:iso:std:iso:3166"/>

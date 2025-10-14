@@ -294,7 +294,7 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="sliceTNMStaging" />
-      <short value="TNM Stagi" />
+      <short value="TNM Staging Section" />
       <definition value="This section records the TNM Staging information for the patient." />
       <min value="0" />
       <max value="1" />

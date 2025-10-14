@@ -72,7 +72,7 @@ For the **initial report (T0)**, when a qualifying encounter occurs, the patient
 * Patient First Name
 * Patient Address State
 * Primary Laterality
-* Primary Cancer Condition: Condition with a category of “encounter-diagnosis” for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
+* Primary Cancer Condition: Condition with a category of “encounter-diagnosis” for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that have a clinicalStatus of active can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
 * Date of Diagnosis
 * Diagnostic Confirmation
 * Behavior
@@ -87,7 +87,7 @@ If all content is present at the 15 day check, then a full report (i.e., all pro
 The intent of this report is to initiate an incidence case.
 
 **Between T0 and T0+12 months**, incremental reports containing patient information and new information will be sent based on availability of specific content. The following additions to the patient record will trigger an incremental report:
-* Non-encounter based triggers: If any information is added or updated for the following data elements, then a report will be sent regardless of if the information is tied to an encounter.
+* Non-encounter based triggers: If any information is added or updated for the following resources, then a report will be sent regardless of if the information is tied to an encounter.
 	* Primary Cancer Condition
 	* Cancer Stage Group: All Observations with the Cancer Stage Group information and having a status of final, amended, or corrected.
 	* TNM Primary Tumor Category: All Observations with TNM tumor information having a status of final, amended, or corrected.
