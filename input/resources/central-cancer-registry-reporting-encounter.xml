@@ -97,6 +97,19 @@
             </type>
             <mustSupport value="true"/>
         </element>
+        <element id="Encounter.reasonReference">
+            <path value="Encounter.reasonReference"/>
+			<mustSupport value="true"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"/>			
+			</type>
+		</element>
         <element id="Encounter.diagnosis">
             <path value="Encounter.diagnosis"/>
             <short value="Encounter diagnosis"/>
@@ -108,6 +121,7 @@
             <type>
                 <code value="Reference"/>
                 <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0"/>
+				<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"/>
             </type>
             <mustSupport value="true"/>
         </element>

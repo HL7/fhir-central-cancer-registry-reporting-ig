@@ -107,6 +107,15 @@
             </type>
             <mustSupport value="true"/>
         </element>
+		<element id="Condition.stage.assessment">
+			<path value="Condition.stage.assessment"/>
+            <mustSupport value="true"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group"/>
+				<targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"/>
+			</type>
+		</element>
    <!--      <element id="Condition.bodySite.extension:locationQualifier">
             <path value="Condition.bodySite.extension"/>
             <sliceName value="locationQualifier"/>
