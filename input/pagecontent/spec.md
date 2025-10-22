@@ -80,7 +80,7 @@ Implementers **SHOULD** use the [mCode Disease characterization guidance]({{site
 
 This IG leverages the following profiles from the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIg}}/index.html) for the extraction of Cancer Pathology Reports from the EHR and inclusion of them in the Central Cancer Registry Content Bundle.
 
-* [US Pathology Diagnostic Report Profile]({{site.data.fhir.ver.cancerpathIG}}/StructureDefinition/us-pathology-diagnostic-report.html)
+* [US Pathology Diagnostic Report Profile]({{site.data.fhir.ver.cancerpathIg}}/StructureDefinition-us-pathology-diagnostic-report.html)
 
 ##### Occupational Data for Health (ODH) IG Usage 
 
