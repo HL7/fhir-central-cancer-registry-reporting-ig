@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "cancer-related-surgical-procedure-lumpectomy",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Procedure:</b> Cancer-related-surgical-procedure-lumpectomy</p><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 735085002}\">Lumpectomy of left breast (procedure)</span></p><p><b>subject</b>: Amy Shaw   </p><p><b>performed</b>: 2023-11-08</p><p><b>reasonReference</b>: <a href=\"Condition-primary-cancer-condition-breast.html\">Condition Infiltrating duct carcinoma of breast (disorder)</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 80248007}\">Left breast structure (body structure)</span></p></div>"
+  },
+  "status" : "completed",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "735085002",
+      "display" : "Lumpectomy of left breast (procedure)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "performedDateTime" : "2023-11-08",
+  "reasonReference" : [{
+    "reference" : "Condition/primary-cancer-condition-breast"
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "80248007",
+      "display" : "Left breast structure (body structure)"
+    }]
+  }]
+}

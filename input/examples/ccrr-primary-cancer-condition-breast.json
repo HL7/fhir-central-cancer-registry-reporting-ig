@@ -8,12 +8,12 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative:</b></p><p><b>Condition: </b>primary-cancer-condition-breast</p><p><b>Histology-Morphology-Behavior Extension</b>: Lobular carcinoma in situ (morphologic abnormality) <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#77284006)</p><p><b>clinicalStatus</b>: Active</p><p><b>verificationStatus</b>: Confirmed</p><p><b>category</b>: Problem List Item</p><p><b>code</b>: Malignant neoplastic disease (disorder) <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#363346000)</p><p><b>bodySite</b>: Left breast structure (body structure) <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#80248007)</p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example</a> Amy Shaw</p><p><b>onset</b>: 2019-04-01</p><p><b>asserter</b>: <a href=\"Practitioner-1.html\">Practitioner/1</a> Joseph Nichols</p><p><b>Stage: </b>American Joint Committee on Cancer stage IIIC (qualifier value) <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT[Intl]</a>#1222806003)</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition:</b> Primary Breast Cancer</p>\n  <p><b>Profile:</b> Central Cancer Registry Primary Cancer Condition</p>\n  <p><b>Clinical Status:</b> Active</p>\n  <p><b>Verification Status:</b> Confirmed</p>\n  <p><b>Category:</b> Problem List Item</p>\n  <p><b>Code:</b> Infiltrating duct carcinoma of breast (SNOMED CT: 408643008)</p>\n  <p><b>Histology/Morphology/Behavior:</b> Infiltrating duct carcinoma (morphologic abnormality) (SNOMED CT: 82711006)</p>\n  <p><b>Body Site:</b> Left breast structure (SNOMED CT: 80248007)</p>\n  <p><b>Laterality:</b> Left (qualifier value) (SNOMED CT: 7771000)</p>\n  <p><b>Subject:</b> Amy Shaw </p>\n  <p><b>Asserter:</b> Dr. Joseph Nichols </p>\n  <p><b>Asserted Date:</b> 2023-03-21</p>\n  <p><b>Stage Summary:</b> American Joint Committee on Cancer stage IIA (qualifier value) (SNOMED CT: 1222766008)</p>\n  <p><b>Evidence Type:</b> Histologic test (procedure) (SNOMED CT: 714797009)</p>\n</div>"
   },
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-      "valueDateTime": "2019-04-01"
+      "valueDateTime": "2023-03-21"
     },
     {
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
@@ -21,8 +21,20 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "127569003",
-            "display": "In situ neoplasm (morphologic abnormality)"
+            "code": "82711006",
+            "display": "Infiltrating duct carcinoma (morphologic abnormality)"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-status-evidence-type",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "714797009",
+            "display": "Histologic test (procedure)"
           }
         ]
       }
@@ -60,8 +72,8 @@
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "363346000",
-        "display": "Malignant neoplastic disease (disorder)"
+        "code": "408643008",
+        "display": "Infiltrating duct carcinoma of breast (disorder)"
       }
     ]
   },
@@ -93,7 +105,6 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "onsetDateTime": "2019-04-01",
   "asserter": {
     "reference": "Practitioner/1"
   },
@@ -103,11 +114,16 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "1222806003",
-            "display": "American Joint Committee on Cancer stage IIIC (qualifier value)"
+            "code": "1222766008",
+            "display": "American Joint Committee on Cancer stage IIA (qualifier value)"
           }
         ]
-      }
+      },
+      "assessment": [
+        {
+          "reference": "Observation/cancer-stage-group-example"
+        }
+      ]
     }
   ]
 }

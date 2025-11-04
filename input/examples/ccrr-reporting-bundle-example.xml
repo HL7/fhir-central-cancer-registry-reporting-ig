@@ -235,7 +235,7 @@
 								</text>
 								<entry>
 									<reference
-                       value="MedicationAdministration/cancer-related-medication-administration-example"/>
+                       value="MedicationAdministration/cancer-med-admin-docetaxel-example"/>
 								</entry>
 							</section>
 						</Composition>

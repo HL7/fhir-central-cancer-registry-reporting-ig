@@ -1,68 +1,54 @@
 {
-	"resourceType": "Practitioner",
-	"id": "1",
-	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2019-03-06T03:07:57.933-05:00"
-	},
-	"text": {
-		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Joseph Nichols</div>"
-	},
-	"identifier": [
-		{
-			"use": "official",
-			"type": {
-				"coding": [
-					{
-						"system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-						"code": "SB",
-						"display": "Social Beneficiary Identifier"
-					}
-				],
-				"text": "US Social Security Number"
-			},
-			"system": "http://hl7.org/fhir/sid/us-ssn",
-			"value": "000-00-0004"
-		}
-	],
-	"active": true,
-	"name": [
-		{
-			"use": "official",
-			"family": "Nichols",
-			"given": [
-				"Joseph",
-				"P"
-			],
-			"suffix": [
-				"MD"
-			]
-		}
-	],
-	"telecom": [
-		{
-			"system": "phone",
-			"value": "800-277-1993",
-			"use": "mobile"
-		},
-		{
-			"system": "email",
-			"value": "joseph.nichols@example.com"
-		}
-	],
-	"address": [
-		{
-			"use": "home",
-			"line": [
-				"53 Sunset AveApt 9"
-			],
-			"city": "Tulsa",
-			"state": "OK",
-			"postalCode": "74126",
-			"country": "USA"
-		}
-	],
-	"gender": "male",
-	"birthDate": "1963-12-14"
+  "resourceType": "Practitioner",
+  "id": "1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Practitioner:</b> Dr. Joseph Nichols</p>\n  <p><b>Identifier:</b> US NPI: 1122334455</p>\n  <p><b>Address:</b> 1234 Main St., Tulsa, OK 74126, US (work)</p>\n  <p><b>Email:</b> joseph.nichols@example.com</p>\n  <p><b>Phone:</b> 800-277-1993</p>\n  <p><b>Profile:</b> US Core Practitioner Profile version 6.1.0</p>\n</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1122334455"
+    }
+  ],
+  "name": [
+    {
+      "family": "Nichols",
+      "given": [
+        "Joseph"
+      ],
+      "prefix": [
+        "Dr"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "1234 Main St."
+      ],
+      "city": "Tulsa",
+      "state": "OK",
+      "postalCode": "74126",
+      "country": "US"
+    }
+  ],
+    "telecom" : [
+    {
+      "system" : "email",
+      "value" : "joseph.nichols@example.com",
+      "use" : "work"
+    },
+    {
+      "system" : "phone",
+      "value" : "800-277-1993",
+      "use" : "work"
+    }
+  ]
 }

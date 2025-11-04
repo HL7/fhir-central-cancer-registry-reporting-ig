@@ -52,7 +52,7 @@
 
       <p>
       The Data Source supporting external Data Submitter (e.g EHR) <b>SHALL</b> implement the 
-      <a href="http://hl7.org/fhir/us/core/STU3.1.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the Central Cancer Registry Reporting IG.
+      <a href="http://hl7.org/fhir/us/core/STU6.1/CapabilityStatement-us-core-server.html">US Core Server capability statement</a> as foundational FHIR APIs needed by the Central Cancer Registry Reporting IG.
       </p>
       <br/>
       

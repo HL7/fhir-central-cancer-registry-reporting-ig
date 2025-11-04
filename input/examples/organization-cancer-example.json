@@ -1,0 +1,36 @@
+{
+  "resourceType": "Organization",
+  "id": "example-cancer-org",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Organization:</b> Cancer Organization</p>\n    <p><b>Profile:</b> Central Cancer Registry Reporting Organization</p>\n<p><b>Status:</b> Active</p>\n  <p><b>Identifier (NPI):</b> 1063494177</p>\n  <p><b>Name:</b> Cancer Organization</p>\n  <p><b>Address:</b> 1234 Main Street, Tulsa, OK 74126</p>\n  <p><b>Phone:</b> (917)932-2000</p>\n  <p><b>Endpoint:</b> Reference to Endpoint/example-healthcare-endpoint</p>\n</div>"
+  },
+  "identifier": [{
+    "system": "http://hl7.org/fhir/sid/us-npi",
+    "value": "1063494177"
+  }],
+  "active": true,
+  "name": "Cancer Organization",
+  "telecom": [{
+    "system": "phone",
+    "value": "(917)932-2000",
+    "use": "work"
+  }],
+  "address": [{
+    "text": "1234 Main Street, Tulsa OK 74126",
+    "line": [
+      "1234 Main Street"
+    ],
+    "city": "Tulsa",
+    "state": "OK",
+    "postalCode": "74126"
+  }],
+  "endpoint": [{
+    "reference": "Endpoint/example-healthcare-endpoint"
+  }]
+}

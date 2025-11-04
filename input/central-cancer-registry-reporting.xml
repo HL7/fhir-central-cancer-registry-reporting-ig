@@ -116,7 +116,7 @@
    </resource>   
    <resource>
       <reference>
-        <reference value="Observation/tnm-clinical-primary-tumor-category-cT3"/>
+        <reference value="Observation/tnm-clinical-primary-tumor-category-cT2"/>
       </reference>
       <name value="mCODE TNM Clinical Primary Tumor Category - Example"/>
       <description value="An example showing an mCODE TNM Clinical Primary Tumor Category"/>
@@ -124,7 +124,7 @@
    </resource>   
    <resource>
       <reference>
-        <reference value="Observation/tnm-clinical-regional-nodes-category-cN3"/>
+        <reference value="Observation/tnm-clinical-regional-nodes-category-cN0"/>
       </reference>
       <name value="mCODE TNM Clinical Regional Nodes Category - Example"/>
       <description value="An example showing an mCODE TNM Clinical Regional Nodes Category"/>
@@ -164,7 +164,7 @@
    </resource>-->
    <resource>
       <reference>
-        <reference value="MedicationAdministration/cancer-related-medication-administration-example"/>
+        <reference value="MedicationAdministration/cancer-med-admin-docetaxel-example"/>
       </reference>
       <name value="Cancer Related Medication Administration - Example"/>
       <description value="An example showing a Cancer-related MedicationAdministration"/>
@@ -230,7 +230,7 @@
       <reference>
         <reference value="Bundle/central-cancer-registry-reporting-specification-bundle-example"/>
       </reference>
-      <name value="Central Cancer Registry Reporting Specifiation Bundle (Knowledge Artifact)- Example"/>
+      <name value="Central Cancer Registry Reporting Specification Bundle (Knowledge Artifact)- Example"/>
       <description value="An example showing a Central Cancer Registry Reporting Specification Bundle (Knowledge Artifact)"/>
       <exampleBoolean value="true"/>
    </resource>
@@ -258,7 +258,7 @@
       <description value="An example showing an Healthcare Organization Endpoint"/>
       <exampleBoolean value="true"/>
    </resource>
-   <resource>
+   <!--<resource>
       <reference>
         <reference value="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
       </reference>
@@ -273,7 +273,7 @@
       <name value="mCODE Radiotherapy Volume - Example"/>
       <description value="An example showing an mCODE Radiotherapy Volume"/>
       <exampleBoolean value="true"/>
-   </resource>
+   </resource>-->
    <resource>
       <reference>
         <reference value="Procedure/radiotherapy-example"/>
@@ -282,7 +282,54 @@
       <description value="An example showing an mCODE Radiotherapy Course Summary"/>
       <exampleBoolean value="true"/>
    </resource>
-
+      <resource>
+      <reference>
+        <reference value="Procedure/cancer-related-surgical-procedure-lumpectomy"/>
+      </reference>
+      <name value="Cancer-related Surgical Procedure - Example"/>
+      <description value="An example showing a Cancer-related Surgical Procedure"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Encounter/encounter-cancer-example-radiation"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Encounter for Radiation - Example"/>
+      <description value="An example showing a Cancer Encounter for Radiation"/>
+      <exampleBoolean value="true"/> 
+   </resource>	
+   <resource>
+      <reference>
+        <reference value="Encounter/encounter-cancer-example-surgery"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Encounter for Surgery - Example"/>
+      <description value="An example showing a Cancer Encounter for Surgery"/>
+      <exampleBoolean value="true"/> 
+   </resource>	
+   <resource>
+      <reference>
+        <reference value="Observation/non-smoker"/>
+      </reference>
+      <name value="Smoking Status - Example"/>
+      <description value="An example showing Smoking Status"/>
+      <exampleBoolean value="true"/> 
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Observation/odh-usual-work"/>
+      </reference>
+      <name value="ODH Usual Work - Example"/>
+      <description value="An example showing ODH Usual Work"/>
+      <exampleBoolean value="true"/> 
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Condition/problem-list-diabetes"/>
+      </reference>
+      <name value="Problem List Condition - Example"/>
+      <description value="An example showing a Problem List Condition"/>
+      <exampleBoolean value="true"/> 
+   </resource>
   
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->

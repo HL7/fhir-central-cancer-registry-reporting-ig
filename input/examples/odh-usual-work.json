@@ -1,0 +1,44 @@
+{
+  "resourceType": "Observation",
+  "id": "odh-usual-work",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>History of Usual Occupation for Amy Shaw</b></p><p><b>Start Date: </b>2010-01-01</p><p><b>Industry Code/Value: </b>1570 / Carpet and rug mills</p><p><b>Occupation Code/Value: </b>6240 / Carpet, floor, and tile installers and finishers</p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "21843-8",
+        "display": "History of Usual occupation"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "effectivePeriod": {
+    "start": "2010-01-01"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "2.16.840.1.114222.4.11.7187",
+        "code": "1570",
+        "display": "Carpet and rug mills"
+      },
+      {
+        "system": "2.16.840.1.114222.4.11.7186",
+        "code": "6240",
+        "display": "Carpet, floor, and tile installers and finishers"
+      }
+    ]
+  }
+}

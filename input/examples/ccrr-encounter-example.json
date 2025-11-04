@@ -1,0 +1,85 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter-cancer-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-encounter"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Encounter:</b> encounter-cancer-example</p><p><b>Profile:</b> central-cancer-registry-reporting-encounter</p><p><b>Identifier:</b> 9937012 (System: http://CancerOrg.smarthealthit.org)</p><p><b>Status:</b> finished</p><p><b>Class:</b> AMB (Ambulatory)</p><p><b>Type:</b> Encounter for problem (procedure) (SNOMED CT: 185347001)</p><p><b>Subject:</b> Amy Shaw (Patient/example)</p><p><b>Reason:</b> Referral by general physician (procedure) (SNOMED CT: 305970004)</p><p><b>Participant:</b> Dr. Joseph Nichols (Practitioner/1) – Attender</p><p><b>Period:</b> 2023-03-21T17:00:14-05:00 to 2023-03-21T20:00:14-05:00</p><p><b>Diagnosis:</b> Reference to Condition/primary-cancer-condition-breast</p><p><b>Service Provider:</b> Cancer Organization (Organization/example-cancer-org)</p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://CancerOrg.smarthealthit.org",
+      "value": "9937012"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "AMB",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "185347001",
+         "display": "Encounter for problem (procedure)"
+       }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "ATND",
+              "display": "attender"
+            }
+          ]
+        }
+      ],
+      "individual": {
+        "reference": "Practitioner/1",
+        "display": "Joseph Nichols"
+      }
+    }
+  ],
+  "period" : {
+    "start" : "2023-03-21T17:00:14-05:00",
+    "end" : "2023-03-21T20:00:14-05:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+         "system": "http://snomed.info/sct",
+         "code": "305970004",
+         "display": "Referral by general physician (procedure)"
+       }
+      ]
+    }
+  ], 
+  "diagnosis": [
+    {
+      "condition": {
+        "reference": "Condition/primary-cancer-condition-breast"
+      }
+    }
+  ],
+  "serviceProvider" : {
+        "reference" : "Organization/example-cancer-org",
+        "display" : "Cancer Organization"
+    }
+}

@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "tnm-clinical-regional-nodes-category-cN3",
+  "id": "tnm-clinical-regional-nodes-category-cN0",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category"
@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 21906-3}\">Regional lymph nodes.clinical [Class] Cancer</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Amy Shaw</a></p><p><b>effective</b>: 2019-04-01</p><p><b>value</b>: <span title=\"Codes: {http://cancerstaging.org cN3}\">N3</span></p><p><b>method</b>: <span title=\"Codes: {http://snomed.info/sct 897275008}\">American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)</span></p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Observation:</b> TNM Clinical Regional Nodes Category (cN0)</p>\n  <p><b>Profile:</b> mCODE TNM Regional Nodes Category</p>\n  <p><b>Status:</b> final</p>\n  <p><b>Category:</b> Laboratory</p>\n  <p><b>Code:</b> Regional lymph nodes.clinical [Class] Cancer (LOINC: 21906-3)</p>\n  <p><b>Subject:</b> Amy Shaw (Patient/example)</p>\n  <p><b>Effective Date:</b> 2023-03-21</p>\n  <p><b>Performer:</b> Dr. Joseph Nichols (Practitioner/1)</p>\n  <p><b>Value:</b> cN0 (American Joint Committee on Cancer cN0 qualifier)</p>\n  <p><b>Method:</b> American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) (SNOMED CT: 897275008)</p>\n  </div>"
   },
   "status": "final",
   "category" : [
@@ -33,7 +33,7 @@
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2019-04-01",
+  "effectiveDateTime": "2023-03-21",
   "performer": [
     {
         "reference": "Practitioner/1"
@@ -43,8 +43,8 @@
     "coding": [
       {
         "system" : "http://snomed.info/sct",
-        "code" : "1229984001",
-        "display" : "American Joint Committee on Cancer cN3 (qualifier value)"
+        "code" : "1229967007",
+        "display" : "American Joint Committee on Cancer cN0 (qualifier value)"
       }
     ]
   },

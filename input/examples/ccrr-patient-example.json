@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>id</b>: example</p><p><b>meta</b>: </p><p><b>identifier</b>: Medical Record Number: 1032702 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Amy V. Shaw , Amy V. Baxter </p><p><b>telecom</b>: ph: 555-555-5555(HOME), amy.shaw@example.com</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1987-02-20</p><p><b>address</b>: </p><ul><li>49 Meadow St Mounds OK 74047 US </li><li>183 Mountain View St Mounds OK 74048 US </li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"StructureDefinition-central-cancer-registry-reporting-patient.html\">Central Cancer Registry Reporting Patient</a></p>\n  <p><b>Patient:</b> Amy V. Baxter (formerly Amy V. Shaw)</p>\n    <p><b>Identifiers:</b></p>\n  <ul>\n    <li>Medical Record Number: 1032702 (system: http://CancerOrg.smarthealthit.org)</li>\n    <li>Social Security Number: 11-222-3333</li>\n  </ul>\n  <p><b>Active:</b> true</p>\n  <p><b>Gender:</b> female</p>\n  <p><b>Birth Date:</b> 1987-02-20</p>\n  <p><b>Marital Status:</b> Never Married</p>\n  <p><b>Race:</b> White, American Indian or Alaska Native (Shoshone), Asian (Filipino)</p>\n  <p><b>Ethnicity:</b> Hispanic or Latino (Mexican, Dominican)</p>\n  <p><b>Birthplace:</b> Georgia, US</p>\n  <p><b>Addresses:</b></p>\n  <ul>\n    <li>49 Meadow St, Mounds, OK 74047, US (2016-12-06 to 2020-07-22)</li>\n    <li>183 Mountain View St, Mounds, OK 74048, US (2020-07-22 to present)</li>\n  </ul>\n  <p><b>Telecom:</b></p>\n  <ul>\n    <li>Phone: 555-555-5555 (home)</li>\n    <li>Email: amy.shaw@example.com</li>\n  </ul>\n  <p><b>Languages:</b> English</p>\n  <p><b>Managing Organization:</b> Cancer Organization (Organization/example-cancer-org)</p>\n</div>"
   },
   "extension": [
     {
@@ -92,6 +92,17 @@
         }
       ],
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+          "valueAddress": {
+            "state": "GA",
+            "country": "US"
+          }
+        }
+      ]
     }
   ],
   "identifier": [
@@ -107,8 +118,23 @@
         ],
         "text": "Medical Record Number"
       },
-      "system": "http://hospital.smarthealthit.org",
+      "system": "http://CancerOrg.smarthealthit.org",
       "value": "1032702"
+    },
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "SS",
+            "display": "Social Security Number"
+          }
+        ],
+        "text": "Social Security Number"
+      },
+      "system": "http://hl7.org/fhir/sid/us-ssn",
+      "value": "11-222-3333"
     }
   ],
   "active": true,
@@ -120,9 +146,10 @@
         "V."
       ],
       "period": {
-        "start": "2016-12-06",
+        "start": "1987-02-20",
         "end": "2020-07-22"
-      }
+      },
+      "use": "maiden"
     },
     {
       "family": "Baxter",
@@ -179,6 +206,15 @@
       }
     }
   ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "code": "S",
+        "display": "Never Married"
+      }
+    ]
+  },
   "communication": [
     {
       "language": {
@@ -189,7 +225,11 @@
             "display": "English"
           }
         ]
-      }
+	  }
+	}
+   ],
+  "managingOrganization": {
+	  "reference": "Organization/example-cancer-org",
+	  "display": "Cancer Organization"
     }
-  ]
 }

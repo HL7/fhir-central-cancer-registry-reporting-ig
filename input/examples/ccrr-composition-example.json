@@ -11,7 +11,7 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Amy Shaw data for CCRR </b></p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"StructureDefinition-ccrr-composition.html\"> Central Cancer Registry Reporting Composition</a></p><h2>Central Cancer Registry Report</h2>\n  <p><b>Patient:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Author:</b> <a href=\"Practitioner-1.html\">Practitioner 1: Dr. Nicholas Joseph</a></p>\n  <p><b>Date:</b> 2023-01-02</p>\n  <h3>Sections:</h3>\n  <ul>\n    <li><b>Primary Cancer Condition:</b> Infiltrating duct carcinoma of the left breast (<a href=\"Condition-primary-cancer-condition-breast.html\">Condition/primary-cancer-condition-breast</a>)</li>\n    <li><b>TNM Staging:</b> Stage IIA (cT2, cN0, cM0) (<a href=\"Observation-cancer-stage-group-example.html\">Observation/cancer-stage-group-example</a>)</li>\n    <li><b>Radiotherapy:</b> Completed external beam radiation therapy, photon modality, curative intent, Jan–Mar 2024 (<a href=\"Procedure-radiotherapy-example.html\">Procedure/radiotherapy-example</a>)</li>\n     <li><b>Medications:</b> Cancer-related medication administration (Docetaxel) (<a href=\"MedicationAdministration-cancer-med-admin-docetaxel-example.html\">MedicationAdministration/cancer-med-admin-docetaxel-example</a>)</li>\n  </ul>\n</div>"
   },
   "identifier": {
     "value": "c03eab8c-11e8-4d0c-ad2a-b385395e27db"
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "title": "Cancer Stage Group section",
+      "title": "TNM Staging section",
       "code": {
         "coding": [
           {
@@ -81,6 +81,15 @@
       "entry": [
         {
           "reference": "Observation/cancer-stage-group-example"
+        },
+        {
+          "reference": "Observation/tnm-clinical-regional-nodes-category-cN0"
+        },
+        {
+          "reference": "Observation/tnm-clinical-primary-tumor-category-cT2"
+        },
+        {
+          "reference": "Observation/tnm-clinical-distant-metastases-category-cM0"
         }
       ]
     },	
@@ -106,27 +115,6 @@
       ]
     },	
     {
-      "title": "Allergies Section",
-      "code": {
-        "coding": [
-          {
-            "system": "http://loinc.org",
-            "code": "48765-2",
-            "display": "Allergies and adverse reactions Document"
-          }
-        ]
-      },
-      "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Allergy to Sulfonide</p></div>"
-      },
-      "entry": [
-        {
-          "reference": "AllergyIntolerance/example"
-        }
-      ]
-    },
-    {
       "title": "Medications Section",
       "code": {
         "coding": [
@@ -143,7 +131,7 @@
       },
       "entry": [
         {
-          "reference": "MedicationAdministration/cancer-related-medication-administration-example"
+          "reference": "MedicationAdministration/cancer-med-admin-docetaxel-example"
         }
       ]
     }

@@ -107,6 +107,60 @@ Figure 2.1 below illustrates a sample central cancer registry reporting timeline
 
 {% include img.html img="ccrr-bundle-sending-timeline.png" caption="Figure 2.1 - Central Cancer Registry Reporting Timeline" %}
 
+#### Patient Journey
+The following describes a realistic history of a patient’s journey from discovering a breast lump of concern through diagnosis, treatment, monitoring, and follow-up for breast cancer. This scenario describes a journey where all the patient’s providers starting with her visit to the oncologist are in a single cancer center and using a single Electronic Health Record (EHR). The diagnostic testing information and biopsy results are provided for context, but in this scenario are conducted by providers outside of the cancer center. This information will be reported to the cancer registry through other means outside of this scenario. 
+When information in the scenario does not map on to Central Cancer Registry Reporting Content (CCRR) IG profiles, we provide examples using [US Core]({{site.data.fhir.ver.uscoreR4}}) or [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html), as indicated in the CCRR IG [detailed specification](spec.html). We condense some repeated patterns. For example, we only show one example of MedicationAdministration when in reality, there are several different medications included in the patient’s chemotherapy regimen.
+
+_**Patient History**_
+
+**Demographics:** [Patient Amy Shaw](Patient-example.html) is a 38 year old multiracial Latina female.  
+
+**Occupation & Industry:** Amy has been a [factory worker for an oil-based paint and floor finish manufacturer for 15 years](Observation-odh-usual-work.html).
+
+**Health History:** No significant family history of breast cancer. She leads an active lifestyle, with [no smoking](Observation-non-smoker.html) or excessive alcohol use. She has [insulin-dependent diabetes](Condition-problem-list-diabetes.html), first diagnosed when she was a child. 
+
+**Initial Symptoms:** In January 2023, Amy notices a lump in her left breast.
+
+_**Diagnosis**_
+
+**Primary Care Visit:** On 3/5/2023, she visits her general practitioner (GP) after noticing that the lump has persisted. The doctor conducts a physical exam and orders a mammogram with ultrasound as needed. 
+
+**Diagnostic Testing:** Mammogram and ultrasound performed on 3/10/2023 confirm a suspicious mass in the area of concern. GP recommends a biopsy. 
+A week later (3/17/2023), Amy presents to the radiology office for a core-needle breast biopsy.  The specimen from the needle biopsy is sent to the pathology laboratory for analysis and interpretation.
+
+**Biopsy Results:** Pathology confirms triple-negative infiltrating duct carcinoma of the left breast. The laboratory sends the pathology report to the state cancer registry, the radiologist, and the primary care provider. 
+
+**PCP Visit:** She is referred by her PCP to an oncologist for treatment. PCP sends the pathology report to the oncologist. 
+
+**Oncologist Consultation:** Amy has a consultation with an oncologist, Dr. Joseph Nichols, on 3/21/2023 (extension:assertedDate in Central Cancer Registry Reporting Primary Cancer Condition Profile). This visit establishes T0 for purposes of determining triggers for reporting to the central cancer registry. Dr. Nichols orders a CT and MRI. He documents her [cancer diagnosis](Condition-primary-cancer-condition-breast.html) of infiltrating duct carcinoma (extension:histologyMorphologyBehavior) of the left (extension:lateralityQualifier) breast (bodySite) in her medical record, and notes Histologic test (procedure) as the diagnostic confirmation method (extension:cancer-status-evidence-type).  
+
+CT and MRI are performed on 3/24/2023 and Dr. Nichols receives the results on 3/29/23. Results confirm that the cancer is 4cm, localized, with no adenopathy or visible metastases. After reviewing the results, on 4/4/23 Dr. Nichols documents the [clinical stage as cT2 cN0 cM0 and Stage Group IIA, AJCC 8th Edition](Observation-cancer-stage-group-example.html) (TNM Stage Group Profile). 
+
+**4/5/23: The diagnosis of cancer associated with the encounter triggers an initial report to be generated and sent to the central cancer registry. (T0+15 days: Encounter-based (EB) bundle EB.1)**
+
+_**Treatment and Monitoring**_
+
+**Chemotherapy:** On 4/10/2023 Amy begins [chemotherapy](MedicationAdministration-cancer-med-admin-docetaxel-example.html) to shrink the tumor before surgery. 
+* She receives chemotherapy at the infusion enter every 3 weeks for 6 months
+* Chemotherapy medications: Docetaxel + Carboplatin + Adriamycin + Cyclophosphamide + Paclitaxel 
+
+**4/10/23: The administration of cancer-related medications is a non-encounter-based (NEB) trigger for an incremental report to be generated and sent to the central cancer registry. (NEB.1)**
+
+**Surgical Intervention:** On 11/8/23 she undergoes a [lumpectomy](Procedure-cancer-related-surgical-procedure-lumpectomy.html) followed by sentinel lymph node dissection. 
+
+**11/8/23:** The surgical procedures trigger an encounter-based incremental report between T0 and T+12 to be generated and sent to the central cancer registry (EB.2)
+
+**3/21/24:** A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+12 months (TB.1)
+
+**Radiation Therapy:** On 1/31/24 Amy begins [external beam radiation treatment](Procedure-radiotherapy-example.html) (mcode-radiotherapy-course-summary.mcode-radiotherapy-modality-and-technique.mcode-radiotherapy-modality.value) to eliminate any remaining cancer cells. She receives this treatment for 8 weeks, with her last visit on 3/31/24.  
+
+**3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report between T0+12 and T0+24 to be generated and sent to the central cancer registry. (NEB.2)**
+
+**Monitoring and Follow-Up:** Amy undergoes frequent follow-ups to monitor for recurrence, blood tests, physical exams every 3-6 months for the first 3 years, and annual mammograms.
+
+**3/21/25: A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+24 Months. (TB.2)**
+
+
 #### Use Case Actors and Interactions
 
 ##### Central Cancer Registry Reporting Actors and Definitions 

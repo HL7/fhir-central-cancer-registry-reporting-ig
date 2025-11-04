@@ -1,0 +1,60 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "cancer-med-admin-docetaxel-example",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>status:</b> completed</p><p><b>category:</b> Outpatient</p><p><b>medication:</b> rxnorm 72962 docetaxel</p><p><b>subject:</b> Amy Shaw</p><p><b>start date:</b> 2023-04-10</p><p><b>Performer:</b> Joseph Nichols</p><p><b>reasonReference:</b> Condition-primary-cancer-condition-breast</p><p><b>authoredOn:</b> 2023-04-10</p><p><b>note:</b> Chemotherapy regimen of docetaxel, carboplatin, adriamycin, cyclophosphamide, and paclitaxel administered by continuous infusion. Patient tolerated infusion without side effects.</p><p><b>Route:</b> SNOMED 47625008 Intravenous route (qualifier value)</p></div>"
+  },
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/medication-admin-category",
+      "code" : "outpatient"
+    }]
+  },
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code" : "72962",
+      "display" : "docetaxel"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2023-04-10",
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/1"
+    }
+  }],
+  "reasonCode": [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "408643008",
+      "display" : "Infiltrating duct carcinoma of breast (disorder)"
+    }]
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/primary-cancer-condition-breast"
+  }],
+  "note" : [{
+    "authorReference" : {
+      "reference" : "Practitioner/1"
+    },
+    "time" : "2023-04-10",
+    "text" : "docetaxel administered by continuous infusion. Patient tolerated infusion without side effects."
+  }],
+  "dosage" : {
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "47625008",
+        "display" : "Intravenous route (qualifier value)"
+      }]
+    }
+  }
+}
