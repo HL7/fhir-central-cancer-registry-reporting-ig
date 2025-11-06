@@ -6,7 +6,7 @@
   },
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Procedure:</b> Cancer-related-surgical-procedure-lumpectomy</p><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 735085002}\">Lumpectomy of left breast (procedure)</span></p><p><b>subject</b>: Amy Shaw   </p><p><b>performed</b>: 2023-11-08</p><p><b>reasonReference</b>: <a href=\"Condition-primary-cancer-condition-breast.html\">Condition Infiltrating duct carcinoma of breast (disorder)</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 80248007}\">Left breast structure (body structure)</span></p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"https://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html\">US Core Procedure</a></p>\n  <p><b>Procedure:</b> Cancer-related-surgical-procedure-lumpectomy</p><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 735085002}\">Lumpectomy of left breast (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Amy V. Shaw</a></p><p><b>performed</b>: 2023-11-08</p><p><b>reasonReference</b>: <a href=\"Condition-primary-cancer-condition-breast.html\">Condition Infiltrating duct carcinoma of breast (disorder)</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 80248007}\">Left breast structure (body structure)</span></p></div>"
   },
   "status" : "completed",
   "code" : {

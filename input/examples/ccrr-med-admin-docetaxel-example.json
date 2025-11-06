@@ -5,8 +5,8 @@
     "profile" : ["http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"]
   },
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Narrative</b></p><p><b>status:</b> completed</p><p><b>category:</b> Outpatient</p><p><b>medication:</b> rxnorm 72962 docetaxel</p><p><b>subject:</b> Amy Shaw</p><p><b>start date:</b> 2023-04-10</p><p><b>Performer:</b> Joseph Nichols</p><p><b>reasonReference:</b> Condition-primary-cancer-condition-breast</p><p><b>authoredOn:</b> 2023-04-10</p><p><b>note:</b> Chemotherapy regimen of docetaxel, carboplatin, adriamycin, cyclophosphamide, and paclitaxel administered by continuous infusion. Patient tolerated infusion without side effects.</p><p><b>Route:</b> SNOMED 47625008 Intravenous route (qualifier value)</p></div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Profile: </b> <a href=\"https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-medication-administration.html\">mCODE Cancer Related Medication Administration</a></p><p><b>status:</b> completed</p><p><b>category:</b> Outpatient</p><p><b>medication:</b> rxnorm 72962 docetaxel</p><p><b>subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p><p><b>start date:</b> 2023-04-10</p><p><b>Performer:</b> Joseph Nichols</p><p><b>reasonReference:</b> Condition-primary-cancer-condition-breast</p><p><b>authoredOn:</b> 2023-04-10</p><p><b>note:</b> Chemotherapy regimen of docetaxel, carboplatin, adriamycin, cyclophosphamide, and paclitaxel administered by continuous infusion. Patient tolerated infusion without side effects.</p><p><b>Route:</b> SNOMED 47625008 Intravenous route (qualifier value)</p></div>"
   },
   "status" : "completed",
   "category" : {
@@ -55,6 +55,12 @@
         "code" : "47625008",
         "display" : "Intravenous route (qualifier value)"
       }]
+    },
+    "dose" : {
+      "value" : 60,
+      "unit" : "mg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg"
     }
   }
 }

@@ -7,7 +7,7 @@
     ]
   },
   "text": {
-    "status": "extensions",
+    "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"StructureDefinition-central-cancer-registry-reporting-patient.html\">Central Cancer Registry Reporting Patient</a></p>\n  <p><b>Patient:</b> Amy V. Baxter (formerly Amy V. Shaw)</p>\n    <p><b>Identifiers:</b></p>\n  <ul>\n    <li>Medical Record Number: 1032702 (system: http://CancerOrg.smarthealthit.org)</li>\n    <li>Social Security Number: 11-222-3333</li>\n  </ul>\n  <p><b>Active:</b> true</p>\n  <p><b>Gender:</b> female</p>\n  <p><b>Birth Date:</b> 1987-02-20</p>\n  <p><b>Marital Status:</b> Never Married</p>\n  <p><b>Race:</b> White, American Indian or Alaska Native (Shoshone), Asian (Filipino)</p>\n  <p><b>Ethnicity:</b> Hispanic or Latino (Mexican, Dominican)</p>\n  <p><b>Birthplace:</b> Georgia, US</p>\n  <p><b>Addresses:</b></p>\n  <ul>\n    <li>49 Meadow St, Mounds, OK 74047, US (2016-12-06 to 2020-07-22)</li>\n    <li>183 Mountain View St, Mounds, OK 74048, US (2020-07-22 to present)</li>\n  </ul>\n  <p><b>Telecom:</b></p>\n  <ul>\n    <li>Phone: 555-555-5555 (home)</li>\n    <li>Email: amy.shaw@example.com</li>\n  </ul>\n  <p><b>Languages:</b> English</p>\n  <p><b>Managing Organization:</b> Cancer Organization (Organization/example-cancer-org)</p>\n</div>"
   },
   "extension": [
@@ -102,7 +102,8 @@
             "country": "US"
           }
         }
-      ]
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
     }
   ],
   "identifier": [

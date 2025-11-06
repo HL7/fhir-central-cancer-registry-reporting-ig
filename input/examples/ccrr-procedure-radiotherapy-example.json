@@ -5,8 +5,8 @@
     "profile" : ["http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"]
   },
   "text" : {
-    "status" : "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"StructureDefinition-mcode-radiotherapy-course-summary.html\"> mCODE Radiotherapy Course Summary</a></p><p><b>Procedure:</b> Radiotherapy Course Summary</p>\n  <p><b>Status:</b> Completed</p>\n  <p><b>Intent:</b> Curative (SNOMEDCT: 373808002)</p>\n  <p><b>Modality:</b> External beam radiation therapy using photons (SNOMEDCT: 1156506007)</p>\n  <p><b>Performed:</b> 2024-01-31 to 2024-03-31</p>\n  <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Reason:</b> Infiltrating duct carcinoma of breast </p>\n</div>"
+    "status" : "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-radiotherapy-course-summary.html\">mCODE Radiotherapy Course Summary</a></p><p><b>Procedure:</b> Radiotherapy Course Summary</p>\n  <p><b>Status:</b> Completed</p>\n  <p><b>Intent:</b> Curative (SNOMEDCT: 373808002)</p>\n  <p><b>Modality:</b> External beam radiation therapy using photons (SNOMEDCT: 1156506007)</p>\n  <p><b>Performed:</b> 2024-01-31 to 2024-03-31</p>\n  <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Reason:</b> Infiltrating duct carcinoma of breast </p>\n</div>"
   },
   "extension" : [
   {
@@ -29,10 +29,22 @@
           "display" : "External beam radiation therapy using photons (procedure)"
         }]
       }
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique",
+        "valueCodeableConcept" : {
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "code" : "1156530009",
+              "display" : "Volumetric Modulated Arc Therapy (procedure)"
+            }
+          ]
+        }
     }
-],
+    ],
     "url" : "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique"
-  }
+  }    
   ],
   "status" : "completed",
   "code" : {

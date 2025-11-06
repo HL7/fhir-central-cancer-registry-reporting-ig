@@ -103,13 +103,9 @@ A full report, containing multiple encounter information/any non-encounter-based
 
 **NOTE:** Central Cancer Registry Reporting is tumor-based, not patient-based. Every tumor will have its own triggering and reporting timeline.
 
-Figure 2.1 below illustrates a sample central cancer registry reporting timeline.
-
-{% include img.html img="ccrr-bundle-sending-timeline.png" caption="Figure 2.1 - Central Cancer Registry Reporting Timeline" %}
-
 #### Patient Journey
 The following describes a realistic history of a patient’s journey from discovering a breast lump of concern through diagnosis, treatment, monitoring, and follow-up for breast cancer. This scenario describes a journey where all the patient’s providers starting with her visit to the oncologist are in a single cancer center and using a single Electronic Health Record (EHR). The diagnostic testing information and biopsy results are provided for context, but in this scenario are conducted by providers outside of the cancer center. This information will be reported to the cancer registry through other means outside of this scenario. 
-When information in the scenario does not map on to Central Cancer Registry Reporting Content (CCRR) IG profiles, we provide examples using [US Core]({{site.data.fhir.ver.uscoreR4}}) or [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html), as indicated in the CCRR IG [detailed specification](spec.html). We condense some repeated patterns. For example, we only show one example of MedicationAdministration when in reality, there are several different medications included in the patient’s chemotherapy regimen.
+When information in the scenario does not map on to Central Cancer Registry Reporting Content (CCRR) IG profiles, we provide examples using [US Core]({{site.data.fhir.ver.uscoreR4}}) or [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html), as indicated in the CCRR IG [detailed specification](spec.html). We also condense some repeated patterns. For example, we only show one example of MedicationAdministration, when in reality there are several different medications included in the patient’s chemotherapy regimen.
 
 _**Patient History**_
 
@@ -134,9 +130,9 @@ A week later (3/17/2023), Amy presents to the radiology office for a core-needle
 
 **Oncologist Consultation:** Amy has a consultation with an oncologist, Dr. Joseph Nichols, on 3/21/2023 (extension:assertedDate in Central Cancer Registry Reporting Primary Cancer Condition Profile). This visit establishes T0 for purposes of determining triggers for reporting to the central cancer registry. Dr. Nichols orders a CT and MRI. He documents her [cancer diagnosis](Condition-primary-cancer-condition-breast.html) of infiltrating duct carcinoma (extension:histologyMorphologyBehavior) of the left (extension:lateralityQualifier) breast (bodySite) in her medical record, and notes Histologic test (procedure) as the diagnostic confirmation method (extension:cancer-status-evidence-type).  
 
-CT and MRI are performed on 3/24/2023 and Dr. Nichols receives the results on 3/29/23. Results confirm that the cancer is 4cm, localized, with no adenopathy or visible metastases. After reviewing the results, on 4/4/23 Dr. Nichols documents the [clinical stage as cT2 cN0 cM0 and Stage Group IIA, AJCC 8th Edition](Observation-cancer-stage-group-example.html) (TNM Stage Group Profile). 
+CT and MRI are performed on 3/24/2023 and Dr. Nichols receives the results on 3/29/23. Results confirm that the cancer is 4cm, localized, with no adenopathy or visible metastases. After reviewing the results, on 4/4/23 Dr. Nichols documents the clinical stage classification as [cT2](Observation-tnm-clinical-primary-tumor-category-cT2.html), [cN0](Observation-tnm-clinical-regional-nodes-category-cN0), [cM0](Observation-tnm-clinical-distant-metastases-category-cM0.html), and [Stage Group IIA](Observation-cancer-stage-group-example.html), AJCC 8th Edition. 
 
-**4/5/23: The diagnosis of cancer associated with the encounter triggers an initial report to be generated and sent to the central cancer registry. (T0+15 days: Encounter-based (EB) bundle EB.1)**
+**4/5/23: The diagnosis of cancer associated with the encounter triggers an initial report to be generated and sent to the central cancer registry. (T0+15 days: [Encounter-based (EB) bundle EB.1](Bundle-ccrr-content-bundle-example.html))**
 
 _**Treatment and Monitoring**_
 
@@ -144,11 +140,11 @@ _**Treatment and Monitoring**_
 * She receives chemotherapy at the infusion enter every 3 weeks for 6 months
 * Chemotherapy medications: Docetaxel + Carboplatin + Adriamycin + Cyclophosphamide + Paclitaxel 
 
-**4/10/23: The administration of cancer-related medications is a non-encounter-based (NEB) trigger for an incremental report to be generated and sent to the central cancer registry. (NEB.1)**
+**4/10/23: The administration of cancer-related medications is a non-encounter-based (NEB) trigger for an incremental report to be generated and sent to the central cancer registry. ([NEB.1](Bundle-ccrr-non-encounter-based-content-bundle-example.html))**
 
 **Surgical Intervention:** On 11/8/23 she undergoes a [lumpectomy](Procedure-cancer-related-surgical-procedure-lumpectomy.html) followed by sentinel lymph node dissection. 
 
-**11/8/23:** The surgical procedures trigger an encounter-based incremental report between T0 and T+12 to be generated and sent to the central cancer registry (EB.2)
+**11/8/23:** The surgical procedures trigger an encounter-based incremental report between T0 and T+12 to be generated and sent to the central cancer registry ([EB.2](Bundle-ccrr-encounter-based-content-bundle-example.html))
 
 **3/21/24:** A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+12 months (TB.1)
 
@@ -160,6 +156,9 @@ _**Treatment and Monitoring**_
 
 **3/21/25: A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+24 Months. (TB.2)**
 
+Figure 2.1 below illustrates a sample central cancer registry reporting timeline for the Patient Journey described above.
+
+{% include img.html img="ccrr-bundle-sending-timeline.png" caption="Figure 2.1 - Sample Central Cancer Registry Reporting Timeline for the Patient Journey" %}
 
 #### Use Case Actors and Interactions
 

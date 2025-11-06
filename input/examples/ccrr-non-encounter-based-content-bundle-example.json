@@ -1,0 +1,650 @@
+{
+  "resourceType": "Bundle",
+  "id": "ccrr-non-encounter-based-content-bundle-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-content-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2023-04-10T11:15:33-10:00",
+  "entry": [
+    {
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Composition/ccrr-composition-content-example",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "ccrr-composition-non-encounter-content-example",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-composition"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Non-encounter Based Example </b></p></div>"
+        },
+        "identifier": {
+          "value": "b03eab8c-11e8-4d0c-ad2a-b385395e28cd"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72134-0"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example",
+          "display": "Amy Shaw"
+        },
+        "date": "2023-04-10T22:13:23Z",
+        "author": [
+          {
+            "reference": "Practitioner/1",
+            "display": "Dr. Joseph Nichols"
+          }
+        ],
+        "title": "Central Cancer Registry Report",
+        "section": [
+          {
+            "title": "Primary Cancer Condition Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "363346000",
+                  "display": "Malignant neoplastic disease (disorder)"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Primary Cancer Condition Section</p></div>"
+            },
+            "entry": [
+              {
+                "reference": "Condition/primary-cancer-condition-breast"
+              }
+            ]
+          },
+          {
+            "title": "Medications Administered Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "29549-3",
+                  "display": "Medication administered Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Medications Administered Section</p></div>"
+            },
+            "entry": [
+              {
+                "reference": "MedicationAdministration/cancer-med-admin-docetaxel-example"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://ecr.drajer.com/secure/fhir-r4/fhir/Patient/example",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"StructureDefinition-central-cancer-registry-reporting-patient.html\">Central Cancer Registry Reporting Patient</a></p>\n  <p><b>Patient:</b> Amy V. Baxter (formerly Amy V. Shaw)</p>\n    <p><b>Identifiers:</b></p>\n  <ul>\n    <li>Medical Record Number: 1032702 (system: http://CancerOrg.smarthealthit.org)</li>\n    <li>Social Security Number: 11-222-3333</li>\n  </ul>\n  <p><b>Active:</b> true</p>\n  <p><b>Gender:</b> female</p>\n  <p><b>Birth Date:</b> 1987-02-20</p>\n  <p><b>Marital Status:</b> Never Married</p>\n  <p><b>Race:</b> White, American Indian or Alaska Native (Shoshone), Asian (Filipino)</p>\n  <p><b>Ethnicity:</b> Hispanic or Latino (Mexican, Dominican)</p>\n  <p><b>Birthplace:</b> Georgia, US</p>\n  <p><b>Addresses:</b></p>\n  <ul>\n    <li>49 Meadow St, Mounds, OK 74047, US (2016-12-06 to 2020-07-22)</li>\n    <li>183 Mountain View St, Mounds, OK 74048, US (2020-07-22 to present)</li>\n  </ul>\n  <p><b>Telecom:</b></p>\n  <ul>\n    <li>Phone: 555-555-5555 (home)</li>\n    <li>Email: amy.shaw@example.com</li>\n  </ul>\n  <p><b>Languages:</b> English</p>\n  <p><b>Managing Organization:</b> Cancer Organization (Organization/example-cancer-org)</p>\n</div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2106-3",
+                  "display": "White"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1002-5",
+                  "display": "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "1586-7",
+                  "display": "Shoshone"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2036-2",
+                  "display": "Filipino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Mixed"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2184-0",
+                  "display": "Dominican"
+                }
+              },
+              {
+                "url": "detailed",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2148-5",
+                  "display": "Mexican"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Hispanic or Latino"
+              }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+                "valueAddress": {
+                  "state": "GA",
+                  "country": "US"
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ],
+              "text": "Medical Record Number"
+            },
+            "system": "http://CancerOrg.smarthealthit.org",
+            "value": "1032702"
+          },
+          {
+            "use": "usual",
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ],
+              "text": "Social Security Number"
+            },
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "11-222-3333"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Shaw",
+            "given": [
+              "Amy",
+              "V."
+            ],
+            "period": {
+              "start": "1987-02-20",
+              "end": "2020-07-22"
+            },
+            "use": "maiden"
+          },
+          {
+            "family": "Baxter",
+            "given": [
+              "Amy",
+              "V."
+            ],
+            "suffix": [
+              "PharmD"
+            ],
+            "period": {
+              "start": "2020-07-22"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-555-5555",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "amy.shaw@example.com"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-02-20",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "line": [
+              "49 Meadow St"
+            ],
+            "city": "Mounds",
+            "state": "OK",
+            "postalCode": "74047",
+            "country": "US",
+            "period": {
+              "start": "2016-12-06",
+              "end": "2020-07-22"
+            }
+          },
+          {
+            "line": [
+              "183 Mountain View St"
+            ],
+            "city": "Mounds",
+            "state": "OK",
+            "postalCode": "74048",
+            "country": "US",
+            "period": {
+              "start": "2020-07-22"
+            }
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ]
+        },
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en",
+                  "display": "English"
+                }
+              ]
+            }
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/example-cancer-org",
+          "display": "Cancer Organization"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ecr.drajer.com/secure/fhir-r4/fhir/Practitioner/1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"https://hl7.org/fhir/us/core/StructureDefinition-us-core-us-core-practitioner.html\">US Core Practitioner</a></p>\n  <p><b>Practitioner:</b> Dr. Joseph Nichols</p>\n  <p><b>Identifier:</b> US NPI: 1122334455</p>\n  <p><b>Address:</b> 1234 Main St., Tulsa, OK 74126, US (work)</p>\n  <p><b>Email:</b> joseph.nichols@example.com</p>\n  <p><b>Phone:</b> 800-277-1993</p>\n  </div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1122334455"
+          }
+        ],
+        "name": [
+          {
+            "family": "Nichols",
+            "given": [
+              "Joseph"
+            ],
+            "prefix": [
+              "Dr"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "1234 Main St."
+            ],
+            "city": "Tulsa",
+            "state": "OK",
+            "postalCode": "74126",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "joseph.nichols@example.com",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "800-277-1993",
+            "use": "work"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://ecr.drajer.com/secure/fhir-r4/fhir/Condition/primary-cancer-condition-breast",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "primary-cancer-condition-breast",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"StructureDefinition-central-cancer-registry-primary-cancer-condition.html\"> Central Cancer Registry Primary Cancer Condition</a></p>\n  <p><b>Condition:</b> Primary Breast Cancer</p>\n    <p><b>Clinical Status:</b> Active</p>\n  <p><b>Verification Status:</b> Confirmed</p>\n  <p><b>Category:</b> Encounter Diagnosis</p>\n  <p><b>Code:</b> Infiltrating duct carcinoma of breast (SNOMED CT: 408643008)</p>\n  <p><b>Histology/Morphology/Behavior:</b> Infiltrating duct carcinoma (morphologic abnormality) (SNOMED CT: 82711006)</p>\n  <p><b>Body Site:</b> Left breast structure (SNOMED CT: 80248007)</p>\n  <p><b>Laterality:</b> Left (qualifier value) (SNOMED CT: 7771000)</p>\n  <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Asserter:</b> <a href=\"Practitioner-1.html\">Dr. Joseph Nichols</a></p>\n  <p><b>Asserted Date:</b> 2023-03-21</p>\n  <p><b>Stage Summary:</b> American Joint Committee on Cancer stage IIA (qualifier value) (SNOMED CT: 1222766008)</p>\n  <p><b>Evidence Type:</b> Histologic test (procedure) (SNOMED CT: 714797009)</p>\n</div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2023-03-21"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "82711006",
+                  "display": "Infiltrating duct carcinoma (morphologic abnormality)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-status-evidence-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "714797009",
+                  "display": "Histologic test (procedure)"
+                }
+              ]
+            }
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "408643008",
+              "display": "Infiltrating duct carcinoma of breast (disorder)"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "7771000",
+                      "display": "Left (qualifier value)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80248007",
+                "display": "Left breast structure (body structure)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "asserter": {
+          "reference": "Practitioner/1"
+        },
+        "stage": [
+          {
+            "summary": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1222766008",
+                  "display": "American Joint Committee on Cancer stage IIA (qualifier value)"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://ecr.drajer.com/secure/fhir-r4/fhir/MedicationAdministration/cancer-med-admin-docetaxel-example",
+      "resource": {
+        "resourceType": "MedicationAdministration",
+        "id": "cancer-med-admin-docetaxel-example",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Profile: </b> <a href=\"https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-cancer-related-medication-administration.html\">mCODE Cancer Related Medication Administration</a></p><p><b>status:</b> completed</p><p><b>category:</b> Outpatient</p><p><b>medication:</b> rxnorm 72962 docetaxel</p><p><b>subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p><p><b>start date:</b> 2023-04-10</p><p><b>Performer:</b> Joseph Nichols</p><p><b>reasonReference:</b> Condition-primary-cancer-condition-breast</p><p><b>authoredOn:</b> 2023-04-10</p><p><b>note:</b> Chemotherapy regimen of docetaxel, carboplatin, adriamycin, cyclophosphamide, and paclitaxel administered by continuous infusion. Patient tolerated infusion without side effects.</p><p><b>Route:</b> SNOMED 47625008 Intravenous route (qualifier value)</p></div>"
+        },
+        "status": "completed",
+        "category": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/medication-admin-category",
+              "code": "outpatient"
+            }
+          ]
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "72962",
+              "display": "docetaxel"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "effectiveDateTime": "2023-04-10",
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/1"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "408643008",
+                "display": "Infiltrating duct carcinoma of breast (disorder)"
+              }
+            ]
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/primary-cancer-condition-breast"
+          }
+        ],
+        "note": [
+          {
+            "authorReference": {
+              "reference": "Practitioner/1"
+            },
+            "time": "2023-04-10",
+            "text": "docetaxel administered by continuous infusion. Patient tolerated infusion without side effects."
+          }
+        ],
+        "dosage": {
+          "route": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "47625008",
+                "display": "Intravenous route (qualifier value)"
+              }
+            ]
+          },
+          "dose": {
+            "value": 60,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "http://ecr.drajer.com/secure/fhir-r4/fhir/Organization/example-cancer-org",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "example-cancer-org",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"StructureDefinition-central-cancer-registry-reporting-organization.html\"> Central Cancer Registry Reporting Organization</a></p>\n  <p><b>Organization:</b> Cancer Organization</p>\n    <p><b>Status:</b> Active</p>\n  <p><b>Identifier (NPI):</b> 1063494177</p>\n   <p><b>Address:</b> 1234 Main Street, Tulsa, OK 74126</p>\n  <p><b>Phone:</b> (917)932-2000</p>\n </div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1063494177"
+          }
+        ],
+        "active": true,
+        "name": "Cancer Organization",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(917)932-2000",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "text": "1234 Main Street, Tulsa OK 74126",
+            "line": [
+              "1234 Main Street"
+            ],
+            "city": "Tulsa",
+            "state": "OK",
+            "postalCode": "74126"
+          }
+        ]
+      }
+    }
+  ]
+}

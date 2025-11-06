@@ -27,35 +27,32 @@ The following is a list of all the changes based on versions.
     <tbody>
         <tr>
             <td>All</td>
-            <td>Aligned with <a href="https://hl7.org/fhir/us/core/STU6.1/index.html">US Core 6.1.0</a></td>
+            <td>Aligned with <a href="https://hl7.org/fhir/us/core/STU6.1/index.html">US Core FHIR IG 6.1.0</a></td>
+        </tr>
+        <tr>
+            <td>All</td>
+            <td>Aligned with <a href="http://hl7.org/fhir/us/mcode/STU4/index.html">mCODE FHIR IG STU4</a></td>
+        </tr>
+        <tr>
+            <td>All</td>
+            <td>Aligned with <a href="http://hl7.org/fhir/us/cancer-reporting/STU2/index.html">Cancer Pathology Data Sharing FHIR IG STU2</a></td>
         </tr>
         <tr>
             <td>All (where applicable)</td>
-            <td>Removed references to MedMorph Reference Architecture IG</td>
-        </tr>
-        <tr>
-            <td>All (where applicable)</td>
-            <td>Added references to US PH Library profiles</td>
-        </tr>
-         <tr>
-            <td>All (where applicable)</td>
-            <td>Align with <a href="https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=05a081bc1baf861049edc957624bcb6c&view=sp">USCDI+ Cancer - Cancer Registry Use Case</a></td>
+            <td>
+                <ul>Removed references to MedMorph Reference Architecture IG</ul>
+                <ul>Added references to US PH Library profiles</ul>
+                <ul>Align with <a href="https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=05a081bc1baf861049edc957624bcb6c&view=sp">USCDI+ Cancer - Cancer Registry Use Case</a></ul>
+                <ul>Fixed typos and broken links</ul>
+            </td>
         </tr>
 		<tr>
 			<td>Change Log</td>
-			<td>Added Change Log</td>
-		</tr>
-		<tr>
-			<td> Removed the Allergies Section and associated US Core profile from the Central Cancer Registry Composition Profile</td>
-			<td> This section was included in error. This information is not collected by registries or NAACCR and should not be included in a CCR report.</td>
-		</tr>
-		<tr>
-			<td>US PH Tribal Affiliation Extension</td>
-			<td>Remove extension (now exists in US Core: <a href="{{site.data.fhir.ver.hl7.fhir.us.core}}/StructureDefinition-us-core-tribal-affiliation.html">US Core Tribal Affiliation Extension</a>)</td>
+			<td>Added and updated the Change Log</td>
 		</tr>
         <tr>
             <td><a href="StructureDefinition-central-cancer-registry-reporting-organization.html">Central Cancer Registry Reporting Organization</a></td>
-            <td>New Profile </td>
+            <td>New Profile to support the USCDI+ Cancer - Cancer Registry Use Case</td>
         </tr>		
         <tr>
             <td><a href="StructureDefinition-central-cancer-registry-reporting-patient.html">Central Cancer Registry Reporting Patient</a></td>
@@ -67,8 +64,25 @@ The following is a list of all the changes based on versions.
         </tr>
         <tr>
             <td><a href="StructureDefinition-central-cancer-registry-reporting-composition.html">Central Cancer Registry Reporting Composition</a></td>
-            <td>Renamed from Central Cancer Registry Report Composition to be consistent with profile naming conventions</td>
+            <td>
+                <ul>Renamed from Central Cancer Registry Report Composition to be consistent with profile naming conventions</ul>
+                <ul>Removed the Allergies Section - This section was included in error. This information is not collected by registries or NAACCR and should not be included in a CCR report.</ul>
+                <ul>Modified the sections and entries to align with the Use Case Triggers and Reporting section of the Use Case page</ul>
+            </td>
         </tr>
+        <tr>
+            <td><a href="StructureDefinition-central-cancer-registry-primary-cancer-condition.html">Central Cancer Registry Reporting Primary Cancer Condition</a></td>
+            <td>Changed base definition from us-core-condition-problems-health-concerns to us-core-condition-encounter-diagnosis to allow for category.code of encounter-diagnosis</td>
+        </tr> 
+        <tr>
+			<td>Use Cases</td>
+			<td>
+                <ul>Updated text and links as appropriate</ul>
+                <ul>Added the Use Case Triggers and Reporting Section</ul>
+                <ul>Added the Patient Journey, accompanying Examples, and the Reporting Timeline diagram</ul>
+                <ul>Updated the Actors and Systems Diagrams and Use Case Actors definitions</ul>
+            </td>
+		</tr>       
     </tbody>
 </table>
 

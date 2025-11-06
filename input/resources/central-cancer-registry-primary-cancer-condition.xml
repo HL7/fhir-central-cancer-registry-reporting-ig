@@ -32,7 +32,7 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="Condition"/>
-    <baseDefinition value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|6.1.0"/>
     <derivation value="constraint"/>
     <differential>
         <element id="Condition">
@@ -50,7 +50,7 @@
             <sliceName value="assertedDate"/>
 			<type>
                 <code value="Extension"/>
-                <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate"/>
+                <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate|5.2.0"/>
             </type>
             <min value="1"/>
             <max value="1"/>

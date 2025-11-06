@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>History of Usual Occupation for Amy Shaw</b></p><p><b>Start Date: </b>2010-01-01</p><p><b>Industry Code/Value: </b>1570 / Carpet and rug mills</p><p><b>Occupation Code/Value: </b>6240 / Carpet, floor, and tile installers and finishers</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n   <p><b>Profile: </b> <a href=\"https://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork.html\">ODH Usual Work</a></p>\n   <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Start Date: </b>2010-01-01</p><p><b>Industry Code/Value: </b>1570 / Carpet and rug mills</p><p><b>Occupation Code/Value: </b>6240 / Carpet, floor, and tile installers and finishers</p></div>"
   },
   "status": "final",
   "code": {

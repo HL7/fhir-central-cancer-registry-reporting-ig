@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Practitioner:</b> Dr. Joseph Nichols</p>\n  <p><b>Identifier:</b> US NPI: 1122334455</p>\n  <p><b>Address:</b> 1234 Main St., Tulsa, OK 74126, US (work)</p>\n  <p><b>Email:</b> joseph.nichols@example.com</p>\n  <p><b>Phone:</b> 800-277-1993</p>\n  <p><b>Profile:</b> US Core Practitioner Profile version 6.1.0</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"https://hl7.org/fhir/us/core/StructureDefinition-us-core-us-core-practitioner.html\">US Core Practitioner</a></p>\n  <p><b>Practitioner:</b> Dr. Joseph Nichols</p>\n  <p><b>Identifier:</b> US NPI: 1122334455</p>\n  <p><b>Address:</b> 1234 Main St., Tulsa, OK 74126, US (work)</p>\n  <p><b>Email:</b> joseph.nichols@example.com</p>\n  <p><b>Phone:</b> 800-277-1993</p>\n  </div>"
   },
   "identifier": [
     {

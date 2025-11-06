@@ -246,7 +246,7 @@
 		  <type>
 			<code value="Extension"/>
 			<profile
-					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.2.0"/>
 		  </type>
 		  <mustSupport value="true"/>
 		</element>
@@ -264,7 +264,7 @@
 		  <type>
 			<code value="Extension"/>
 			<profile
-					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.2.0"/>
 		  </type>
 		  <mustSupport value="true"/>
 		</element>
@@ -288,7 +288,7 @@
 		  <type>
 			<code value="Extension"/>
 			<profile
-					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
+					 value="http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.2.0"/>
 		  </type>
 		  <mustSupport value="true"/>
 		</element>
@@ -305,7 +305,7 @@
 		  <type>
 			<code value="Reference"/>
 			<targetProfile
-						   value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+						   value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"/>
 		  </type>
 		  <mustSupport value="true"/>
 		</element>

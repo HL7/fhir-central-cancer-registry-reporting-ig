@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Organization:</b> Cancer Organization</p>\n    <p><b>Profile:</b> Central Cancer Registry Reporting Organization</p>\n<p><b>Status:</b> Active</p>\n  <p><b>Identifier (NPI):</b> 1063494177</p>\n  <p><b>Name:</b> Cancer Organization</p>\n  <p><b>Address:</b> 1234 Main Street, Tulsa, OK 74126</p>\n  <p><b>Phone:</b> (917)932-2000</p>\n  <p><b>Endpoint:</b> Reference to Endpoint/example-healthcare-endpoint</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"StructureDefinition-central-cancer-registry-reporting-organization.html\"> Central Cancer Registry Reporting Organization</a></p>\n  <p><b>Organization:</b> Cancer Organization</p>\n    <p><b>Status:</b> Active</p>\n  <p><b>Identifier (NPI):</b> 1063494177</p>\n   <p><b>Address:</b> 1234 Main Street, Tulsa, OK 74126</p>\n  <p><b>Phone:</b> (917)932-2000</p>\n  <p><b>Endpoint:</b> Reference to Endpoint/example-healthcare-endpoint</p>\n</div>"
   },
   "identifier": [{
     "system": "http://hl7.org/fhir/sid/us-npi",

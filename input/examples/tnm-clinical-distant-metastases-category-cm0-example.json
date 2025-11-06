@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Observation:</b> TNM Clinical Distant Metastases Category (cM0)</p>\n  <p><b>Profile:</b> mCODE TNM Distant Metastases Category</p>\n  <p><b>Status:</b> final</p>\n  <p><b>Category:</b> Imaging</p>\n  <p><b>Code:</b> cM category (SNOMED CT: 399387003)</p>\n  <p><b>Subject:</b> Amy Shaw (Patient/example)</p>\n  <p><b>Effective Date:</b> 2023-03-21</p>\n  <p><b>Performer:</b> Dr. Joseph Nichols (Practitioner/1)</p>\n  <p><b>Value:</b> cM0 - 1229901006 (American Joint Committee on Cancer cM0 qualifier)</p>\n  <p><b>Method:</b> American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) (SNOMED CT: 897275008)</p>\n  </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"https://hl7.org/fhir/us/mcode/StructureDefinition-mcode-tnm-distant-metastases-category.html\">mCODE TNM Distant Metastases Category</a></p>\n  <p><b>Observation:</b> TNM Clinical Distant Metastases Category (cM0)</p>\n    <p><b>Status:</b> final</p>\n  <p><b>Category:</b> Imaging</p>\n  <p><b>Code:</b> cM category (SNOMED CT: 399387003)</p>\n  <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Effective Date:</b> 2023-03-21</p>\n  <p><b>Performer:</b> <a href=\"Practitioner-1.html\">Dr. Joseph Nichols (Practitioner/1)</a></p>\n  <p><b>Value:</b> cM0 - 1229901006 (American Joint Committee on Cancer cM0 qualifier)</p>\n  <p><b>Method:</b> American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging) (SNOMED CT: 897275008)</p>\n  </div>"
   },
   "status": "final",
   "category" : [

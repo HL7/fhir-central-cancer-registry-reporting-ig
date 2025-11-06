@@ -206,8 +206,24 @@
       <reference>
         <reference value="Bundle/ccrr-content-bundle-example"/>
       </reference>
-      <name value="Central Cancer Registry Reporting Content Bundle - Example"/>
-      <description value="An example showing a Central Cancer Registry Reporting Content Bundle"/>
+      <name value="Central Cancer Registry Reporting Content Bundle - Initial Report Content Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Intial Report Content Bundle"/>
+      <exampleBoolean value="true"/>
+   </resource>
+   <resource>
+      <reference>
+        <reference value="Bundle/ccrr-non-encounter-based-content-bundle-example"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Content Bundle - Non-encounter Based Content Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Non-encounter Based Content Bundle"/>
+      <exampleBoolean value="true"/>
+   </resource>
+  <resource>
+      <reference>
+        <reference value="Bundle/ccrr-encounter-based-content-bundle-example"/>
+      </reference>
+      <name value="Central Cancer Registry Reporting Content Bundle - Encounter Based Content Example"/>
+      <description value="An example showing a Central Cancer Registry Reporting Encounter Based Content Bundle"/>
       <exampleBoolean value="true"/>
    </resource>
    <resource>
