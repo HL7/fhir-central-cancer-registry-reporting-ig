@@ -94,7 +94,7 @@ The following is a list of all the changes based on versions.
 |---------|----------|
 |[FHIR-36230](https://jira.hl7.org/browse/FHIR-36230) | CLONE - Terminology Value Sets Comments |
 |[FHIR-35880](https://jira.hl7.org/browse/FHIR-35880) | Add T N M Profiles to Section 6.2.1.2 Text Summary |
-|[FHIR-35760](https://jira.hl7.org/browse/FHIR-44524) | Clarify how the data of interest is specified |
+|[FHIR-35760](https://jira.hl7.org/browse/FHIR-35760) | Clarify how the data of interest is specified |
 |[FHIR-35714](https://jira.hl7.org/browse/FHIR-35714) | Ensure you coordinate the lab result sections with the Cancer Pathology reporting |
 |[FHIR-35702](https://jira.hl7.org/browse/FHIR-35702) | Clarify policy references and fix links |
 |[FHIR-35315](https://jira.hl7.org/browse/FHIR-35315) | Please confirm that Vendor Software Name and Version number are included in the IG. |

@@ -82,24 +82,26 @@ For the **initial report (T0)**, when a qualifying encounter occurs, the patient
 * Date of birth 
 * Facility Identifier or Facility Name
 
-If all content is present at the 15 day check, then a full report (i.e., all profiles) will be sent to the registry. If any of the content is missing, a full report will be sent at T0+30 days regardless of content status.
+If all content is present at the 15 day check, then an initial encounter-based report will be sent to the registry. If any of the content is missing, the initial report will be sent at T0+30 days regardless of content status.
 
 The intent of this report is to initiate an incidence case.
 
-**Between T0 and T0+12 months**, incremental reports containing patient information and new information will be sent based on availability of specific content. The following additions to the patient record will trigger an incremental report:
+**After the T0 bundle is sent**, incremental reports containing patient information and new information will be sent based on availability of specific content. The following additions to the patient record will trigger an incremental report:
 * Non-encounter based triggers: If any information is added or updated for the following resources, then a report will be sent regardless of if the information is tied to an encounter.
 	* Primary Cancer Condition
 	* Cancer Stage Group: All Observations with the Cancer Stage Group information and having a status of final, amended, or corrected.
 	* TNM Primary Tumor Category: All Observations with TNM tumor information having a status of final, amended, or corrected.
 	* TNM Regional Nodes Category: All Observations with TNM regional nodes information having a status of final, amended, or corrected.
 	* TNM Distant Metastases Category: All Observations with TNM metastases information having a status of final, amended, or corrected.
-	* Radiotherapy Course Summary: All Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 108290001-Radiation Oncology and/or Radiotherapy (Procedure).
+	* Radiotherapy Course Summary: All Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 1217123003 Radiotherapy course of treatment (regime/therapy).
 * Encounter-based triggers: For any encounter that meets the reportability criteria AND contains new information for the following data elements:
+	* Medication Requests: Medication requests with a status of completed.
+	* Medication Administration: Medication administrations with a status of completed.
 	* Procedure: Procedures performed during the closed encounter with a status of completed or unknown.
 	* DiagnosticReport Profile for Laboratory Results Reporting: Results linked to the encounter or results received during the encounter with a status of final.
 	* DiagnosticReport Profile for Report and Note exchange: Results linked to the encounter or results received during the encounter with a status of final.
 
-A full report, containing multiple encounter information/any non-encounter-based information, will be sent at **T0+12 months**, **T0+24 months**, **T0+36 months**, and **T0+48 months** if there has been at least one encounter or content trigger criteria met during this time. If no trigger criteria have been met, then no report will be sent. After 12 consecutive months of no trigger criteria or upon patient death, reporting will stop.
+After 12 consecutive months of no trigger criteria or upon patient death, reporting will stop.
 
 **NOTE:** Central Cancer Registry Reporting is tumor-based, not patient-based. Every tumor will have its own triggering and reporting timeline.
 
@@ -146,15 +148,12 @@ _**Treatment and Monitoring**_
 
 **11/8/23:** The surgical procedures trigger an encounter-based incremental report between T0 and T+12 to be generated and sent to the central cancer registry ([EB.2](Bundle-ccrr-encounter-based-content-bundle-example.html))
 
-**3/21/24:** A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+12 months (TB.1)
-
 **Radiation Therapy:** On 1/31/24 Amy begins [external beam radiation treatment](Procedure-radiotherapy-example.html) (mcode-radiotherapy-course-summary.mcode-radiotherapy-modality-and-technique.mcode-radiotherapy-modality.value) to eliminate any remaining cancer cells. She receives this treatment for 8 weeks, with her last visit on 3/31/24.  
 
 **3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report between T0+12 and T0+24 to be generated and sent to the central cancer registry. (NEB.2)**
 
-**Monitoring and Follow-Up:** Amy undergoes frequent follow-ups to monitor for recurrence, blood tests, physical exams every 3-6 months for the first 3 years, and annual mammograms.
+**Monitoring and Follow-Up:** Amy undergoes frequent follow-ups to monitor for recurrence, blood tests, physical exams every 3-6 months for the first 3 years, and annual mammograms. Monthly checks for new information that meet the trigger requirements could result in additional reports generated and sent. These are not included in this journey.
 
-**3/21/25: A report with any required but previously unreported information is generated and sent to the central cancer registry at T0+24 Months. (TB.2)**
 
 Figure 2.1 below illustrates a sample central cancer registry reporting timeline for the Patient Journey described above.
 

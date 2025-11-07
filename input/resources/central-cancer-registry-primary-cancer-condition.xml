@@ -96,6 +96,28 @@
             <definition value="Defines extensions for the bodySite element."/>
             <mustSupport value="true"/>
         </element>
+        <element id="Condition.bodySite.extension:locationQualifier">
+            <path value="Condition.bodySite.extension"/>
+            <sliceName value="locationQualifier"/>
+            <min value="0"/>
+            <max value="*"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-body-location-qualifier"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Condition.bodySite.extension:lateralityQualifier">
+            <path value="Condition.bodySite.extension"/>
+            <sliceName value="lateralityQualifier"/>
+            <min value="0"/>
+            <max value="1"/>
+            <type>
+                <code value="Extension"/>
+                <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
         <element id="Condition.bodySite.extension:data-absent-reason">
             <path value="Condition.bodySite.extension"/>
             <sliceName value="data-absent-reason"/>
@@ -116,12 +138,5 @@
 				<targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"/>
 			</type>
 		</element>
-   <!--      <element id="Condition.bodySite.extension:locationQualifier">
-            <path value="Condition.bodySite.extension"/>
-            <sliceName value="locationQualifier"/>
-            <min value="0"/>
-            <max value="1"/>
-            <mustSupport value="true"/>
-        </element> -->
     </differential>
 </StructureDefinition>
