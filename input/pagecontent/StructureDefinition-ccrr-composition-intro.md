@@ -48,11 +48,11 @@ From US Core IG:
 The following guidance is provided to the implementers to identify the data of interest which needs to be extracted and populated in the various sections of the Composition.
 
 * Encounter Section: Any relevant Encounter(s).
-* Primary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
-* Secondary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the secondary cancer condition along with a verificationStatus of confirmed.
+* Primary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that do not have a clinicalStatus of inactive can be considered to determine the primary cancer condition along with a verificationStatus of confirmed when populated.
+* Secondary Cancer Condition Section: Condition with a category of "encounter-diagnosis" for the closed encounter with a Condition.code that is present in the Secondary Cancer Disorder Value Set. Conditions that do not have a clinicalStatus of inactive can be considered to determine the secondary cancer condition along with a verificationStatus of confirmed when populated.
 * TNM Staging Section: Observation(s) with the TNM stage group, primary tumor, regional nodes, and distant metastases information having a status of final, amended, or corrected.
 * Radiotherapy Course Summary Section: Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 1217123003-Radiotherapy course of treatment (regime/therapy).
-* Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and verificationStatus of confirmed.
+* Problems Section: Underlying medical conditions and active problems. All Conditions that do not have a clinicalStatus of inactive and have a verificationStatus of confirmed when populated.
 * Medications Administered Section: Cancer-related medications administered during the closed encounter with a status of completed, on-hold, in-progress, stopped, or unknown.
 * Medications Section: Medications referenced by MedicationRequest and MedicationAdministration.
 * ODH Section: Usual Work information for the patient with a status of final.
