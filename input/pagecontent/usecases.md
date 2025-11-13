@@ -72,7 +72,7 @@ For the **initial report (T0)**, when a qualifying encounter occurs, the patient
 * Patient First Name
 * Patient Address State
 * Primary Laterality
-* Primary Cancer Condition: Condition with a category of “encounter-diagnosis” for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that have a clinicalStatus of active can be considered to determine the primary cancer condition along with a verificationStatus of confirmed.
+* Primary Cancer Condition: Condition with a category of “encounter-diagnosis” for the closed encounter with a Condition.code value that is on the reportability list. All Conditions that have a clinicalStatus of active can be considered to determine the primary cancer condition along with a verificationStatus of confirmed when populated.
 * Date of Diagnosis
 * Diagnostic Confirmation
 * Behavior
