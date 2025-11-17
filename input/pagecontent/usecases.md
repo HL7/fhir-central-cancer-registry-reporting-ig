@@ -146,11 +146,11 @@ _**Treatment and Monitoring**_
 
 **Surgical Intervention:** On 11/8/23 she undergoes a [lumpectomy](Procedure-cancer-related-surgical-procedure-lumpectomy.html) followed by sentinel lymph node dissection. 
 
-**11/8/23:** The surgical procedures trigger an encounter-based incremental report between T0 and T+12 to be generated and sent to the central cancer registry ([EB.2](Bundle-ccrr-encounter-based-content-bundle-example.html))
+**11/8/23:** The surgical procedure triggers an encounter-based incremental report to be generated and sent to the central cancer registry ([EB.2](Bundle-ccrr-encounter-based-content-bundle-example.html))
 
 **Radiation Therapy:** On 1/31/24 Amy begins [external beam radiation treatment](Procedure-radiotherapy-example.html) (mcode-radiotherapy-course-summary.mcode-radiotherapy-modality-and-technique.mcode-radiotherapy-modality.value) to eliminate any remaining cancer cells. She receives this treatment for 8 weeks, with her last visit on 3/31/24.  
 
-**3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report between T0+12 and T0+24 to be generated and sent to the central cancer registry. (NEB.2)**
+**3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report to be generated and sent to the central cancer registry. (NEB.2)**
 
 **Monitoring and Follow-Up:** Amy undergoes frequent follow-ups to monitor for recurrence, blood tests, physical exams every 3-6 months for the first 3 years, and annual mammograms. Monthly checks for new information that meet the trigger requirements could result in additional reports generated and sent. These are not included in this journey.
 
