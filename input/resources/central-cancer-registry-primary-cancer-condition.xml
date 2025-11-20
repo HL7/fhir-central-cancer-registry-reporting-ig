@@ -129,6 +129,10 @@
             </type>
             <mustSupport value="true"/>
         </element>
+		<element id="Condition.stage"/>
+			<path value="Condition.stage"/>
+            <mustSupport value="true"/>
+		</element>
 		<element id="Condition.stage.assessment">
 			<path value="Condition.stage.assessment"/>
             <mustSupport value="true"/>
