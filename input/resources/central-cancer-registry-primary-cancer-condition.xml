@@ -129,7 +129,7 @@
             </type>
             <mustSupport value="true"/>
         </element>
-		<element id="Condition.stage"/>
+		<element id="Condition.stage">
 			<path value="Condition.stage"/>
             <mustSupport value="true"/>
 		</element>
