@@ -9,6 +9,11 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-ca
 # These resources exist in the IG but are not included in the Bundle directly, they are referenced in the bundle due to which these information messages are raised by the publisher.
 Can't find 'Organization/example-healthcare-org' in the bundle (Bundle.entry[0].resource.sender)
 
+# Messages due to specific versions of the IG
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is based on FHIR version 4.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+
 # Large Code System Validation
 The value set include has too many concepts to validate (4,920), so each individual code has not been checked
 #A definition for CodeSystem 'http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-triggerdefinition-namedevent' could not be found, so the code cannot be validated (from https://tx.fhir.org/r4)
