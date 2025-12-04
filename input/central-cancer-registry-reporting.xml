@@ -252,7 +252,7 @@
    </resource>
    <resource>
       <reference>
-        <reference value="PlanDefintion/plandefinition-central-cancer-registry-reporting-example"/>
+        <reference value="PlanDefinition/plandefinition-central-cancer-registry-reporting-example"/>
       </reference>
       <name value="CCRR PlanDefinition - Example"/>
       <description value="An example showing a PlanDefintion for CCRR"/>
