@@ -5,7 +5,6 @@
     <meta>
         <versionId value="35"/>
         <lastUpdated value="2021-11-17T04:21:04.742+00:00"/>
-        <source value="#QldGNssihwOAV7Nt"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-plandefinition"/>
     <version value="1.0.0"/>
@@ -89,36 +88,6 @@
         <element id="PlanDefinition.action.input">
             <path value="PlanDefinition.action.input"/>
         </element>
- <!--         <element id="PlanDefinition.action.input.extension">
-            <path value="PlanDefinition.action.input.extension"/>
-            <slicing>
-                <discriminator>
-                    <type value="value"/>
-                    <path value="url"/>
-                </discriminator>
-                <rules value="open"/>
-            </slicing>
-            <definition value="Defines extensions for the action."/>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action.input.extension:fhirquerypattern">
-            <path value="PlanDefinition.action.input.extension"/>
-            <sliceName value="us-ph-fhirquerypattern-extension"/>
-            <min value="0"/>
-            <max value="1"/>
-            <type>
-                <code value="Extension"/>
-            </type>
-            <mustSupport value="true"/>
-        </element>
-        <element id="PlanDefinition.action.input.extension:fhirquerypattern.url">
-            <path value="PlanDefinition.action.input.extension.url"/>
-            <min value="1"/>
-            <max value="1"/>
-            <fixedUri value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension"/>
-            <mustSupport value="true"/>
-        </element> -->
-        
         <element id="PlanDefinition.action:encounterClose">
             <path value="PlanDefinition.action"/>
             <sliceName value="encounterClose"/>
@@ -158,7 +127,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="initiate-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -169,14 +138,6 @@
             <short value="When the &quot;start&quot; action should be triggered."/>
             <definition value="When the &quot;start&quot; action should be triggered."/>
             <min value="1"/>
-      <!--       <constraint>
-                <key value="epd-1"/>
-                <severity value="error"/>
-                <human value="The code value of the namedEventType SHALL be the same as the name element"/>
-                <expression value="extension('http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension').value.coding.code.supersetOf(name)"/>
-                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;name&quot;)])"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-            </constraint> -->
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:encounterClose.trigger.extension">
@@ -204,22 +165,6 @@
             <type>
                 <code value="Extension"/>
             </type>
-    <!--          <constraint>
-                <key value="ele-1"/>
-                <severity value="error"/>
-                <human value="All FHIR elements must have a @value or children"/>
-                <expression value="hasValue() or (children().count() &gt; id.count())"/>
-                <xpath value="@value|f:*|h:div"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-            </constraint> 
-            <constraint>
-                <key value="ext-1"/>
-                <severity value="error"/>
-                <human value="Must have either extensions or value[x], not both"/>
-                <expression value="extension.exists() != value.exists()"/>
-                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-            </constraint> -->
             <isModifier value="false"/>
             <isSummary value="false"/>
             <mapping>
@@ -243,22 +188,6 @@
                 <code value="Extension"/>
                 <profile value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-named-eventtype-extension"/>
             </type>
-    <!--        <constraint>
-                <key value="ele-1"/>
-                <severity value="error"/>
-                <human value="All FHIR elements must have a @value or children"/>
-                <expression value="hasValue() or (children().count() &gt; id.count())"/>
-                <xpath value="@value|f:*|h:div"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
-            </constraint>
-            <constraint>
-                <key value="ext-1"/>
-                <severity value="error"/>
-                <human value="Must have either extensions or value[x], not both"/>
-                <expression value="extension.exists() != value.exists()"/>
-                <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
-                <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-            </constraint> -->
             <mustSupport value="true"/>
             <isModifier value="false"/>
             <isSummary value="false"/>
@@ -325,7 +254,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="execute-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -341,7 +270,30 @@
             </slicing>
             <min value="2"/>
         </element>
-
+        <element id="PlanDefinition.action:checkReportable.action.condition">
+            <path value="PlanDefinition.action.action.condition"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:checkReportable.action.input">
+            <path value="PlanDefinition.action.action.input"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:checkReportable.action.output">
+            <path value="PlanDefinition.action.action.output"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:checkReportable.action.relatedAction">
+            <path value="PlanDefinition.action.action.relatedAction"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable">
             <path value="PlanDefinition.action.action"/>
             <sliceName value="isEncounterReportable"/>
@@ -364,13 +316,16 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="check-trigger-codes"/>
                 </coding>
             </patternCodeableConcept>
         </element>
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable.condition">
             <path value="PlanDefinition.action.action.condition"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable.condition.kind">
             <path value="PlanDefinition.action.action.condition.kind"/>
@@ -388,6 +343,8 @@
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable.input">
             <path value="PlanDefinition.action.action.input"/>
             <definition value="Defines input data requirements for the action. Required data is accessible via a context variable named `%[id]` using the `id` of the input data requirement"/>
+            <min value="0"/>
+            <max value="*"/>
             <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:checkReportable.action:isEncounterReportable.input.id">
@@ -430,7 +387,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="evaluate-condition"/>
                 </coding>
             </patternCodeableConcept>
@@ -499,7 +456,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="execute-reporting-workflow"/>
                 </coding>
             </patternCodeableConcept>
@@ -517,11 +474,36 @@
             <min value="3"/>
             <mustSupport value="true"/>
         </element>
+        <element id="PlanDefinition.action:reportCancerData.action.condition">
+            <path value="PlanDefinition.action.action.condition"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:reportCancerData.action.input">
+            <path value="PlanDefinition.action.action.input"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:reportCancerData.action.output">
+            <path value="PlanDefinition.action.action.output"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="PlanDefinition.action:reportCancerData.action.relatedAction">
+            <path value="PlanDefinition.action.action.relatedAction"/>
+            <min value="0"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
         <element id="PlanDefinition.action:reportCancerData.action:createCancerReport">
             <path value="PlanDefinition.action.action"/>
             <sliceName value="createCancerReport"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:createCancerReport.id">
             <path value="PlanDefinition.action.action.id"/>
@@ -539,7 +521,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="create-report"/>
                 </coding>
             </patternCodeableConcept>
@@ -549,6 +531,7 @@
             <sliceName value="validateCancerReport"/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:validateCancerReport.id">
             <path value="PlanDefinition.action.action.id"/>
@@ -566,7 +549,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="validate-report"/>
                 </coding>
             </patternCodeableConcept>
@@ -578,6 +561,7 @@
             <definition value="Defines the routing and sending of the cancer report."/>
             <min value="1"/>
             <max value="1"/>
+            <mustSupport value="true"/>
         </element>
         <element id="PlanDefinition.action:reportCancerData.action:routeAndSendCancerReport.id">
             <path value="PlanDefinition.action.action.id"/>
@@ -605,7 +589,7 @@
             <max value="1"/>
             <patternCodeableConcept>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action"/>
+                    <system value="http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions"/>
                     <code value="submit-report"/>
                 </coding>
             </patternCodeableConcept>

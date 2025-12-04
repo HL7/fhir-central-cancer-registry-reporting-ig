@@ -5,13 +5,12 @@
     <meta>
         <versionId value="10"/>
         <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
-        <source value="#DggdH1djbgWRgxnJ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"/>
     <version value="0.1.0"/>
     <name value="CentralCancerRegistryReportingPrimaryCancerCondition"/>
     <title value="Central Cancer Registry Reporting Primary Cancer Condition"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
     <publisher value="HL7 International / Public Health"/>
@@ -43,6 +42,8 @@
         </element>
         <element id="Condition.extension">
       		<path value="Condition.extension"/>
+      		<min value="2"/>
+            <max value="*"/>
       		<mustSupport value="true"/>
     	</element>
         <element id="Condition.extension:assertedDate|5.2.0">

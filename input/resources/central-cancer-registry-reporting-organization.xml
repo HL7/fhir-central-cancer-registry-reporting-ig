@@ -5,7 +5,6 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2025-07-30T02:41:12.847+00:00"/>
-        <source value="#4k9G4nbRWSeykpGG"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"/>
     <version value="1.0.0"/>
@@ -41,6 +40,18 @@
             <short value="Central Cancer Registry Reporting Organization"/>
             <definition value="This profile is based on the Organization resource and establishes the core elements, extensions, vocabularies and value sets for representing an organization for central cancer registry reporting."/>
         </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+          			<path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
 		<element id="Organization.identifier:NPI">
 		  <path value="Organization.identifier"/>
 		  <sliceName value="NPI"/>
@@ -50,6 +61,24 @@
 		  </patternIdentifier>
 		  <min value="1"/>
 		  <max value="1"/>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Organization.identifier:CLIA">
+		  <path value="Organization.identifier"/>
+		  <sliceName value="CLIA"/>
+		  <short value="Clinical Laboratory Improvement Amendments (CLIA) Number for laboratories"/>
+		  <patternIdentifier>
+			<system value="urn:oid:2.16.840.1.113883.4.7"/>
+		  </patternIdentifier>
+		  <mustSupport value="true"/>
+		</element>
+		<element id="Organization.identifier:NAIC">
+		  <path value="Organization.identifier"/>
+		  <sliceName value="NAIC"/>
+		  <short value="NAIC Code"/>
+		  <patternIdentifier>
+			<system value="urn:oid:2.16.840.1.113883.6.300"/>
+		  </patternIdentifier>
 		  <mustSupport value="true"/>
 		</element>
     </differential>

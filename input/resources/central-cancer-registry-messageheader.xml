@@ -5,13 +5,12 @@
     <meta>
         <versionId value="10"/>
         <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
-        <source value="#DggdH1djbgWRgxnJ"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-messageheader"/>
     <version value="0.1.0"/>
     <name value="CentralCancerRegistryReportingMessageHeader"/>
     <title value="Central Cancer Registry Reporting Message Header"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
     <publisher value="HL7 International / Public Health"/>

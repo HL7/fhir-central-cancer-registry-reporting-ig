@@ -5,7 +5,6 @@
     <meta>
         <versionId value="1"/>
         <lastUpdated value="2025-08-11T02:41:12.847+00:00"/>
-        <source value="#5l3H3bmTQAwzjlFF"/>
     </meta>
    <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"/>
     <version value="1.0.0"/>

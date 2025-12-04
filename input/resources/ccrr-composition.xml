@@ -4,7 +4,6 @@
   <meta>
     <versionId value="77" />
     <lastUpdated value="2021-08-21T02:37:44.721+00:00" />
-    <source value="#W9i7pBeg7jai2jZL" />
   </meta>
   <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-composition" />
   <version value="1.0.0" />
@@ -86,7 +85,7 @@
       <short value="Encounter related to the public health event" />
       <definition value="This Encounter profile represents the encounter related to the central cancer registry report." />
       <min value="0"/>
-	  <max value="*"/>
+	  <max value="1"/>
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0" />

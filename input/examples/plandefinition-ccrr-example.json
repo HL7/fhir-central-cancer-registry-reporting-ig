@@ -49,7 +49,7 @@
               {
                 "coding": [
                   {
-                    "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                    "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code": "initiate-reporting-workflow"
                   }
                 ]
@@ -64,7 +64,7 @@
                     "valueCodeableConcept": {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-triggerdefinition-namedevent",
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-triggerdefinition-namedevents",
                           "code": "encounter-close",
                           "display": "Indicates the close of an encounter"
                         }
@@ -97,7 +97,7 @@
               {
                 "coding" : [
                   {
-                    "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                    "system" : "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code" : "execute-reporting-workflow"
                   }
                 ]
@@ -112,7 +112,7 @@
                   {
                     "coding" : [
                       {
-                        "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                        "system" : "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                         "code" : "check-trigger-codes"
                       }
                     ]
@@ -158,7 +158,7 @@
                   {
                     "coding" : [
                       {
-                        "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                        "system" : "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                         "code" : "evaluate-condition"
                       }
                     ]
@@ -195,7 +195,7 @@
               {
                 "coding" : [
                   {
-                    "system" : "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                    "system" : "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                     "code" : "execute-reporting-workflow"
                   }
                 ]
@@ -210,7 +210,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                           "code": "create-report"
                         }
                       ]
@@ -222,7 +222,7 @@
                           "type": "Patient",
                           "profile": [
                             
-                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-patient"
+                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"
                             
                           ]
                     },
@@ -238,7 +238,7 @@
                           "type": "Encounter",
                           "profile": [
                             
-                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-encounter"
+                              "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-encounter"
                             
                           ]
                     },
@@ -296,7 +296,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                           "code": "validate-report"
                         }
                       ]
@@ -339,7 +339,7 @@
                     {
                       "coding": [
                         {
-                          "system": "http://hl7.org/fhir/us/ph-library/ValueSet/us-ph-valueset-plandefinition-action",
+                          "system": "http://hl7.org/fhir/us/ph-library/CodeSystem/us-ph-codesystem-plandefinition-actions",
                           "code": "submit-report"
                         }
                       ]

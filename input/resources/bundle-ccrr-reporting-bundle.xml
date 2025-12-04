@@ -5,13 +5,12 @@
     <meta>
         <versionId value="3"/>
         <lastUpdated value="2021-08-13T05:43:12.456+00:00"/>
-        <source value="#op9qv8RqccCL7zOB"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle"/>
     <version value="0.1.0"/>
     <name value="CentralCancerRegistryReportingBundle"/>
     <title value="Central Cancer Registry Reporting Bundle"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <date value="2019-09-01"/>
     <publisher value="HL7 International / Public Health"/>
