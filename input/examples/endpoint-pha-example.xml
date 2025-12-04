@@ -13,7 +13,7 @@
     </div> 
   </text> 
   <identifier> 
-    <system value="http://example.pha.org/enpoint-identifier"/> 
+    <system value="http://example.org"/> 
     <value value="pha-endpoint-id"/> 
   </identifier> 
   <status value="active"/> 
@@ -27,7 +27,7 @@
   </managingOrganization> 
   <contact> 
     <system value="email"/> 
-    <value value="endpointmanager@example.pha.org"/> 
+    <value value="endpointmanager@example.org"/> 
     <use value="work"/> 
     </contact> 
   <period> 
@@ -42,5 +42,5 @@
   <payloadMimeType value="application/fhir+xml"/>
   <payloadMimeType value="application/fhir+json"/>
 
-  <address value="http://example.pha.org/fhir"/> 
+  <address value="http://example.org/fhir"/> 
 </Endpoint>

@@ -71,22 +71,6 @@
           }
         },
         {
-          "url": "detailed",
-          "valueCoding": {
-            "system": "urn:oid:2.16.840.1.113883.6.238",
-            "code": "2184-0",
-            "display": "Dominican"
-          }
-        },
-        {
-          "url": "detailed",
-          "valueCoding": {
-            "system": "urn:oid:2.16.840.1.113883.6.238",
-            "code": "2148-5",
-            "display": "Mexican"
-          }
-        },
-        {
           "url": "text",
           "valueString": "Hispanic or Latino"
         }
@@ -94,16 +78,11 @@
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
     },
     {
-      "extension": [
-        {
           "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
           "valueAddress": {
             "state": "GA",
             "country": "US"
           }
-        }
-      ],
-      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
     }
   ],
   "identifier": [
@@ -119,7 +98,7 @@
         ],
         "text": "Medical Record Number"
       },
-      "system": "http://CancerOrg.smarthealthit.org",
+      "system": "http://example.org",
       "value": "1032702"
     },
     {
