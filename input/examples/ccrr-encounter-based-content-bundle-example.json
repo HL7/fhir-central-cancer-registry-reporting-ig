@@ -1,0 +1,333 @@
+{
+  "resourceType": "Bundle",
+  "id": "ccrr-encounter-based-content-bundle-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-content-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2023-11-08T11:15:33-10:00",
+  "entry": [
+    {
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Composition/ccrr-composition-content-example",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "ccrr-composition-content-example",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-composition"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Encounter-based Content Bundle </b></p></div>"
+        },
+        "identifier": {
+          "value": "b13eab8c-11e8-4d0c-ad2a-b385395e27gh"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72134-0"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/example",
+          "display": "Amy Shaw"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-cancer-example-surgery",
+          "display": "Encounter Cancer Surgery Example"
+        },
+        "date": "2023-11-08T22:13:23Z",
+        "author": [
+          {
+            "reference": "Organization/example-cancer-org",
+            "display": "Cancer Organization"
+          }
+        ],
+        "title": "Central Cancer Registry Report",
+        "section": [
+          {
+            "title": "Primary Cancer Condition Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "363346000",
+                  "display": "Malignant neoplastic disease (disorder)"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Primary Cancer Condition Section</p></div>"
+            },
+            "entry": [
+              {
+                "reference": "Condition/primary-cancer-condition-breast"
+              }
+            ]
+          },
+          {
+            "title": "Procedures Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "47519-4",
+                  "display": "History of Procedures Document"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p>Procedures Section</p></div>"
+            },
+            "entry": [
+              {
+                "reference": "Procedure/cancer-related-surgical-procedure-lumpectomy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Practitioner/1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"https://hl7.org/fhir/us/core/StructureDefinition-us-core-us-core-practitioner.html\">US Core Practitioner</a></p>\n  <p><b>Practitioner:</b> Dr. Joseph Nichols</p>\n  <p><b>Identifier:</b> US NPI: 1122334455</p>\n  <p><b>Address:</b> 1234 Main St., Tulsa, OK 74126, US (work)</p>\n  <p><b>Email:</b> joseph.nichols@example.com</p>\n  <p><b>Phone:</b> 800-277-1993</p>\n  </div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1122334455"
+          }
+        ],
+        "name": [
+          {
+            "family": "Nichols",
+            "given": [
+              "Joseph"
+            ],
+            "prefix": [
+              "Dr"
+            ]
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "1234 Main St."
+            ],
+            "city": "Tulsa",
+            "state": "OK",
+            "postalCode": "74126",
+            "country": "US"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "email",
+            "value": "joseph.nichols@example.com",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "800-277-1993",
+            "use": "work"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Condition/primary-cancer-condition-breast",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "primary-cancer-condition-breast",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"
+          ]
+        },
+        "text": {
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile:</b> <a href=\"StructureDefinition-central-cancer-registry-primary-cancer-condition.html\"> Central Cancer Registry Primary Cancer Condition</a></p>\n  <p><b>Condition:</b> Primary Breast Cancer</p>\n    <p><b>Clinical Status:</b> Active</p>\n  <p><b>Verification Status:</b> Confirmed</p>\n  <p><b>Category:</b> Encounter Diagnosis</p>\n  <p><b>Code:</b> Infiltrating duct carcinoma of breast (SNOMED CT: 408643008)</p>\n  <p><b>Histology/Morphology/Behavior:</b> Infiltrating duct carcinoma (morphologic abnormality) (SNOMED CT: 82711006)</p>\n  <p><b>Body Site:</b> Left breast structure (SNOMED CT: 80248007)</p>\n  <p><b>Laterality:</b> Left (qualifier value) (SNOMED CT: 7771000)</p>\n  <p><b>Subject:</b> <a href=\"Patient-example.html\">Patient-example: Amy Shaw</a></p>\n  <p><b>Asserter:</b> <a href=\"Practitioner-1.html\">Dr. Joseph Nichols</a></p>\n  <p><b>Asserted Date:</b> 2023-03-21</p>\n  <p><b>Stage Summary:</b> American Joint Committee on Cancer stage IIA (qualifier value) (SNOMED CT: 1222766008)</p>\n  <p><b>Evidence Type:</b> Histologic test (procedure) (SNOMED CT: 714797009)</p>\n</div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2023-03-21"
+          },
+          {
+            "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "82711006",
+                  "display": "Infiltrating duct carcinoma (morphologic abnormality)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/cancer-status-evidence-type",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "714797009",
+                  "display": "Histologic test (procedure)"
+                }
+              ]
+            }
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "408643008",
+              "display": "Infiltrating duct carcinoma of breast (disorder)"
+            }
+          ]
+        },
+        "bodySite": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "7771000",
+                      "display": "Left (qualifier value)"
+                    }
+                  ]
+                }
+              }
+            ],
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "80248007",
+                "display": "Left breast structure (body structure)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "asserter": {
+          "reference": "Practitioner/1"
+        },
+        "stage": [
+          {
+            "summary": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1222766008",
+                  "display": "American Joint Committee on Cancer stage IIA (qualifier value)"
+                }
+              ]
+            },
+            "assessment": [
+              {
+                "reference": "Observation/cancer-stage-group-example"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/Organization/example-cancer-org",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "example-cancer-org",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-organization"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Profile: </b> <a href=\"StructureDefinition-central-cancer-registry-reporting-organization.html\"> Central Cancer Registry Reporting Organization</a></p>\n  <p><b>Organization:</b> Cancer Organization</p>\n    <p><b>Status:</b> Active</p>\n  <p><b>Identifier (NPI):</b> 1063494177</p>\n   <p><b>Address:</b> 1234 Main Street, Tulsa, OK 74126</p>\n  <p><b>Phone:</b> (917)932-2000</p>\n  </div>"
+        },
+        "identifier": [
+          {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1063494177"
+          }
+        ],
+        "active": true,
+        "name": "Cancer Organization",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(917)932-2000",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "text": "1234 Main Street, Tulsa OK 74126",
+            "line": [
+              "1234 Main Street"
+            ],
+            "city": "Tulsa",
+            "state": "OK",
+            "postalCode": "74126"
+          }
+        ]
+      }
+    }
+  ]
+}

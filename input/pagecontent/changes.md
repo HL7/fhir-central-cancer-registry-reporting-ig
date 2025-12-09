@@ -63,7 +63,7 @@ The following is a list of all the changes based on versions.
             <td>Renamed from Cancer Encounter to be consistent with profile naming conventions</td>
         </tr>
         <tr>
-            <td><a href="StructureDefinition-central-cancer-registry-reporting-composition.html">Central Cancer Registry Reporting Composition</a></td>
+            <td><a href="StructureDefinition-ccrr-composition.html">Central Cancer Registry Reporting Composition</a></td>
             <td>
                 <ul>Renamed from Central Cancer Registry Report Composition to be consistent with profile naming conventions</ul>
                 <ul>Removed the Allergies Section - This section was included in error. This information is not collected by registries or NAACCR and should not be included in a CCR report.</ul>
@@ -131,7 +131,7 @@ The following is a list of all the changes based on versions.
 |[FHIR-34575](https://jira.hl7.org/browse/FHIR-34575) | Bulk Data Cohort |
 |[FHIR-34574](https://jira.hl7.org/browse/FHIR-34574) | ODH Specification |
 |[FHIR-34572](https://jira.hl7.org/browse/FHIR-34572) | PH Profiles Link |
-|[FHIR-34571](https://jira.hl7.org/browse/FHIR-34571) | Use of SHALL|
+|[FHIR-34571](https://jira.hl7.org/browse/FHIR-34571) | Use of proper conformance words|
 |[FHIR-34570](https://jira.hl7.org/browse/FHIR-43461) | Diagram Reportability Identification |
 |[FHIR-34569](https://jira.hl7.org/browse/FHIR-34569) | Audit Trail Documentation |
 |[FHIR-34568](https://jira.hl7.org/browse/FHIR-34568) | Follow up activities |

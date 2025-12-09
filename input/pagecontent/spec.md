@@ -11,7 +11,9 @@ Before reading this formal specification, implementers should first be familiar 
 #### Conventions
 This implementation guide uses RFC-2119 terminology to flag statements that have relevance for the evaluation of conformance with the guide:
 
+§
 * **SHALL** indicates requirements that must be met to be conformant with the specification.
+§
 
 * **SHOULD** indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.
 
@@ -24,13 +26,14 @@ Actors and Systems asserting conformance to this implementation guide have to im
 
 ##### MUST SUPPORT Definition
 
+§
 * Systems **SHALL** be capable of populating data elements as specified by the profiles and data elements are returned using the specified APIs in the capability statement.
 * Systems **SHALL** be capable of processing resource instances containing the MUST SUPPORT data elements without generating an error or causing the application to fail. In other words, Systems SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
 * Systems SHOULD be capable of displaying the Must Support data elements for human use or storing them for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Systems **SHALL NOT** include the data elements in the resource instance returned from executing the API requests.
 * When accessing Central Cancer Registry Reporting data, Systems **SHALL** interpret missing data elements within resource instances returned from API requests as data not present.
 * When data is not available for any of the mandatory elements specified in the IG, a data absent reason extension should be added to satisfy the requirement along with an appropriate value from the [data-absent-reason value set](http://hl7.org/fhir/ValueSet/data-absent-reason).
-
+§
 
 #### Profiles and Other IGs Usage
 This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html), search parameter definitions, and terminology artifacts to describe the content to be shared as part of Central Cancer Registry Reporting Content IG workflows. The implementation guide is based on [FHIR R4]({{site.data.fhir.path}}) and profiles are listed for each interaction.
@@ -106,7 +109,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 * The system actors namely Data Source, Data Submitter, and the Data Receiver are required to use the SMART on FHIR Backend Services Authorization mechanisms as outlined below for the following interactions:
 
-
+§
     * When the Data Submitter is not packaged within the Data Source, the Data Submitter **SHALL** use the SMART on FHIR Backend Service Authorization to access data from the Data Source  
     * Data Submitter posting data to the Data Receiver **SHALL** use the SMART on FHIR Backend Services Authorization to submit the data.
     
@@ -124,6 +127,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 * The Data Receiver **SHALL** support the system/*.read and system/*.write scopes. 
 
 * The health care organization's existing processes along with the Data Source's authorization server **SHALL** verify any organizational policy requirements (for example, registration of the Data Submitter, authorizing requested scopes, testing and verification of Data Submitter implementation in sandbox environment prior to production) before allowing the Data Submitter to access the data to be included in the CCRR report. 
+§
 
 <!--##### Overall Security Requirements 
 
@@ -149,6 +153,7 @@ This section outlines how the SMART on FHIR Backend Services Authorization will 
 
 ##### Knowledge Artifact and Knowledge Artifact Repository Requirements 
 
+§
 * The Central Cancer Registry **SHALL** create a Knowledge Artifact following the constraints identified by the [MedMorph Provisioning Requirements]({{site.data.fhir.ver.medmorphIg}}/provisioning.html#creating-knowledge-artifacts).
 
 * The Central Cancer Registry **SHALL** publish the value sets required to trigger a cancer report for a patient with an encounter diagnosis of cancer. This can be published in the Central Cancer Registry FHIR Server or a separate Knowledge Artifact Repository.
@@ -208,7 +213,7 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 
 ##### Subscription Notification API 
 
-* The Data Submitter **SHALL** support a POST API <Data Submitter Base URL>/receive-notification with a payload of the Subscription Notification Bundle to receive the notifications from the Data Source. 
+* The Data Submitter **SHALL** support a POST API "receive-notification" with a payload of the Subscription Notification Bundle to receive the notifications from the Data Source. 
 
 * The Data Submitter **SHALL** ensure no duplicate reports are submitted for the same patient and encounter occurring within a health care organization.
 
@@ -223,7 +228,7 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 
 * The Data Submitter **SHALL** package the CCRR report following the constraints identified in [Central Cancer Registry Reporting Bundle](StructureDefinition-ccrr-reporting-bundle.html).
 
-* The Data Submitter **SHALL** submit the message containing the CCRR Report to the identified endpoint using either FHIR Messaging (<Data Receiver Base URL>/$process-message) endpoint or POST a Bundle using the <Data Receiver Base URL>/Bundle endpoint. 
+* The Data Submitter **SHALL** submit the message containing the CCRR Report to the identified endpoint using either FHIR Messaging $process-message endpoint or POST a Bundle using the Bundle endpoint. 
 
 <!--* The Data Submitter **SHALL** create a central cancer registry report following the constraints identified in [Central Cancer Registry Content Bundle](StructureDefinition-ccrr-content-bundle.html).
 
@@ -241,13 +246,13 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 
 * The Data Receiver **SHALL** support multiple methods to receive data from the Data Submitter as follows
 	
-	* POST a Bundle using the <Data Receiver Base URL>/Bundle endpoint
-	* POST a Bundle using the FHIR Messaging <Data Receiver base URL>/$process-message endpoint
+	* POST a Bundle using the BBundle endpoint
+	* POST a Bundle using the FHIR Messaging $process-message endpoint
 		 
 
 * The Data Receiver **SHALL** implement the $process-message operation on the ROOT URL of the FHIR Server to receive reports from the Data Submitter using the POST operation.
 
-* The Data Receiver **SHALL** implement the /Bundle endpoint to receive [Central Cancer Registry Reporting Content Bundle](StructureDefinition-ccrr-content-bundle.html) from a Data Submitter.
+* The Data Receiver **SHALL** implement the Bundle endpoint to receive [Central Cancer Registry Reporting Content Bundle](StructureDefinition-ccrr-content-bundle.html) from a Data Submitter.
 
 * Upon receipt of the message, the Data Receiver **SHALL** validate the data before accepting the data for downstream processing.
 
@@ -269,3 +274,4 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 * The TTP **SHALL** implement the Trusted Third Party requirements as outlined in the [MedMorph RA TTP requirements]({{site.data.fhir.ver.medmorphIg}}/CapabilityStatement-medmorph-trusted-third-party.html).
 -->
 
+§

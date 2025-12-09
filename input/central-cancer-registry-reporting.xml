@@ -258,6 +258,54 @@
       <description value="An example showing a PlanDefintion for CCRR"/>
       <exampleBoolean value="true"/> 
     </resource>
+    <resource>
+      <reference>
+        <reference value="Composition/ccrr-composition-example"/>
+      </reference>
+      <name value="CCRR Composition - Example"/>
+      <description value="An example showing a CCRR Composition"/>
+      <exampleBoolean value="true"/> 
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/ccrr-encounter-based-content-bundle-example"/>
+      </reference>
+      <name value="Encounter based CCRR Content Bundle - Example"/>
+      <description value="An example showing a Encounter based CCRR Content bundle"/>
+      <exampleBoolean value="true"/> 
+    </resource>
+	<resource>
+	      <reference>
+	        <reference value="Bundle/reporting-bundle-example"/>
+	      </reference>
+	      <name value="CCRR Reporting Bundle - Example"/>
+	      <description value="An example showing a CCRR Reporting bundle"/>
+	      <exampleBoolean value="true"/> 
+	 </resource>
+	    <resource>
+	      <reference>
+	        <reference value="Bundle/ccrr-content-bundle-example"/>
+	      </reference>
+	      <name value="Initial CCRR Content Bundle - Example"/>
+	      <description value="An example showing an Initial CCRR Content bundle"/>
+	      <exampleBoolean value="true"/> 
+	    </resource>
+	    <resource>
+	      <reference>
+	        <reference value="Bundle/ccrr-non-encounter-based-content-bundle-example"/>
+	      </reference>
+	      <name value="Non Encounter based CCRR Content Bundle - Example"/>
+	      <description value="An example showing a non Encounter based CCRR Content bundle"/>
+	      <exampleBoolean value="true"/> 
+	    </resource>
+	    <resource>
+	      <reference>
+	        <reference value="Observation/odh-usual-work"/>
+	      </reference>
+	      <name value="ODH - Example"/>
+	      <description value="An example showing a ODH Observation"/>
+	      <exampleBoolean value="true"/> 
+	    </resource>
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>

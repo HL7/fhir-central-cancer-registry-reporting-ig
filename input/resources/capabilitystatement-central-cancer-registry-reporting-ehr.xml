@@ -31,7 +31,7 @@
       <h2>REST  Behavior</h2>
 	  <h3> Data Source with Data Submitter functionality bundled together</h3>
       <p>The primary focus of the Data Source actor is to create the Central Cancer Registry (CCR) Report and send it to the Data Receiver (i.e., Central Cancer Registry).</p>
-	  
+	 
 	  <p>Data Sources (with built-in Data Submitter functionality) <b>SHALL</b> meet the general security requirements documented in FHIR <a href="http://hl7.org/fhir/security.html">Security guidance</a>.</p>
       <p>Data Sources (with built-in Data Submitter functionality) <b>SHALL</b> be capable of generating the Central Cancer Registry Reporting Bundle in response to a encounter-close and encounter-start trigger events</p>
       <p>Data Sources (with built-in Data Submitter functionality) <b>SHOULD</b> be capable of submitting the Central Cancer Registry Reporting Bundle to the Data Receiver using $process-message operation.</p>

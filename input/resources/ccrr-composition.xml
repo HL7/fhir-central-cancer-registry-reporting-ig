@@ -339,13 +339,16 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category" />
+        <targetProfile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category" />
       </type>
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <mustSupport value="true" />
       <isModifier value="false" />
     </element>
-    <element id="Composition.section:sliceTNMStagingSection.sliceTNMDistantMetastasesCategoryEntry">
+ <!--   <element id="Composition.section:sliceTNMStagingSection.sliceTNMDistantMetastasesCategoryEntry">
       <path value="Composition.section.entry" />
       <sliceName value="sliceTNMDistantMetastasesCategory"/>
       <short value="TNM Distant Metastases Category Entry"/>
@@ -383,7 +386,7 @@
       <max value="1" />
       <mustSupport value="true" />
       <isModifier value="false" />
-    </element>
+    </element> -->
     <element id="Composition.section:sliceRadioTherapyCourseSummary">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
