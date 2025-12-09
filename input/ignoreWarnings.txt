@@ -48,10 +48,9 @@ Details for Observation/tnm-clinical-primary-tumor-category-cT2 matching against
 Found multiple matching profiles for Observation/tnm-clinical-distant-metastases-category-cM0 among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category|4.0.0, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category|4.0.0, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category|4.0.0
 Details for Observation/tnm-clinical-distant-metastases-category-cM0 matching against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group|4.0.0
 
+# Messages related to creating Ids for Specification statements
 
-
-
-
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 
 # Messages due to dependencies on other specifications
 
@@ -59,7 +58,7 @@ There are multiple different potential matches for the url 'http://terminology.h
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
-
+The canonical URL http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport doesn't point to an actual ImplementationGuide resource
 
 # Messages due to pinning of canonicals in snapshot elements from otehr IG dependencies
 
