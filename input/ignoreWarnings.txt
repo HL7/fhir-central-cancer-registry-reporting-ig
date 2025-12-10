@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# Expansion Parameters Related Error
+# Expansion Parameters Related Error This will be fixed in a later version of the IG Publisher (see: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0 
 
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
@@ -8,9 +8,12 @@ No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureD
 
 The value set expansion is too large, and only a subset has been displayed
 
-# Messages due to specific versions of the IG
+# Messages due to specific versions of the US Core IG, we are currently using US Core 6.1.0 as it is the currently approved SVAP version for HTI-1
 
 The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+
+# Message due to subscription IG , The Subscriptions backport IG was mistakenly released as FHIR 4.0.0 instead of 4.0.1. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Subscriptions.20backport.20issue
+
 The ImplementationGuide is based on FHIR version 4.0.1 but package hl7.fhir.uv.subscriptions-backport.r4#1.1.0 is based on FHIR version 4.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 This IG is version 4.0.1, while the IG 'hl7.fhir.uv.subscriptions-backport.r4' is from version 4.0.0
 
@@ -23,18 +26,25 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.114222.4.5.327' could not be fou
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHIndustryCDCCensus2010' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 
-# Messages related to CCRR Reporting Bundle Slicing validated to be not errors
+# Deprecated Attribute usage (Valueset..publisher is being populated, but the information message is still coming)
+
+The extension http://hl7.org/fhir/StructureDefinition/valueset-steward|5.2.0 is deprecated with the note: 'Use ValueSet.publisher instead'
+
+# Messages related to CCRR Reporting Bundle Slicing validated to be false positive 
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# Messages related to CCRR Content Bundle Slicing validated to be not errors
+# Messages related to CCRR Content Bundle Slicing validated to be false positive
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-content-bundle|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# Messages for ODH Sliciing validated to be not errors 
+# Messages for ODH Sliciing validated to be false positive
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork|1.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
+# Message related to CCRR Specification Bundle slicing validated to be false positive
+
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-specification-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # Messages Due to Inherited Slicing
 
@@ -88,24 +98,6 @@ Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-ge
 Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-birthPlace to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 Pinned the version of http://hl7.org/fhir/StructureDefinition/individual-genderIdentity to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 Pinned the version of http://hl7.org/fhir/us/core/ValueSet/simple-language to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
 # Best Practice Recommendations
 Best Practice Recommendation: In general, all observations should have a performer	

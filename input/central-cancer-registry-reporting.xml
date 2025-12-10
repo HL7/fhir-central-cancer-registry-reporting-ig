@@ -260,6 +260,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/central-cancer-registry-reporting-specification-bundle-example"/>
+      </reference>
+      <name value="CCRR Specification Bundle - Example"/>
+      <description value="An example showing a CCRR Specification Bundle or Knowledge Artifact"/>
+      <exampleBoolean value="true"/> 
+    </resource>
+    <resource>
+      <reference>
         <reference value="Composition/ccrr-composition-example"/>
       </reference>
       <name value="CCRR Composition - Example"/>
