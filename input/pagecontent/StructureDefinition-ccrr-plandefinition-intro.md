@@ -13,3 +13,5 @@ This profile is used to represent the PlanDefinition instance which is an integr
 * The PlanDefinition specifies a mechanism to run scheduled jobs at least every 6 months for the patient and create a cancer report.
 
 * The PlanDefinition specifies a mechanism to run scheduled jobs once every 12 months until the patient is deceased or there is no updates to the record for 24 months and create a cancer report.
+
+
