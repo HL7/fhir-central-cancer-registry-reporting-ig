@@ -26,10 +26,6 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.114222.4.5.327' could not be fou
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHIndustryCDCCensus2010' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 
-# Deprecated Attribute usage (Valueset..publisher is being populated, but the information message is still coming)
-
-The extension http://hl7.org/fhir/StructureDefinition/valueset-steward|5.2.0 is deprecated with the note: 'Use ValueSet.publisher instead'
-
 # Messages related to CCRR Reporting Bundle Slicing validated to be false positive 
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-reporting-bundle|2.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -64,11 +60,9 @@ The html source contains the word 'SHALL' but it is not in a text phrase marked 
 
 # Messages due to dependencies on other specifications
 
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActCode' to 'http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0'
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
-The canonical URL http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport doesn't point to an actual ImplementationGuide resource
 
 # Messages due to pinning of canonicals in snapshot elements from otehr IG dependencies
 
@@ -92,7 +86,6 @@ Pinned the version of http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
 Pinned the version of http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
 Pinned the version of http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
-Pinned the version of http://hl7.org/fhir/StructureDefinition/data-absent-reason to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
 Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
 Pinned the version of http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity to 6.1.0 from choices of 5.0.1 (hl7.fhir.us.core#5.0.1), 6.1.0 (hl7.fhir.us.core#6.1.0)
 Pinned the version of http://hl7.org/fhir/StructureDefinition/patient-birthPlace to 5.2.0 from choices of 1.0.0 (hl7.fhir.uv.extensions.r4#1.0.0), 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.1.0 (hl7.fhir.uv.extensions.r4#5.1.0), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)

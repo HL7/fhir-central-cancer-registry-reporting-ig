@@ -22,12 +22,6 @@
         },
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/valueset-steward",
-            "valueContactDetail": {
-              "name": "Example Steward"
-            }
-          },
-          {
             "url": "http://hl7.org/fhir/StructureDefinition/artifact-author",
             "valueContactDetail": {
               "name": "Example Author"
