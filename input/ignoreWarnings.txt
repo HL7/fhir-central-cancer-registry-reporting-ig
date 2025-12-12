@@ -10,7 +10,7 @@ The value set expansion is too large, and only a subset has been displayed
 
 # Messages due to specific versions of the US Core IG, we are currently using US Core 6.1.0 as it is the currently approved SVAP version for HTI-1
 
-The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
 
 # Message due to subscription IG , The Subscriptions backport IG was mistakenly released as FHIR 4.0.0 instead of 4.0.1. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Subscriptions.20backport.20issue
 
