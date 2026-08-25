@@ -12,6 +12,9 @@ Advances in medicine and changes in the healthcare delivery system now allow pat
 
 Standards specifications provided in this document are designed to facilitate the implementation of an automated electronic process for the identification and reporting of cancer cases, treatment, and outcomes using ambulatory healthcare provider EHR systems to create a cancer event report and submit it to public health central cancer registries. Automated electronic reporting is expected to reduce labor (for the ambulatory healthcare providers and public health central cancer registries), and increase the security, completeness, timeliness and accuracy of cancer surveillance data.
 
+#### Implementation Guide (IG) Relationships
+
+The CCRR IG is intended for use by healthcare providers to report clinical cancer information from EHRs to central cancer registries. This IG’s specification contains references to other IGs for inclusion of relevant content in the cancer report bundle. This includes reference to a specific profile in the [Cancer Pathology Data Sharing IG]({{site.data.fhir.ver.cancerpathIg}}/index.html) (CPDS) IG to enable registries to receive the pathology report number, which is a data element in USCDI+ Cancer, from the provider report. It also enables extraction of cancer pathology reports from the EHR and inclusion in Central Cancer Registry Content Bundle. The full CPDS IG is intended for reporting only pathology reports whereas the CCRR IG contains more extensive clinical information and may include the pathology report when available.
 
 ### Legal Mandate for Cancer Reporting 
 
@@ -66,7 +69,7 @@ The goal of the Central Cancer Registry Reporting Content IG is to automate the 
 #### Use Case Triggers and Reporting
 To limit the number of reports sent to registries, this IG contains specific reporting intervals and criteria for both encounter-based and content-based triggering of when a report is sent to a Central Cancer Registry (CCR).
 
-For the **initial report (T0)**, when a qualifying encounter occurs, the patient record will be queried at 15 days post-encounter and (if necessary) 30 days post encounter for the presence of the following content:
+For the **initial report (T0)**, when a qualifying closed encounter occurs, the patient record will be queried at 15 days post-encounter and (if necessary) 30 days post encounter for the presence of the following list of minimum data elements. If state regulations or other use case needs are different, then reports should be sent sooner. This list defines the minimum elements that must be complete in the EHR to trigger **sending** the **initial** report only. The content of all report types will include all data elements, not only those in this list, as specified by the IG profiles. 
 
 * Patient Last Name
 * Patient First Name
@@ -82,28 +85,31 @@ For the **initial report (T0)**, when a qualifying encounter occurs, the patient
 * Date of birth 
 * Facility Identifier or Facility Name
 
-If all content is present at the 15 day check, then an initial encounter-based report will be sent to the registry. If any of the content is missing, the initial report will be sent at T0+30 days regardless of content status.
+If all content is present at the 15-day check, then an initial encounter-based report will be sent to the registry. If any of the content is missing, the initial report will be sent at T0+30 days regardless of content status.
 
 The intent of this report is to initiate an incidence case.
 
 **After the T0 bundle is sent**, incremental reports containing patient information and new information will be sent based on availability of specific content. The following additions to the patient record will trigger an incremental report:
-* Non-encounter based triggers: If any information is added or updated for the following resources, then a report will be sent regardless of if the information is tied to an encounter.
-	* Primary Cancer Condition
-	* Cancer Stage Group: All Observations with the Cancer Stage Group information and having a status of final, amended, or corrected.
-	* TNM Primary Tumor Category: All Observations with TNM tumor information having a status of final, amended, or corrected.
-	* TNM Regional Nodes Category: All Observations with TNM regional nodes information having a status of final, amended, or corrected.
-	* TNM Distant Metastases Category: All Observations with TNM metastases information having a status of final, amended, or corrected.
-	* Radiotherapy Course Summary: All Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 1217123003 Radiotherapy course of treatment (regime/therapy).
-* Encounter-based triggers: For any encounter that meets the reportability criteria AND contains new information for the following data elements:
-	* Medication Requests: Medication requests with a status of completed.
-	* Medication Administration: Medication administrations with a status of completed.
-	* Procedure: Procedures performed during the closed encounter with a status of completed or unknown.
-	* DiagnosticReport Profile for Laboratory Results Reporting: Results linked to the encounter or results received during the encounter with a status of final.
-	* DiagnosticReport Profile for Report and Note exchange: Results linked to the encounter or results received during the encounter with a status of final.
+* Non-encounter based triggers: If any information is added or updated for the following profiles, then a report will be sent whether the event is tied to an encounter or not. In other words, these events do not **have** to be associated with an encounter to trigger a report, but they will also trigger a report when they **are** part of encounter.
+	* [Primary Cancer Condition](StructureDefinition-central-cancer-registry-primary-cancer-condition.html): Records the primary cancer condition, i.e., the original or first tumor in the body (source: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
+	* [TNM Stage Group]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-stage-group.html): All Observations with the Cancer Stage Group information and having a status of final, amended, or corrected.
+	* [TNM Primary Tumor Category]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-primary-tumor-category.html): All Observations with TNM tumor information having a status of final, amended, or corrected.
+	* [TNM Regional Nodes Category]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-regional-nodes-category.html): All Observations with TNM regional nodes information having a status of final, amended, or corrected.
+	* [TNM Distant Metastases Category]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html): All Observations with TNM metastases information having a status of final, amended, or corrected.
+	* [Radiotherapy Course Summary]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-radiotherapy-course-summary.html): All Procedures with the radiotherapy course summary information having a status of completed, not-done, stopped, entered-in-error, unknown and a category of 1217123003 Radiotherapy course of treatment (regime/therapy).
+	* [DiagnosticReport for Laboratory Results Reporting]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-diagnosticreport-lab.html): Results linked to the encounter or results received during the encounter with a status of final.
+	* [DiagnosticReport for Report and Note Exchange]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-diagnosticreport-note.html): Results linked to the encounter or results received during the encounter with a status of final.
+* Encounter-based triggers: For any encounter that meets the reportability criteria AND contains new information for the following profiles:
+	* [Cancer-Related Medication Request]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-request.html): Medication requests with a status of completed.
+	* [Cancer-Related Medication Administration]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-cancer-related-medication-administration.html): Medication administrations with a status of completed.
+	* [Procedure]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-procedure.html): Procedures performed during the closed encounter with a status of completed or unknown.
 
-After 12 consecutive months of no trigger criteria or upon patient death, reporting will stop.
 
-**NOTE:** Central Cancer Registry Reporting is tumor-based, not patient-based. Every tumor will have its own triggering and reporting timeline.
+After 18 consecutive months of no trigger criteria or upon patient death, reporting will stop.
+
+**NOTES:** 
+* Central Cancer Registry Reporting is tumor-based, not patient-based. Every tumor will have its own triggering and reporting timeline.
+* Only one report (bundle) should be sent when there are multiple triggers during a single encounter.
 
 #### Patient Journey
 The following describes a realistic history of a patient’s journey from discovering a breast lump of concern through diagnosis, treatment, monitoring, and follow-up for breast cancer. This scenario describes a journey where all the patient’s providers starting with her visit to the oncologist are in a single cancer center and using a single Electronic Health Record (EHR). The diagnostic testing information and biopsy results are provided for context, but in this scenario are conducted by providers outside of the cancer center. This information will be reported to the cancer registry through other means outside of this scenario. 
@@ -139,18 +145,18 @@ CT and MRI are performed on 3/24/2023 and Dr. Nichols receives the results on 3/
 _**Treatment and Monitoring**_
 
 **Chemotherapy:** On 4/10/2023 Amy begins [chemotherapy](MedicationAdministration-cancer-med-admin-docetaxel-example.html) to shrink the tumor before surgery. 
-* She receives chemotherapy at the infusion enter every 3 weeks for 6 months
+* She receives chemotherapy at the infusion center every 3 weeks for 6 months
 * Chemotherapy medications: Docetaxel + Carboplatin + Adriamycin + Cyclophosphamide + Paclitaxel 
 
-**4/10/23: The administration of cancer-related medications is a non-encounter-based (NEB) trigger for an incremental report to be generated and sent to the central cancer registry. ([NEB.1](Bundle-ccrr-non-encounter-based-content-bundle-example.html))**
+**4/10/23: The administration of cancer-related medications is an encounter-based (EB) trigger for an incremental report to be generated and sent to the central cancer registry. ([EB.2](Bundle-ccrr-encounter2-based-content-bundle-example.html))**
 
 **Surgical Intervention:** On 11/8/23 she undergoes a [lumpectomy](Procedure-cancer-related-surgical-procedure-lumpectomy.html) followed by sentinel lymph node dissection. 
 
-**11/8/23:** The surgical procedure triggers an encounter-based incremental report to be generated and sent to the central cancer registry ([EB.2](Bundle-ccrr-encounter-based-content-bundle-example.html))
+**11/8/23:** The surgical procedure triggers an encounter-based incremental report to be generated and sent to the central cancer registry ([EB.3](Bundle-ccrr-encounter-based-content-bundle-example.html))
 
 **Radiation Therapy:** On 1/31/24 Amy begins [external beam radiation treatment](Procedure-radiotherapy-example.html) (mcode-radiotherapy-course-summary.mcode-radiotherapy-modality-and-technique.mcode-radiotherapy-modality.value) to eliminate any remaining cancer cells. She receives this treatment for 8 weeks, with her last visit on 3/31/24.  
 
-**3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report to be generated and sent to the central cancer registry. (NEB.2)**
+**3/31/24: The completion of radiation therapy triggers a non-encounter-based incremental report to be generated and sent to the central cancer registry. ([NEB.1](Bundle-ccrr-non-encounter-based-content-bundle-example.html))**
 
 **Monitoring and Follow-Up:** Amy undergoes frequent follow-ups to monitor for recurrence, blood tests, physical exams every 3-6 months for the first 3 years, and annual mammograms. Monthly checks for new information that meet the trigger requirements could result in additional reports generated and sent. These are not included in this journey.
 
@@ -178,7 +184,7 @@ Figure 2.2 below depicts the interactions between actors and systems when the Da
 The descriptions for each step in the above diagram include:
 * Step 1: The Data Submitter creates a notification (e.g., subscription, CDS hook, v2 message) in the Data Source’s FHIR server so that it can be notified when specific events occur in the clinical workflow. 
 * Step 2: The Provider, as part of its clinical workflow, update the patient’s data in the Data Source.
-* Step 3: The Data Source notifies the Data Submitter based on notifications created in Step 1.
+* Step 3: The Data Source notifies the Data Submitter based on notifications (trigger) created in Step 1.
 * Step 4: The Data Submitter queries the Data Source for the patient’s data.
 * Step 4a: The Data Submitter receives the response from the Data Source with the patient’s data.
 * Step 5: The Data Submitter evaluates the data and creates the report if criteria are met.

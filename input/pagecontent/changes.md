@@ -41,7 +41,7 @@ The following is a list of all the changes based on versions.
             <td>All (where applicable)</td>
             <td>
                 <ul>Removed references to MedMorph Reference Architecture IG</ul>
-                <ul>Added references to US PH Library profiles</ul>
+                <ul>Added references to <a href="https://hl7.org/fhir/us/ph-library/STU1/index.html">US Public Health Profiles Library</a></ul>
                 <ul>Align with <a href="https://uscdiplus.healthit.gov/uscdiplus?id=uscdi_record&table=x_g_sshh_uscdi_sub_domain&sys_id=05a081bc1baf861049edc957624bcb6c&view=sp">USCDI+ Cancer - Cancer Registry Use Case</a></ul>
                 <ul>Fixed typos and broken links</ul>
             </td>

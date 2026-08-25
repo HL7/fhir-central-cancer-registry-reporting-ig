@@ -4,7 +4,7 @@
 
 * Nagesh Bashyam (Drajer LLC)
 * Becky Angeles (Carradora Health Inc)
-* Brett Marquard (Wave One Assocaites)
+* Brett Marquard (Wave One Associates)
 
 #### Project leads and subject matter experts (SMEs) – U.S. Centers for Disease Control and Prevention (CDC):
 
@@ -13,6 +13,9 @@
 * Sandy Jones
 * Kasey Diebold
 * Caitlin Kennedy
+
+##### Subject Matter Expert(s):
+* Wendy Blumenthal (Team GC&E, contractor supporting CDC)
  
 ##### MedMorph Project Lead:
 

@@ -66,7 +66,6 @@ This IG leverages the following [US Core]({{site.data.fhir.ver.uscoreR4}}) profi
 
 This IG leverages the [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html) for exchanging cancer specific information which includes the following profiles: 
 
-* [mCODE Primary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-primary-cancer-condition.html)
 * [mCODE Secondary Cancer Condition Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-secondary-cancer-condition.html)
 * [mCODE TNM Stage Group Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-stage-group.html)
 * [mCODE TNM Distant Metastases Category Profile]({{site.data.fhir.ver.mcodeIg}}/StructureDefinition-mcode-tnm-distant-metastases-category.html)
@@ -246,7 +245,7 @@ The requirements in this sub-section are only applicable if the Data Submitter i
 
 * The Data Receiver **SHALL** support multiple methods to receive data from the Data Submitter as follows
 	
-	* POST a Bundle using the BBundle endpoint
+	* POST a Bundle using the Bundle endpoint
 	* POST a Bundle using the FHIR Messaging $process-message endpoint
 		 
 
