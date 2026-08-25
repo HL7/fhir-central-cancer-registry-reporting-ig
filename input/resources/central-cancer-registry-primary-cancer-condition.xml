@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="central-cancer-registry-primary-cancer-condition"/>
     <meta>
-        <versionId value="10"/>
-        <lastUpdated value="2022-07-12T02:03:11.293+00:00"/>
+        <versionId value="11"/>
+        <lastUpdated value="2026-08-12T02:03:11.293+00:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-primary-cancer-condition"/>
     <version value="0.1.0"/>
@@ -84,6 +84,11 @@
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSet
+                  value="http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-body-location-vs"/>
+			</binding>
         </element>
         <element id="Condition.bodySite.extension">
             <path value="Condition.bodySite.extension"/>
@@ -130,6 +135,26 @@
             </type>
             <mustSupport value="true"/>
         </element>
+		<element id="Condition.subject">
+			<path value="Condition.subject"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+				<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-patient"/>
+			</type>
+		</element>
+		<element id="Condition.encounter">
+			<path value="Condition.encounter"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value= "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/> 
+				<targetProfile value="http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/central-cancer-registry-reporting-encounter"/>
+			</type>
+		</element>
+		<element id="Condition.stage">
+            <path value="Condition.stage"/>     
+            <mustSupport value="true"/>   
+        </element>  
 		<element id="Condition.stage.assessment">
 			<path value="Condition.stage.assessment"/>
             <mustSupport value="true"/>
