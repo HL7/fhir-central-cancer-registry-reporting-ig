@@ -6,7 +6,7 @@ This profile is used to represent the PlanDefinition instance which is an integr
 
 * The Central Cancer Registry Reporting PlanDefinition is triggered by an encounter-close event.
 
-* The PlanDefinition specifies a mechanism to run scheduled jobs at specified intervals when the reason for the encounter/visit is to diagnose, evaluate, and/or treat an active cancer and create a cancer report.
+* The PlanDefinition specifies a mechanism to run scheduled jobs at specified intervals when the reason for the encounter/visit is to diagnose, evaluate, and/or treat an active cancer and create a cancer report. If state regulations or other use case needs are different, then reports should be sent sooner than specified in the plan definition.
 
 	* Encounter of ICD-10-CM or SNOMED CT Reportable Codes
 	

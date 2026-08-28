@@ -61,7 +61,6 @@ This IG leverages the following [US Core]({{site.data.fhir.ver.uscoreR4}}) profi
 * [US Core Smoking Status Observation Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-smokingstatus.html)
 * [US Core Vital Signs Profile]({{site.data.fhir.ver.uscoreR4}}/StructureDefinition-us-core-vital-signs.html)
 
-
 ##### mCode FHIR IG Usage
 
 This IG leverages the [mCode FHIR IG]({{site.data.fhir.ver.mcodeIg}}/index.html) for exchanging cancer specific information which includes the following profiles: 
