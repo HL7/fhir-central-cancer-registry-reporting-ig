@@ -1,11 +1,11 @@
 {
   "resourceType": "Bundle",
-  "id": "central-cancer-registry-reporting-specification-bundle-example",
+  "id": "ccrr-specification-bundle-example",
   "meta": {
     "versionId": "1",
     "lastUpdated": "2020-11-29T02:03:28.045+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-specification-bundle"
+      "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/ccrr-specification-bundle"
     ]
   },
   "type": "collection",
@@ -144,10 +144,10 @@
       }
     },
     {
-      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/PlanDefinition/pccrre",
+      "fullUrl": "http://hl7.org/fhir/us/central-cancer-registry-reporting/PlanDefinition/plandefinition-central-cancer-registry-reporting-example",
       "resource": {
         "resourceType": "PlanDefinition",
-        "id": "pccrre",
+        "id": "plandefinition-central-cancer-registry-reporting-example",
         "meta": {
           "versionId": "1",
           "lastUpdated": "2020-11-29T02:03:28.045+00:00",
@@ -159,7 +159,7 @@
           "status": "extensions",
           "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CCRR PlanDefinition Example</b></p></div>"
         },
-        "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/pccrre",
+        "url": "http://hl7.org/fhir/us/central-cancer-registry-reporting/StructureDefinition/plandefinition-central-cancer-registry-reporting-example",
         "version": "1.0",
         "name": "CentralCancerRegistryReportingExample",
         "title": "PlanDefinition Central Cancer Registry Reporting Example",

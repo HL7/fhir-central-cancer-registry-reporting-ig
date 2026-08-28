@@ -29,7 +29,7 @@
         "experimental": true,
         "date": "2020-11-04T12:32:29.858-05:00",
         "publisher": "HL7 Public Health Work Group",
-        "description": "This is the Healthcare Survey Reporting Knowledge Artifact",
+        "description": "This is the Cancer Registry Reporting Knowledge Artifact",
         "effectivePeriod": {
           "start": "2021-11-01"
         },
@@ -106,7 +106,7 @@
             "action" : [
               {
                 "id" : "is-encounter-reportable",
-                "description" : "This action represents the check for reportability to create the patients eICR.",
+                "description" : "This action represents the check for reportability to create the patient's cancer report.",
                 "textEquivalent" : "Check Trigger Codes based on RCTC Value sets.",
                 "code" : [
                   {
@@ -132,7 +132,7 @@
                     "id" : "conditions",
                     "extension" : [
                       {
-                        "url" : "http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-fhirquerypattern-extension",
+                        "url" : "http://hl7.org/fhir/us/ph-library/StructureDefinition/cqf-fhirQueryPattern",
                         "valueString" : "Condition?patient=Patient/{{context.patientId}}"
                       }
                     ],
