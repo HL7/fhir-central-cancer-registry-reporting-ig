@@ -31,7 +31,7 @@
     <kind value="resource"/>
     <abstract value="false"/>
     <type value="MessageHeader"/>
-    <baseDefinition value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-messageheader"/>
+    <baseDefinition value="http://hl7.org/fhir/us/ph-library/StructureDefinition/us-ph-messageheader|2.0.0"/>
     <derivation value="constraint"/>
     <differential>
         <element id="MessageHeader">
