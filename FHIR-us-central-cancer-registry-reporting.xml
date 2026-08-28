@@ -11,7 +11,7 @@
 <artifact id="Composition/ccrr-composition-example" key="Composition-ccrr-composition-example" name="CCRR Composition - Example"/>
 <artifact id="PlanDefinition/plandefinition-central-cancer-registry-reporting-example" key="PlanDefinition-plandefinition-central-cancer-registry-reporting-example" name="CCRR PlanDefinition - Example"/>
 <artifact id="Bundle/reporting-bundle-example" key="Bundle-reporting-bundle-example" name="CCRR Reporting Bundle - Example"/>
-<artifact id="Bundle/central-cancer-registry-reporting-specification-bundle-example" key="Bundle-central-cancer-registry-reporting-specification-bundle-example" name="CCRR Specification Bundle - Example"/>
+<artifact id="Bundle/ccrr-specification-bundle-example" key="Bundle-central-cancer-registry-reporting-specification-bundle-example" name="CCRR Specification Bundle - Example"/>
 <artifact id="ValueSet/cancer-core-reportability-codes" key="ValueSet-cancer-core-reportability-codes" name="Cancer Core Reportability Codes"/>
 <artifact deprecated="true" id="StructureDefinition/cancer-encounter" key="StructureDefinition-cancer-encounter" name="Cancer Encounter"/>
 <artifact id="MedicationAdministration/cancer-med-admin-docetaxel-example" key="MedicationAdministration-cancer-related-medication-administration-example" name="Cancer Related Medication Administration - Example"/>
@@ -36,6 +36,7 @@
 <artifact id="StructureDefinition/ccrr-plandefinition" key="StructureDefinition-ccrr-plandefinition" name="Central Cancer Registry Reporting PlanDefinition"/>
 <artifact id="StructureDefinition/central-cancer-registry-primary-cancer-condition" key="StructureDefinition-central-cancer-registry-primary-cancer-condition" name="Central Cancer Registry Reporting Primary Cancer Condition"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="Central Cancer Registry Reporting Primary Cancer Condition - Example"/>
+<artifact id="StructureDefinition/ccrr-specification-bundle" key="StructureDefinition-ccrr-specification-bundle" name="Central Cancer Registry Reporting Specification Bundle"/>
 <artifact deprecated="true" id="Bundle/content-bundle-example" key="Bundle-content-bundle-example" name="Content Bundle - Example"/>
 <artifact id="Bundle/ccrr-content-bundle-example" key="Bundle-ccrr-content-bundle-example" name="EB.1: Initial CCRR Content Bundle - Example"/>
 <artifact id="Bundle/ccrr-encounter2-based-content-bundle-example" key="Bundle-ccrr-encounter2-based-content-bundle-example" name="EB.2: Encounter-based CCRR Content Bundle - Example 2"/>
