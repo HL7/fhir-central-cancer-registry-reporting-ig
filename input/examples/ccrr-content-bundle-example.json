@@ -255,9 +255,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "21908-9",
-              "display": "Stage group.clinical Cancer"
+              "system": "http://snomed.info/sct",
+              "code": "399537006",
+              "display": "Clinical TNM stage grouping (observable entity)"
             }
           ]
         },
@@ -336,9 +336,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "21905-5",
-              "display": "Primary tumor.clinical [Class] Cancer"
+              "system": "http://snomed.info/sct",
+              "code": "399504009",
+              "display": "cT category (observable entity)"
             }
           ]
         },
@@ -400,9 +400,9 @@
         "code": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "21906-3",
-              "display": "Regional lymph nodes.clinical [Class] Cancer"
+              "system": "http://snomed.info/sct",
+              "code": "399534004",
+              "display": "cN category (observable entity)"
             }
           ]
         },

@@ -21,9 +21,9 @@
   ],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "21908-9",
-      "display" : "Stage group.clinical Cancer"
+        "system": "http://snomed.info/sct",
+        "code": "399537006",
+        "display": "Clinical TNM stage grouping (observable entity)"
     }]
   },
   "subject" : {

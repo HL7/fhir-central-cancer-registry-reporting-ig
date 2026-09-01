@@ -132,7 +132,7 @@
                     "id" : "conditions",
                     "extension" : [
                       {
-                        "url" : "http://hl7.org/fhir/us/ph-library/StructureDefinition/cqf-fhirQueryPattern",
+                        "url" : "http://hl7.org/fhir/StructureDefinition/cqf-fhirQueryPattern",
                         "valueString" : "Condition?patient=Patient/{{context.patientId}}"
                       }
                     ],

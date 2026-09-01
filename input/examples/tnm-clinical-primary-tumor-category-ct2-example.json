@@ -24,9 +24,9 @@
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org",
-        "code": "21905-5",
-        "display": "Primary tumor.clinical [Class] Cancer"
+        "system": "http://snomed.info/sct",
+        "code": "399504009",
+        "display": "cT category (observable entity)"
       }
     ]
   },

@@ -24,9 +24,9 @@
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org",
-        "code": "21906-3",
-        "display": "Regional lymph nodes.clinical [Class] Cancer"
+        "system": "http://snomed.info/sct",
+        "code": "399534004",
+        "display": "cN category (observable entity)"
       }
     ]
   },
