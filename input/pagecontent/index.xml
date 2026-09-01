@@ -31,5 +31,8 @@
     <li>
       <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information.
     </li>
+	<li>
+      For those who wish to utilize the eCR Now App to submit CCRR bundles, please refer to the <a href="https://github.com/CDCgov/Cancer_Registry_Reporting">Cancer Registry Reporting Github</a> for the Adoption Guide and PlanDefinition. 
+    </li>
   </ul>
 </div>
